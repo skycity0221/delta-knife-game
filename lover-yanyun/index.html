@@ -66,17 +66,23 @@ body{background:#071017;color:#f8eddf}
 .hero{min-height:690px;border:1px solid #bda47a55;border-radius:12px;background:#10202a;box-shadow:0 28px 90px #0008;isolation:isolate}
 .hero:before,.hero:after{display:none}
 .hero-scene{position:absolute;inset:0;overflow:hidden;z-index:0}
-.hero-photo{position:absolute;inset:-1%;width:102%;height:102%;object-fit:cover;object-position:69% 34%;filter:saturate(.88) contrast(1.06) brightness(.82)}
-.hero-scene:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0b1520f2 0%,#101d27b7 40%,#0a142438 76%),linear-gradient(0deg,#08111bef 0%,transparent 52%,#0d152228 100%)}
-.hero-wash{position:absolute;z-index:1;right:-7%;bottom:-17%;height:57%;width:47%;background:url('assets/hero-ink.jpg') center/contain no-repeat;mix-blend-mode:screen;opacity:.15;pointer-events:none}
-.hero-inscription{position:absolute;z-index:2;right:22px;top:22px;writing-mode:vertical-rl;font-family:'Noto Serif SC',serif;letter-spacing:6px;font-size:12px;color:#ffedd5bb;border-right:1px solid #eec9a17c;padding-right:10px}
-.hero-inner{position:relative;z-index:3;min-height:690px;padding:75px 7% 65px;justify-content:flex-end;max-width:630px}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:61% 16%;filter:saturate(.92) contrast(1.04) brightness(.88)}
+.hero-scene:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#08131df4 0%,#0d1821de 32%,#0b162160 64%,#09141c15 100%),linear-gradient(0deg,#08131df5 0%,#08131de0 12%,transparent 44%,#08131d33 100%)}
+.hero-frame{position:absolute;inset:14px;border:1px solid #e8c9a44d;border-radius:26px;pointer-events:none;z-index:1;box-shadow:inset 0 0 0 1px #ffffff0a}
+.hero-wash{position:absolute;left:-5%;bottom:-8%;height:39%;width:34%;background:linear-gradient(135deg,#98b0bf20,#d6bea028),url('assets/hero-lake.jpg') center 22%/cover no-repeat;border:1px solid #d8bc9361;border-radius:34px 34px 10px 80px;opacity:.16;mix-blend-mode:screen;filter:blur(.2px);z-index:1;pointer-events:none}
+.hero-inscription{position:absolute;z-index:3;right:24px;top:22px;writing-mode:vertical-rl;font-family:'Noto Serif SC',serif;letter-spacing:6px;font-size:12px;color:#ffedd5c7;border-right:1px solid #eec9a17c;padding-right:10px;text-shadow:0 3px 14px #0007}
+.hero-sidecard{position:absolute;z-index:3;right:4.6%;bottom:42px;width:198px;background:linear-gradient(180deg,#0d1720f0,#101821dc);border:1px solid #d6b58a58;border-radius:8px;overflow:hidden;box-shadow:0 18px 50px #0007, inset 0 0 0 1px #ffffff08}
+.hero-sidecard .thumb{height:248px;background:url('assets/hero-ink.jpg') center 20%/cover no-repeat;filter:saturate(.92) brightness(.95)}
+.hero-sidecard .copy{padding:12px 14px 14px}
+.hero-sidecard .copy span{display:block;color:#d8c5b1;font-size:10px;letter-spacing:3px;margin-bottom:6px}
+.hero-sidecard .copy strong{display:block;font-family:'Noto Serif SC',serif;font-weight:600;line-height:1.75;color:#fbecd7;font-size:13px}
+.hero-inner{position:relative;z-index:3;min-height:690px;padding:78px 7% 60px;justify-content:flex-end;max-width:640px}
 .hero .eyebrow{letter-spacing:5px;color:#ead2b6;font-size:11px}
 .hero h1{margin:17px 0 10px;font-weight:600;font-family:'Noto Serif SC',serif;font-size:clamp(66px,8.3vw,112px);line-height:1.08;letter-spacing:13px;color:#fff3e1;text-shadow:0 4px 30px #0009}
 .hero h1 em{color:#f6d0c9;background:none;-webkit-text-fill-color:initial}
 .hero .tagline{color:#f7d1cc;font-size:17px;letter-spacing:2px;font-family:'Noto Serif SC',serif;line-height:1.65;margin-top:14px}
-.hero-desc{color:#efe4d8de;max-width:370px;font-size:13px;line-height:1.9;margin-top:14px}
-.creator-credit{font-size:10px!important;letter-spacing:3px!important;color:#d4c5b6!important;opacity:.66!important;margin-top:8px}
+.hero-desc{color:#efe4d8de;max-width:390px;font-size:13px;line-height:1.9;margin-top:14px}
+.creator-credit{font-size:10px!important;letter-spacing:3px!important;color:#d4c5b6!important;opacity:.72!important;margin-top:8px}
 .cta-row{gap:10px;margin-top:25px;align-items:center}
 .hero .cta-row .btn:first-child{min-width:230px;font-size:15px;padding:16px 22px;background:linear-gradient(110deg,#8d3d4e,#b66b72);border:1px solid #efc4ae;border-radius:5px}
 .hero .cta-row .btn.secondary{background:#15212ad5;border-radius:5px;border:1px solid #d6ba9580;font-size:12px;padding:14px 12px}
@@ -84,12 +90,14 @@ body{background:#071017;color:#f8eddf}
 .hero-detail:before{content:'';width:42px;height:1px;background:#c5a47b8a}
 .hero-decoration{display:none!important}
 .particles{display:none}
-.home-epilogue{display:grid;grid-template-columns:1fr 1.3fr;gap:16px;margin:18px 0 10px}
-.home-epilogue .scene-image{min-height:180px;border-radius:9px;overflow:hidden;position:relative;border:1px solid #d2b49250;background:url('assets/hero-lake.jpg') center 47%/cover}
-.home-epilogue .scene-image:after{content:'浮生如梦 · 江湖有缘';position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,#07131ef1,transparent);padding:46px 16px 15px;font-family:'Noto Serif SC',serif;color:#f9e7d2;font-size:15px;letter-spacing:3px}
-.home-epilogue .scene-copy{background:#13212b;border:1px solid #e3c69e39;border-radius:9px;padding:24px}
+.home-epilogue{display:grid;grid-template-columns:1.08fr 1.18fr;gap:16px;margin:18px 0 10px}
+.home-epilogue .scene-image{min-height:265px;border-radius:9px;overflow:hidden;position:relative;border:1px solid #d2b49250;background:url('assets/hero-lake.jpg') center 34%/cover}
+.home-epilogue .scene-image:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#08131d24 0%,#08131d05 30%,#08131dd8 100%)}
+.home-epilogue .scene-image:after{content:'浮生如梦 · 江湖有缘';position:absolute;bottom:0;left:0;right:0;padding:54px 16px 15px;font-family:'Noto Serif SC',serif;color:#f9e7d2;font-size:15px;letter-spacing:3px;background:linear-gradient(0deg,#07131ef4,transparent)}
+.home-epilogue .scene-copy{background:linear-gradient(180deg,#12212a,#101920);border:1px solid #e3c69e39;border-radius:9px;padding:24px}
 .home-epilogue h2{font-family:'Noto Serif SC',serif;font-size:24px;font-weight:500;margin:7px 0 9px;color:#f8e7cf}
 .home-epilogue p{color:#c8bdb2;line-height:1.9;font-size:13px}
+.scene-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.scene-tags span{padding:7px 10px;border:1px solid #d6b99242;border-radius:999px;font-size:11px;color:#ecdcc6;background:#ffffff05}
 .cgslot .cg-overlay{padding:26px 14px 12px}
 .cgslot .cg-overlay small{display:none}
 .cg-card.unlockable{cursor:pointer}
@@ -106,25 +114,33 @@ body{background:#071017;color:#f8eddf}
  .shell{padding:8px 10px 40px}
  .top{margin-bottom:10px}
  .top .brand .tiny{display:none}
- .hero{min-height:720px;border-radius:8px}
+ .hero{min-height:780px;border-radius:8px}
  .hero-scene{inset:0}
- .hero-photo{inset:0;width:100%;height:66%;object-fit:cover;object-position:54% 20%;filter:saturate(.95) brightness(.92)}
- .hero-scene:after{background:linear-gradient(0deg,#0b1520 23%,#0b1520f5 35%,#0b1520a8 48%,#0b152000 77%),linear-gradient(90deg,#0b152033,transparent)}
- .hero-wash{height:52%;width:85%;bottom:-12%;right:-17%;opacity:.12}
- .hero-inscription{top:18px;right:16px;font-size:10px}
- .hero-inner{min-height:720px;max-width:none;padding:315px 25px 31px;justify-content:flex-end;align-items:flex-start}
+ .hero-photo{inset:0;width:100%;height:100%;object-fit:cover;object-position:57% 12%;filter:saturate(.95) brightness(.92)}
+ .hero-scene:after{background:linear-gradient(0deg,#0b1520 12%,#0b1520f7 32%,#0b1520bd 45%,#0b15203d 72%,#0b152015 100%),linear-gradient(90deg,#0b152066 0%,transparent 45%)}
+ .hero-frame{inset:10px;border-radius:16px}
+ .hero-wash{height:30%;width:42%;left:-9%;bottom:-6%;opacity:.13}
+ .hero-inscription{top:16px;right:16px;font-size:10px;letter-spacing:4px}
+ .hero-sidecard{display:none}
+ .hero-sidecard .thumb{height:148px;background-position:center 18%}
+ .hero-sidecard .copy{padding:8px 8px 10px}
+ .hero-sidecard .copy span{font-size:8px;letter-spacing:2px;margin-bottom:4px}
+ .hero-sidecard .copy strong{font-size:10px;line-height:1.55}
+ .hero-inner{min-height:780px;max-width:none;padding:332px 24px 136px;justify-content:flex-end;align-items:flex-start}
  .hero h1{font-size:clamp(56px,15vw,78px);letter-spacing:9px;line-height:1.05;margin:10px 0}
  .hero .eyebrow{font-size:10px;letter-spacing:3px}
  .hero .tagline{font-size:14px;letter-spacing:1px;margin-top:9px}
- .hero-desc{font-size:12px;line-height:1.8;margin:10px 0 0}
+ .hero-desc{max-width:none;font-size:12px;line-height:1.8;margin:10px 0 0;padding-right:8px}
  .hero .cta-row{display:grid;width:100%;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
  .hero .cta-row .btn:first-child{grid-column:span 2;width:100%;font-size:15px;padding:15px 12px;min-width:0}
  .hero .cta-row .btn.secondary{font-size:12px;padding:12px 9px}
  .hero-detail{font-size:9px;margin-top:14px}
  .home-epilogue{grid-template-columns:1fr;gap:10px}
- .home-epilogue .scene-image{min-height:210px;background-position:center 52%}
+ .home-epilogue .scene-image{min-height:238px;background-position:center 31%}
  .home-epilogue .scene-copy{padding:18px}
  .home-epilogue h2{font-size:20px}
+ .scene-tags{gap:6px}
+ .scene-tags span{font-size:10px;padding:6px 8px}
  .strip{grid-template-columns:repeat(2,1fr)}
  .cg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
  .cg-caption{font-size:11px;padding:8px 5px}
@@ -132,7 +148,8 @@ body{background:#071017;color:#f8eddf}
  .cgslot .cg-overlay b{font-size:10px}
  .cgslot.locked .cg-lock{font-size:13px}
 }
-@media(max-width:375px){.hero{min-height:680px}.hero-inner{min-height:680px;padding:285px 20px 24px}.hero h1{font-size:53px}}
+@media(max-width:375px){.hero{min-height:752px}.hero-inner{min-height:752px;padding:308px 20px 132px}.hero h1{font-size:53px}.hero-sidecard{width:108px;right:12px}}
+.hidden-choice{border-color:#d8b46b99;background:linear-gradient(110deg,#d5a94c1a,#7f63b51a)}.hidden-badge{display:block;color:#eed094;font-size:11px;letter-spacing:1px;margin-bottom:4px}.choice-feedback{font-size:13px;line-height:1.8}.choice-feedback small{color:var(--muted)}
 </style></head><body><main id="app" class="shell"></main><div id="toast" class="toast hide"></div><div id="modalHost"></div><script>
 'use strict';
 const STORAGE='lover-yanyun-v1'; // 兼容旧版本图鉴存档
@@ -268,7 +285,7 @@ function persist(){try{localStorage.setItem(STORAGE,JSON.stringify(save))}catch(
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function el(s){document.getElementById('app').innerHTML=s}function toast(s){const t=document.getElementById('toast');t.textContent=s;t.classList.remove('hide');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.add('hide'),2800)}
 function hdr(){return `<div class="top"><div class="brand"><span class="brandmark">缘</span>恋与燕云 <span class="tiny">SIMULATOR 1.5</span></div><div class="topright"><span class="tiny">已通关 ${save.runs} 局</span><button class="navbtn" onclick="showHome()">⌂ 首页</button></div></div>`}
-function showHome(){screen='home';game=null;currentEvent=null;el(hdr()+`<section class="hero"><div class="hero-scene"><img class="hero-photo" src="assets/hero-duo.jpg" alt="樱花树下相伴而立的两位江湖侠客"><div class="hero-wash"></div></div><div class="hero-inscription">江湖有梦 · 情缘未央</div><div class="hero-inner"><div class="eyebrow">A TALE OF LOVE & JIANGHU</div><h1>恋与<br><em>燕云</em></h1><div class="tagline">十次抉择，遇见你的江湖心动。</div><div class="hero-desc">在《燕云十六声》的江湖里，缘分桥初遇、觉障林双排、深夜耳语，可能通向一场盛大的爱情，也可能成为瓜房里的离谱传说。</div><div class="creator-credit">沈狂狂狂狂制作</div><div class="cta-row"><button class="btn" onclick="showSetup()">开始我的江湖情缘　❥</button><button class="btn secondary" onclick="showEndings()">✧ 结局图鉴</button><button class="btn secondary" onclick="showCGs()">▧ CG画廊</button></div><div class="hero-detail">恋爱 · 奇遇 · 反转 · 人生</div></div></section><section class="home-epilogue"><div class="scene-image" role="img" aria-label="参考武侠画面中的孤舟与雨夜荷塘"></div><div class="scene-copy"><div class="eyebrow">缘起十回合</div><h2>江湖那么大，偏偏遇见你。</h2><p>她也许是黏人的小徒弟、温柔的御姐、高冷的论剑高手，或总在刷纪录的竞速少女。你们的故事，从一次寻常上线开始。</p></div></section><section class="strip"><div class="mini"><strong>${save.runs}</strong><span>已经历的人生</span></div><div class="mini"><strong>${Object.keys(save.seen).length}/${endings.length}</strong><span>结局收集</span></div><div class="mini"><strong>${Object.keys(save.cgs).length}/20</strong><span>心动CG收藏</span></div><div class="mini"><strong>10</strong><span>人生回合</span></div></section>`+footer())}
+function showHome(){screen='home';game=null;currentEvent=null;el(hdr()+`<section class="hero"><div class="hero-scene"><img class="hero-photo" src="assets/hero-duo.jpg" alt="樱花树下相伴而立的两位江湖侠客"><div class="hero-wash"></div><div class="hero-frame"></div></div><div class="hero-inscription">江湖有梦 · 情缘未央</div><div class="hero-sidecard"><div class="thumb" role="img" aria-label="古风水墨人物参考画面"></div><div class="copy"><span>侠影入画</span><strong>一半是江湖，一半是心动。</strong></div></div><div class="hero-inner"><div class="eyebrow">A TALE OF LOVE & JIANGHU</div><h1>恋与<br><em>燕云</em></h1><div class="tagline">十次抉择，遇见你的江湖心动。</div><div class="hero-desc">在《燕云十六声》的江湖里，缘分桥初遇、觉障林双排、深夜耳语，可能通向一场盛大的爱情，也可能成为瓜房里的离谱传说。十回合之内，你总会遇见那位让你动心的她。</div><div class="creator-credit">沈狂狂狂狂制作</div><div class="cta-row"><button class="btn" onclick="showSetup()">开始我的江湖情缘　❥</button><button class="btn secondary" onclick="showEndings()">✧ 结局图鉴</button><button class="btn secondary" onclick="showCGs()">▧ CG画廊</button></div><div class="hero-detail">恋爱主线 70%+ · 武侠氛围 · 多女主 · 10回合</div></div></section><section class="home-epilogue"><div class="scene-image" role="img" aria-label="雨夜荷塘孤舟的武侠江湖场景"></div><div class="scene-copy"><div class="eyebrow">缘起十回合</div><h2>江湖那么大，偏偏遇见你。</h2><p>她也许是黏人的小徒弟、温柔的御姐、高冷的论剑高手，或总在刷纪录的竞速少女。你们的故事，从一次寻常上线开始，也可能在一次奔现、一次误会、一次深夜语音之后彻底改变。</p><div class="scene-tags"><span>女大学生徒弟</span><span>御姐音休闲玩家</span><span>PVP女高手</span><span>竞速妹</span></div></div></section><section class="strip"><div class="mini"><strong>${save.runs}</strong><span>已经历的人生</span></div><div class="mini"><strong>${Object.keys(save.seen).length}/${endings.length}</strong><span>结局收集</span></div><div class="mini"><strong>${Object.keys(save.cgs).length}/20</strong><span>心动CG收藏</span></div><div class="mini"><strong>10</strong><span>人生回合</span></div></section>`+footer())}
 function footer(){return `<div class="footer">恋与燕云模拟器 · 玩家同人创作 / 非官方作品<br>角色、包括故事中的昵称，均为虚构改编，不代表现实人物。请勿传播他人私密内容。<br>争锋工作室推广为游戏内独立展示。</div>`}
 function showSetup(){screen='setup';setup.path='newbie';setup.temperament='rational';el(hdr()+`<section class="panel start-panel"><button class="back" onclick="showHome()">← 返回首页</button><div class="eyebrow">CHAPTER 00 · 普通玩家的故事</div><h1 class="section-title">今晚，上线吗？</h1><p class="muted">你只是一个普通的燕云玩家。可能收获一段爱情，也可能突然走上另一条江湖路。</p><label class="tiny" for="playerName">给自己取个昵称</label><div class="formline"><input id="playerName" maxlength="12" value="${esc(setup.name)}" placeholder="输入昵称" autocomplete="off"></div><div class="starter-note">♥ 10个回合，一段意想不到的江湖人生。职业、情缘与结局，都留给命运和你的选择。</div><button class="btn start-full" onclick="startGame()">❤ 开始第 ${save.runs+1} 段人生</button></section>`+footer())}
 function rand(max){return Math.floor(Math.random()*max)}function adjust(delta){for(const [k,v] of Object.entries(delta||{})){if(k in game.stats)game.stats[k]=Math.max(k==='money'?0:0,Math.min(k==='money'?200:100,game.stats[k]+v))}}
@@ -298,7 +315,7 @@ function chooseEvent(){
  game.visited[currentEvent.id]=(game.visited[currentEvent.id]||0)+1;showTurn();
 }
 function statPanel(){const cols=[['skill','剑术'],['speed','竞速'],['charm','魅力'],['eq','情商'],['money','财力'],['fame','名气'],['romance','恋爱脑'],['guard','警惕心']];return `<div class="stats">${cols.map(([k,n])=>`<div class="stat"><div class="stat-top"><span>${n}</span><b>${Math.round(game.stats[k])}</b></div><div class="track"><span style="width:${Math.min(100,game.stats[k])}%"></span></div></div>`).join('')}</div>`}
-function showTurn(){if(!game)return;screen='game';const ev=currentEvent;const all=ev.choices;const choices=all.length<=2?all:all.slice(0,2);game.offeredChoices=choices;el(hdr()+`<section class="panel story-panel"><div class="flex"><div class="hud"><span class="pill">第 ${game.turn} / 10 回合</span><span class="pill">${esc(game.role)}</span></div><button class="navbtn quit" onclick="confirmQuit()">结束本局</button></div><div class="progress"><span style="width:${game.turn/10*100}%"></span></div><div class="scene"><div class="chapter">CHAPTER ${String(game.turn).padStart(2,'0')} · 江湖偶遇</div><h2>${esc(ev.title)}</h2><p>${esc(ev.body.replaceAll('{npc}',game.npc.name))}</p></div><div class="scene-question">此刻，你会……</div><div class="story-choices">${choices.map((c,i)=>`<button class="choice" onclick="doChoice(${i})"><span><b>${'AB'[i]}.</b> ${esc(c.text)}</span><span class="arrow">›</span></button>`).join('')}</div></section>`+footer())}
+function showTurn(){if(!game)return;screen='game';const ev=currentEvent;const all=ev.choices;const choices=all;game.offeredChoices=choices;el(hdr()+`<section class="panel story-panel"><div class="flex"><div class="hud"><span class="pill">第 ${game.turn} / 10 回合</span><span class="pill">${esc(game.role)}</span></div><button class="navbtn quit" onclick="confirmQuit()">结束本局</button></div><div class="progress"><span style="width:${game.turn/10*100}%"></span></div><div class="scene"><div class="chapter">CHAPTER ${String(game.turn).padStart(2,'0')} · 江湖偶遇</div><h2>${esc(ev.title)}</h2><p>${esc(ev.body.replaceAll('{npc}',game.npc.name))}</p></div><div class="scene-question">此刻，你会……</div><div class="story-choices">${choices.map((c,i)=>`<button class="choice" onclick="doChoice(${i})"><span><b>${'ABCDE'[i]}.</b> ${esc(c.text)}</span><span class="arrow">›</span></button>`).join('')}</div></section>`+footer())}
 function tryCareerShift(ev,c){
  if(game.role!=='普通玩家')return '';
  const roles={opportunity_rank:['rank','论剑玩家'],opportunity_speed:['speed','竞速玩家'],opportunity_stream:['stream','主播'],opportunity_escort:['escort','陪玩'],opportunity_forest:['forest','觉障林高手'],opportunity_player:['player','海王']};
@@ -362,8 +379,8 @@ function resolveEnding(){
  else id='E37';
  return endings.find(x=>x.id===id)||endings[29];
 }
-function finishGame(){if(!game)return;lastEnding=resolveEnding();save.runs++;save.seen[lastEnding.id]=(save.seen[lastEnding.id]||0)+1;save.cgs[lastEnding.cg]=true;const record={name:game.name,ending:lastEnding.id,turns:game.eventsCompleted,date:new Date().toLocaleString('zh-CN'),stats:{...game.stats}};save.history.unshift(record);save.history=save.history.slice(0,20);persist();const shouldAd=save.runs%5===0;game=null;showEnding(lastEnding,shouldAd)}
-function showEnding(ending,shouldAd=false){screen='ending';const cg=cgData[ending.cg-1];el(hdr()+`<section class="panel"><div class="end-hero"><div class="eyebrow">YOUR DESTINY · ${ending.id}</div><div class="laurel">${ending.kind==='good'?'♥':ending.kind==='career'?'✦':ending.kind==='bad'?'☾':'✧'}</div><h2>${esc(ending.name)}</h2><span class="badge">${({good:'心动佳话',bad:'江湖翻车',career:'独行封神',meme:'隐藏彩蛋'})[ending.kind]}</span><p>${esc(ending.desc)}</p></div><h3>✦ 结局限定 CG · ${esc(cg.name)}</h3>${cgMarkup(cg,true)}<p class="tiny">CG ${String(cg.id).padStart(2,'0')} / 20 · 已实装，达成对应结局后可在CG画廊反复查看</p><div class="ending-actions"><button class="btn" onclick="showSetup()">再次入江湖</button><button class="btn secondary" onclick="showEndings()">结局图鉴</button><button class="btn secondary" onclick="showCGs()">CG画廊</button></div></section>`+footer());if(shouldAd)setTimeout(showAd,160)}
+function finishGame(){if(!game)return;lastEnding=resolveEnding();save.runs++;save.seen[lastEnding.id]=(save.seen[lastEnding.id]||0)+1;save.cgs[lastEnding.cg]=true;const finalResult=game.log.at(-1)?.result||'';const record={choices:game.log.map(x=>({...x})),name:game.name,ending:lastEnding.id,turns:game.eventsCompleted,date:new Date().toLocaleString('zh-CN'),stats:{...game.stats}};save.history.unshift(record);save.history=save.history.slice(0,20);persist();const shouldAd=save.runs%5===0;game=null;showEnding(lastEnding,shouldAd,finalResult)}
+function showEnding(ending,shouldAd=false,finalResult=''){screen='ending';const cg=cgData[ending.cg-1];el(hdr()+`<section class="panel"><div class="end-hero"><div class="eyebrow">YOUR DESTINY · ${ending.id}</div><div class="laurel">${ending.kind==='good'?'♥':ending.kind==='career'?'✦':ending.kind==='bad'?'☾':'✧'}</div><h2>${esc(ending.name)}</h2><span class="badge">${({good:'心动佳话',bad:'江湖翻车',career:'独行封神',meme:'隐藏彩蛋'})[ending.kind]}</span><p>${esc(ending.desc)}</p></div>${finalResult?`<div class="notice" role="status">${esc(finalResult)}</div>`:''}<h3>✦ 结局限定 CG · ${esc(cg.name)}</h3>${cgMarkup(cg,true)}<p class="tiny">CG ${String(cg.id).padStart(2,'0')} / 20 · 已实装，达成对应结局后可在CG画廊反复查看</p><div class="ending-actions"><button class="btn" onclick="showSetup()">再次入江湖</button><button class="btn secondary" onclick="showEndings()">结局图鉴</button><button class="btn secondary" onclick="showCGs()">CG画廊</button></div></section>`+footer());if(shouldAd)setTimeout(showAd,160)}
 function cgMarkup(cg,large=false){return `<div class="cgslot" style="${large?'width:100%;max-width:650px;margin:auto;':''}"><img src="${cg.file}" alt="${esc(cg.name)}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="cg-fallback" style="display:none"><div class="symbol">${cg.symbol}</div><div style="color:#f7d8ef">CG ${String(cg.id).padStart(2,'0')} · ${esc(cg.name)}</div><small style="color:#cbaccd">图片加载失败，请确认 assets 中存在对应文件。</small></div><div class="cg-overlay"><b>CG ${String(cg.id).padStart(2,'0')} · ${esc(cg.name)}</b><small>${esc(cg.prompt)}</small></div></div>`}
 function openCG(id,preview=false){const cg=cgData.find(x=>x.id===id);if(!cg||(!preview&&!save.cgs[id]))return;document.getElementById('modalHost').innerHTML=`<div class="overlay" role="dialog" aria-modal="true" aria-label="CG预览"><div class="modal" style="width:min(100%,760px)"><div class="flex"><div class="ad-head">CG PREVIEW · ${String(id).padStart(2,'0')}</div><button class="navbtn" onclick="closeModal()">✕</button></div><h2 style="margin:10px 0 14px">${esc(cg.name)}</h2>${cgMarkup(cg,true)}<p class="rule">${esc(cg.prompt)}</p><button class="btn" style="width:100%" onclick="closeModal()">关闭</button></div></div>`}
 function showEndings(){screen='endings';el(hdr()+`<section class="panel"><button class="back" onclick="showHome()">← 返回首页</button><div class="eyebrow">DESTINY ARCHIVE</div><h1 class="section-title">人生结局图鉴</h1><p class="muted">已解锁 ${Object.keys(save.seen).length} / ${endings.length} 个首批结局。360 种为后续开发目标，当前实装38个结局判定与文本。</p><div class="ending-grid">${endings.map(e=>`<div class="ending-card ${save.seen[e.id]?'':'locked'}"><span class="badge">${e.id} · ${({good:'心动',bad:'翻车',career:'事业',meme:'彩蛋'})[e.kind]}</span><strong>${save.seen[e.id]?esc(e.name):'？？？ 未解锁'}</strong><p>${save.seen[e.id]?esc(e.desc):'继续游玩，尝试不同的人生路线。'}</p>${save.seen[e.id]?`<div class="tiny">达成 ${save.seen[e.id]} 次 · CG ${e.cg}</div>`:''}</div>`).join('')}</div></section>`+footer())}
@@ -373,52 +390,507 @@ function resetSave(){if(confirm('确定清空本机所有结局和CG解锁记录
 function showAd(){document.getElementById('modalHost').innerHTML=`<div class="overlay" role="dialog" aria-modal="true" aria-label="争锋工作室推广"><div class="modal"><div class="flex"><div class="ad-head">AD · 争锋工作室推广</div><button class="navbtn" onclick="closeModal()">✕</button></div><div class="ad-graphic"><div style="font-size:13px;letter-spacing:6px;color:#ffd9ea">江湖同行 · 双排无忧</div><h2>争锋工作室</h2><p>游戏制作不易 · 点陪玩选争锋</p><div style="font-size:13px;color:#ffe6ee">双排 · 陪玩 · 快乐开黑</div><p>联系微信</p><div class="wechat">GuanDR666</div></div><p class="rule">已完成 ${save.runs} 局。本推广每完成5局展示一次，不影响游戏属性、结局与存档。可直接关闭继续游玩。</p><button class="btn" style="width:100%" onclick="closeModal()">继续我的江湖 ❤</button></div></div>`}
 function closeModal(){document.getElementById('modalHost').innerHTML=''}
 window.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});showHome();
-// V1.3 故事线重构：前两回合铺垫，第3回合必定遇见女主，后续7回合关系事件。
+// V1.7: ten turns, heroine-specific arcs, event memory, weighted comic/social incidents.
+// Entire cast and situations are fictional. Real-world gossip is used only as thematic reference.
 const heroines=[
- {id:'disciple',name:'小栀',label:'可爱女大学生徒弟',emoji:'🌸',intro:'她刚读大学，游戏里是热情的新手，喜欢收集小动物和跑图。',where:'你在大世界帮人解了一道谜题，一个叫「小栀」的萌新在附近频道小声求带。',hook:'“师父师父！我又迷路了，这次真不是故意的。”',value:'trust'},
- {id:'sister',name:'晚棠',label:'御姐音休闲玩家',emoji:'🌙',intro:'声音温柔成熟，不爱争排名，更喜欢看风景、拍照和聊天。',where:'缘分桥附近，你遇到一位正在弹琴的休闲玩家「晚棠」，她邀请你坐下听一曲。',hook:'“小朋友，别急着赶路，江湖的月亮今晚很好看。”',value:'warm'},
- {id:'pvp',name:'霜刃',label:'高冷PVP女高手',emoji:'⚔️',intro:'话少、操作强，常年研究论剑与争锋，很在意尊重和实力。',where:'止戈比武结束，你被一位叫「霜刃」的高冷女高手用一招收尾。她却主动提出复盘。',hook:'“你刚才那招不差。要不要再练一局？”',value:'respect'},
- {id:'speed',name:'折枝',label:'沉迷竞速的竞速妹',emoji:'🍃',intro:'一心刷新身法路线纪录，语速快，聊天三句离不开“再跑一把”。',where:'你跑图时险些撞上正在刷竞速路线的「折枝」。她停下来问你有没有看到捷径。',hook:'“只差零点三秒！你来帮我盯一下路线？”',value:'companion'}
+ {id:'disciple',name:'小栀',label:'可爱女大学生徒弟',emoji:'🌸',where:'在清河解谜时，你遇到一位迷路的成年女大学生。她的ID叫「小栀」，正对着机关转圈。',hook:'“救命，师父！这破机关转得比我期末周还快！”',topic:'师徒日常',voice:'活泼黏人',promise:'一起走出新手村',weakness:'害怕被当作只会撒娇的菜鸟'},
+ {id:'sister',name:'晚棠',label:'御姐音休闲玩家',emoji:'🌙',where:'缘分桥旁有人轻弹古琴。ID「晚棠」的成年休闲玩家邀请你驻足听曲，声音像深夜电台。',hook:'“别忙着打卡，坐下来看看这轮月亮。”',topic:'江湖闲游',voice:'温柔疏离',promise:'哪怕退游也愿意联络',weakness:'厌烦被强行安排亲密关系'},
+ {id:'pvp',name:'霜刃',label:'高冷PVP女高手',emoji:'⚔️',where:'论剑练习场上，你被ID「霜刃」的女高手漂亮反制。她竟发来复盘邀请。',hook:'“操作还行，意识得练。再打两把。”',topic:'论剑争锋',voice:'简洁直接',promise:'赢一场配合默契的双排',weakness:'讨厌别人把实力当恋爱筹码'},
+ {id:'speed',name:'折枝',label:'沉迷竞速的竞速妹',emoji:'🍃',where:'身法竞速起点，ID「折枝」的女生第十三次刷新个人纪录失败，抓住路过的你问路线。',hook:'“还差零点三秒！你帮我数拍子好吗？”',topic:'竞速纪录',voice:'语速飞快',promise:'一起冲进榜单',weakness:'专注竞速时常忽略对方情绪'}
 ];
-function rr(a){return a[Math.floor(Math.random()*a.length)]}
-function story(title,body,a,b,id){return {id,title,body,choices:[a,b]}}
-function op(text,result,changes={}){return {text,result,changes}}
-function stageEvent(){
- const g=game,h=g.hero,f=g.flags,t=g.turn;
- if(t===1)return story('江湖开服，今晚去哪儿？','下班/下课后，你打开《燕云十六声》。没有固定搭子，也没有惊天人设，只想度过一个普通的夜晚。',op('逛逛大世界，顺便看看附近频道。','你沿河边漫无目的地闲逛，遇见不少有趣的玩家。',{social:1}),op('先清日常，有人喊组队再说。','你把日常清得七七八八，心情轻松不少。',{practice:1}),'start');
- if(t===2){if(g.dream)return story('凌晨群里的深情文学','打觉群里，ID「梦西洲」的大叔又在酒后发了一大段忧郁小作文：“有人懂江湖的冷，却无人懂我的心。”有群友怀疑他是在钓年轻女孩安慰。',op('不评价真假，提醒群友别轻信陌生人的私聊。','群里笑成一团，有人说你是清醒的江湖观察员。',{wise:1,dreamCalm:1}),op('发个“叔，先把酒醒了”表情包。','大伙发了满屏表情包。梦西洲沉默三分钟，又发了一句“算了”。',{meme:1,dreamMeme:1}),'dream');
- return story('一次看似普通的偶遇','朋友发来一条组队邀请：有人打本缺一人，有人约着看夜景。你想起自己好像很久没认识新朋友了。',op('加入临时队，跟大家说声晚上好。','这趟队伍气氛很好，有人给你点了好友申请。',{social:1}),op('去大世界散散心，等真正合拍的搭子。','你路过河岸，看见有人在弹琴、有人在练身法。',{calm:1}),'premeet')}
- if(t===3)return story('命运的组队邀请',`${h.where}\n${h.hook}`,op('自然回应，先一起玩一会儿。',`你和${h.name}组了队，她笑着说：“原来你还挺好相处的。”`,{bond:2,met:1}),op('有点害羞，但还是答应邀请。',`你们从笨拙的开场聊起，${h.name}发现你其实很认真。`,{bond:1,met:1,shy:1}),'encounter');
- if(t===4){const scene={disciple:'小栀又卡在一处机关前，问你能不能手把手教。',sister:'晚棠邀请你去一处山顶看日出，还说不必打怪。',pvp:'霜刃把你叫进切磋房，想帮你改掉一个习惯性失误。',speed:'折枝突然分享一张写满箭头的竞速路线截图，让你一起研究。'}[h.id];return story('从路人到固定搭子',`${scene}\n你意识到，自己开始期待她的下一条消息。`,op('认真陪她，顺便聊聊游戏之外的生活。','这一次，你们交换了更多生活趣事，聊天不再局限于游戏。',{bond:2,trust:1}),op('以搞怪方式接梗，让气氛轻松一点。','她被你逗笑了，顺势把你拉进常用组队列表。',{bond:1,humor:1}),'bond')}
- if(t===5)return story('深夜的那条消息',`${({disciple:'做完作业的小栀',sister:'刚结束夜班的晚棠',pvp:'刚练完论剑的霜刃',speed:'还在刷路线的折枝'})[h.id]}突然私聊：“你怎么还在线？”聊天从今天的游戏，聊到明天吃什么。你发现彼此作息好像渐渐同步了。`,op('问她以后能不能固定一起玩。',`“可以呀。”${h.name}回复，过了几秒又补上一枚小爱心。`,{bond:2,steady:1}),op('调侃一句“你是不是舍不得我下线？”',`她回了一个捂脸表情包：“少自恋……不过还真有一点。”`,{bond:2,flirt:1}),'night');
- if(t===6){if(g.dream&&Math.random()<.32)return story('又见梦西洲小作文',`你和${h.name}正在组队，群里「梦西洲」又发：“醉后无人问，醒来皆过客。”有人私聊你问该不该安慰他。${h.name}也看到了这段话。`,op('提醒朋友可以关心，但要保留边界。',`${h.name}说：“你还挺清醒的，至少不会跟着乱带节奏。”`,{bond:1,trust:2,dreamCalm:1}),op('和她一起围观群友接梗，别传播人家隐私。',`你们笑了一阵，${h.name}说这群里每天像在放连续剧。`,{bond:1,humor:1,dreamMeme:1}),'dream2')
- return story('朋友圈里的一点酸意',`你发现${h.name}最近也常和别人双排。有人开玩笑说，她已经有“新固定”了。她主动问你：“你是不是有点不开心？”`,op('坦诚说出在意，但尊重她的正常社交。',`她认真解释：“我和别人打游戏，不代表我不在乎你。”你们聊得很坦白。`,{bond:2,trust:2,healthy:1}),op('嘴硬说没事，之后却故意冷淡。',`她察觉了你的冷淡，发来一句“有话直说嘛”，气氛有点僵。`,{bond:-2,mistrust:2,avoid:1}),'jealous')}
- if(t===7){if(g.bond<=2)return story('还要不要继续靠近？',`${h.name}觉得你最近有些疏远，问：“我们是不是只适合偶尔组队？”这可能是最后一次认真沟通的机会。`,op('说清误会，重新邀请她一起玩。','你们把没说出口的心事讲明白，关系终于回暖。',{bond:3,trust:2,repair:1}),op('保持普通朋友，不强求她回应。','你们相互祝福，选择各自继续江湖。',{friendOnly:1,solo:1}),'repair')
- return story('侠缘和心动，是一回事吗？',`${h.name}问你：“如果我们绑定侠缘，你会不会当真？”${({disciple:'她紧张地捏着衣袖。',sister:'她的声音轻了下来。',pvp:'她停下了手里的切磋邀请。',speed:'她第一次没急着开下一把竞速。'})[h.id]}她似乎在等一个认真回答。`,op('表明想认真了解她，也尊重她的节奏。',`她轻声说：“那就从今天开始认真试试吧。”你们约定不会把游戏绑定当成现实承诺的替代。`,{bond:2,trust:2,serious:1} ),op('先不定义关系，继续暧昧双排。',`她说“好呀”，但提醒你别默认双方已经是情侣。`,{bond:1,ambiguous:1}),'confess')}
- if(t===8){if(f.friendOnly)return story('重新找到自己的节奏',`虽然与${h.name}没有成为情侣，你们仍偶尔打招呼。一个老玩家邀你试试高强度训练，亦有朋友想请你直播。`,op('接受挑战，试试新的江湖方向。','你开始规律练习，发现自己也能找到新的快乐。',{careerTry:1}),op('继续当休闲玩家，保留好朋友。','你仍然喜欢闲逛江湖，和朋友保持轻松联系。',{solo:1}),'solo8');
- return story('聆音大套与真心',`${h.name}看中了一套很贵的聆音时装，随口说“好好看啊”。你听得出她是在分享喜好，并没有要求你买。可群友却调侃：“恋爱脑，该你表现了。”`,op('量力而行，陪她一起攒心仪装扮。',`她笑了：“你不用给我买，我想要的是有人陪我。”`,{bond:2,trust:1,healthy:1}),op('冲动买下大套，想借此确定关系。',`你送出了昂贵礼物。她道了谢，但你也开始担心自己是不是给了彼此太大压力。`,{gift:1,bond:1,spent:1}),'gift')}
- if(t===9){if(f.friendOnly)return story('新的江湖机遇',`你回到普通玩家生活。${h.name}发来祝福：“找到喜欢做的事最重要。”此时一个小众圈子的邀约送到了你面前。`,op('抓住难得机会，好好投入。','你开启一段与恋爱无关的成长路线。',{careerTry:1}),op('不接邀约，继续自在闯荡。','江湖很大，你决定不让头衔定义自己。',{solo:1}),'career9');
- if(!f.serious)return story('暧昧的分岔路',`${h.name}问：“我们每天都聊天，你到底怎么想？”这次你不能再用表情包糊弄过去。`,op('认真表白，把关系说清楚。',`她沉默了几秒：“我也想认真试试。”`,{serious:1,bond:2,trust:2}),op('说现在只想做游戏搭子。',`她点点头：“谢谢你说清楚。”你们回到普通朋友的距离。`,{friendOnly:1,solo:1}),'lateConfess');
- if(f.gift && Math.random()<.24)return story('礼物之后的沉默',`${h.name}发现你这两天总提起那套昂贵时装，认真问：“我很感谢，但你是不是把这当作对我的要求？”你意识到送礼也会给对方压力。`,op('道歉，明确礼物不能换取感情。',`你解释清楚，${h.name}终于松了口气：“以后别为我乱花钱。”`,{trust:2,bond:1,healthy:1}),op('质问她为何没有因此更亲近你。',`她沉默后表示需要冷静。你们的相处开始变得沉重。`,{rupture:1,bond:-4}),'giftConflict');
- if(Math.random()<.10)return story('照片里的那个人',`${h.name}说想奔现，可你发现她发来的照片和个人主页里似乎有些对不上。真实身份还需要核实，你不想做出草率决定。`,op('提出先视频确认，再决定是否见面。',`视频里双方坦诚聊了很久。你们发现先前存在误解，决定先慢慢了解。`,{verified:1,trust:1,longDistance:1}),op('只凭头像就买下车票，不再确认。',`见面安排来得太仓促，你心里埋下一丝不安。`,{unverifiedMeet:1}),'photoQuestion');
- return story('要不要走进现实？',`${h.name}提起最近的线下见面活动。你们还没有正式见过面，现在终于有机会让关系迈出一步。`,op('先互相确认身份，再约白天公共场所见面。',`你们认真核实了彼此身份，约在热闹的车站见面。${h.name}笑着朝你挥手。`,{verified:1,meetInPerson:1,bond:2,trust:2}),op('先不奔现，继续用时间了解彼此。',`你们约好慢慢来。她说：“不着急，喜欢不是赶进度条。”`,{longDistance:1,bond:1,trust:1}),'meet')}
- // 第10回合总是关系结局关口，不凭空婚礼或突然被骗
- if(f.rupture)return story('礼物真的能换来喜欢吗？',`${h.name}终于说出心里话：“我不想因为收过礼物，就必须回应你的期待。”你看着聊天框，知道关系已经走到岔路口。`,op('承认自己越界，停止索求，体面道别。','你没有挽回成功，但保留了彼此最后的尊重。',{breakup:1}),op('继续责怪她“不懂感恩”。','你们最终闹得不欢而散，留下的只是账单和遗憾。',{breakup:1,spent:1}),'lastRupture');
- if(f.unverifiedMeet)return story('车站里的误会',`你按照片在人群里找了半天，却发现迎接你的真人与先前描述不符。原来你们一直没把身份说清楚。`,op('先确认情况，决定把关系转为普通朋友。','你们坦诚沟通后和平分别。',{catfish:1}),op('尴尬离开，决定今后先核实身份再奔现。','你终于明白照片不等于承诺。',{catfish:1}),'lastCatfish');
- if(f.friendOnly)return story('仍是你的江湖',`你和${h.name}偶尔还会互相点赞，但故事并不一定要变成爱情。回头看，这段相遇也没有白费。`,op('继续打本、看风景，做自在玩家。','你把这段缘分留在好友列表。',{solo:1}),op('把更多时间投入擅长的玩法。','你决定认真经营自己的江湖目标。',{careerTry:1}),'lastSolo');
- if(!f.serious)return story('缘分未满',`${h.name}发来一张游戏里的合照。两人相视一笑，但谁也没有把未来说得太满。`,op('珍惜这份陪伴，慢慢了解。','你们没有仓促许诺，仍然期待明天上线。',{bond:1,lasting:1}),op('给这段暧昧一个体面的句号。','没有争吵，你们选择各自启程。',{solo:1}),'lastOpen');
- if(f.meetInPerson)return story('第一次见面之后',`离开车站时，${h.name}问你：“游戏里我们已经很合拍，现实里还要不要继续认识我？”`,op('牵起她的手，认真开始现实恋爱。','你们开始约会，未来的每一天都比一张游戏截图更真实。',{lasting:1,happy:1}),op('从现实朋友慢慢相处，不急着谈婚论嫁。','你们相约下一次见面，给彼此留有空间。',{lasting:1}),'lastMeet');
- return story('隔着屏幕的晚安',`${h.name}发来语音：“我喜欢我们现在这样，但也希望将来能见面。”你终于明白，真正的关系需要持续经营。`,op('商量未来的见面计划，不许空头承诺。','你们写下见面计划，也答应在现实中照顾好自己。',{lasting:1,happy:1}),op('仍然在意她，但暂时没有余力经营异地恋。','你们决定放慢关系节奏，保留彼此的体面。',{longDistance:1}),'lastDistance')
+const randomOne=a=>a[Math.floor(Math.random()*a.length)];
+const mk=(id,title,body,choices,meta={})=>({id,title,body,choices,category:meta.category||'love',weight:meta.weight||1,need:meta.need||null,exclude:meta.exclude||null,arc:meta.arc||null,chapters:meta.chapters||null,rare:!!meta.rare});
+const opt=(text,result,delta={})=>({text,result,delta});
+// branch variables are internal. The interface does not display numeric changes.
+const CL=(title,body,yes,no,meta={})=>mk(meta.id||('a'+contentEvents.length),title,body,[opt(...yes),opt(...no)],meta);
+const contentEvents=[];
+const add=(id,title,body,yes,no,meta={})=>contentEvents.push(mk(id,title,body,[opt(...yes),opt(...no)],meta));
+// ----- Pre-meeting everyday life, all players remain ordinary -----
+add('pre1','今晚先打什么？','你刚上线，群里一边喊打本，一边喊“在线蹲情缘”。你还只是个普通燕云玩家。',['看看附近频道，也许有有趣的人。','你认识了两个会接梗的玩家。',{social:1,kind:1}],['清日常，留下余力看风景。','你做完任务，带着一身轻松回到大世界。',{practice:1}],{chapters:[1,2]});
+add('pre2','群里有人在招固定','有人招觉障林双排，有人招论剑搭子，还有人标注“别来恋爱脑”。',['先问清楚玩什么，不急着贴标签。','你顺利混进一个正常聊天的群。',{social:1,clear:1}],['回一句“本服最强气氛组申请出战”。','有人邀请你充当今晚的吉祥物。',{meme:1,social:1}],{chapters:[1,2]});
+add('pre3','断不了情根','群友给你做了一个“断不了情根”鬼畜短片，旁白是“少侠呐少侠”。',['转发：我现在真的断得了。','群友不信，纷纷给你介绍侠缘。',{meme:1,social:1}],['回复：你说得对，我还要打觉。','你暂时把爱情放在聊天框里。',{practice:1}],{chapters:[1,2]});
+add('pre4','爱你老己','凌晨，朋友突然感慨：“先爱自己，老己。”有人说刚给网恋对象买了时装。',['笑着说，买东西也得看预算。','你决定绝不靠氪金证明感情。',{guard:1,clear:1}],['说不定真心不贵，先认识人再说。','你给陌生人的好感留了一扇门。',{warm:1}],{chapters:[1,2]});
+add('pre5','论剑房里的嘴硬','一次切磋你被打得毫无还手之力，对面发：“你有操作，只是操作不多。”',['回个表情，求对方教教你。','你学到了一个非常实用的小技巧。',{practice:1,kind:1}],['打字：“今天状态不好，明天必拿下。”','你自己也笑了，决定以后少嘴硬。',{meme:1}],{chapters:[1,2]});
+add('pre6','梦西洲的深情文学','晚上十一点，群里ID「梦西洲」的大叔又在酒后发忧郁小作文：“夜风吹散侠客梦，谁来接住我的破碎。”不少人怀疑他在借伤感文字吸引年轻女生私聊。',['提醒群友谨慎交友，别把猜测当证据。','你劝大家只讨论文案，不围攻具体玩家。',{dream:1,clear:1,kind:1}],['接梗：“叔，先喝杯热水，文案可以明早发。”','群里笑成一片，他发了一张泡枸杞的图。',{dream:1,meme:1}],{chapters:[1,2],weight:1.35});
+add('pre7','群策群力还是群策群骂','有人因为队伍走位失误，被队友做成了九宫格战绩图。',['劝双方先复盘别开盒。','队伍气氛缓和，大家继续排本。',{kind:1,clear:1}],['回复：“起码PPT排版不错。”','当事人也笑了，照片没再传播。',{meme:1}],{chapters:[1,2]});
+add('pre8','情缘广告翻车','附近频道一则“找侠缘，包专一”广告，后面竟写了五个联系方式。',['我先围观，别急着相信文案。','你学会看行为，不看海报。',{guard:1}],['问：“这广告是批发的吗？”','旁边玩家刷起问号。',{meme:1,social:1}],{chapters:[1,2]});
+add('pre9','师父的第八个徒弟','一个老玩家抱怨自己徒弟太多，连谁喊师父都分不清了。',['建议建个备忘录，别认错人。','群友把你封为江湖行政主管。',{social:1}],['回“这是带娃模拟器吧？”','一排哈哈哈刷过。',{meme:1}],{chapters:[1,2]});
+add('pre10','“大睡理论”信徒','朋友给你发了一份“大睡理论”：别为打游戏熬到凌晨三点。',['关掉无意义的通知，早点睡。','你第二天操作明显好了点。',{clear:1}],['继续夜游，但不打扰别人休息。','你在空荡的江湖看了一场日出。',{warm:1}],{chapters:[1,2]});
+add('pre11','红绳之谜','缘分桥上有人卖“保证脱单的幸运红绳”，价格比普通材料贵十倍。',['把钱留下来买晚饭。','你成功避开一次玄学消费。',{guard:1}],['假装摆摊：“保证不被绿的红绳！”','路过玩家给你起了个绰号：反诈侠。',{meme:1}],{chapters:[1,2]});
+add('pre12','附近频道抽象文学','有人发“如何呢，又能怎”，后面接一句“今晚觉障林还能拿道魁吗”。',['回：“先把队友拉进队再说。”','你成了群里最有行动力的人。',{social:1}],['发一张猫猫持剑表情包。','你的表情包被疯狂收藏。',{meme:1}],{chapters:[1,2]});
+// ----- Strongly distinct heroine events: 12 per heroine (48), with scene and stakes -----
+const heroineEvents={
+ disciple:[
+ ['d01','师父，救一下！','小栀误把机关钥匙当成时装材料，眼看任务又要失败。',['耐心教一次，让她自己试。','她终于通关，兴奋地给你截了张合照。',{bond:2,trust:2}],['直接代打，催她快点。','她道了谢，却没学会。',{bond:1,stress:1}]],
+ ['d02','期末周限定搭子','小栀说下周有考试，却舍不得错过每天的双排。',['劝她先复习，约好考完再玩。','她偷偷记下你帮她背过的知识点。',{bond:2,trust:2}],['说“少打一天我会伤心”。','她有些为难，第二天明显疲惫。',{stress:2,bond:1}]],
+ ['d03','“师父”还是“哥哥”？','小栀在群里顺口叫你师父，私聊却问：“我能不能只喊你哥哥？”',['先问她想表达什么，不强迫称呼。','她红着脸说只是和你更亲近。',{bond:2,flirt:1}],['发十个土味情话，搞得群里都知道。','她笑得不行，随后提醒别在群里公开调情。',{bond:1,meme:1,stress:1}]],
+ ['d04','第一个双人合照','小栀拉你到桃花树下拍照，却把自己拍得像十米高巨人。',['陪她调整机位，再拍一次。','你们留下了一张很像约会的合照。',{bond:2,trust:1}],['帮她做成“师徒身高差”表情包。','她在群里发了一堆笑哭。',{meme:2,bond:1}]],
+ ['d05','她也想当高手','群友当众叫小栀“混子”，她没有哭，而是说要自己练会输出。',['陪她练，别替她打。','她打出第一次漂亮连招，偷偷给你比心。',{bond:2,trust:2,practice:1}],['替她骂回去，让她不用练。','她感谢你维护，但更想被当成独立玩家。',{stress:2}]],
+ ['d06','两位师父的战争','一名老玩家突然说小栀以前也是他的徒弟，要求她必须只跟自己组队。',['尊重小栀选择，不参与控制欲大战。','她说你是第一个把她意见放在前面的人。',{bond:2,trust:2}],['宣称“她现在是我徒弟”，直接吵起来。','群聊开始截图站队，她很不开心。',{stress:2,scandal:2,jealous:1}]],
+ ['d07','校园快递风波','小栀问你要不要寄点家乡特产，又担心泄露地址。',['不交换隐私，约个安全的线下见面再说。','她说你懂分寸，放心了不少。',{trust:2,guard:1}],['立刻问她宿舍楼和手机号。','她婉拒了这个问题。',{stress:2}]],
+ ['d08','八百字感谢信','小栀给你写了篇“师父年度优秀带娃报告”，结尾居然是“申请晋升为男朋友”。',['认真回应她的心意。','你们第一次把关系谈得清清楚楚。',{bond:2,confess:1,trust:1}],['回复：“驳回，重写，字数不够。”','她说你真气人，但又笑了起来。',{bond:1,meme:2}]],
+ ['d09','师徒关系小作文','一个路人把你们师徒合照发进群里，配文“年度师徒恋大瓜”。',['请求删图，和小栀共同澄清。','群友很快散去，她更信任你了。',{trust:2,clear:1}],['顺着瓜继续编更离谱的故事。','截图越传越离谱，小栀有点难堪。',{scandal:2,stress:2}]],
+ ['d10','别当恋爱脑','她说自己室友总劝她：“网络恋爱会影响学习！”',['聊聊学习生活和彼此底线。','她说认真相处不该耽误现实。',{trust:2,bond:1}],['说：“为了我退掉所有社团吧。”','她认真拒绝，气氛冷了下来。',{stress:3}]],
+ ['d11','她的毕业照','小栀发来一张只露校园风景的照片，问你以后有没有机会一起旅行。',['先确认双方身份与安排，再慢慢计划。','她把见面地点写进日历。',{trust:2,verified:1}],['直接说“你肯定和网图一样漂亮”。','她反问你是不是只在意照片。',{stress:1,unverified:1}]],
+ ['d12','夜间突击考试','小栀突然打电话问：“我的辅助连招和我的生日，你先答哪个？”',['先说生日，再解释自己的技能打算。','她被你逗笑：“答对了，送你一朵花。”',{bond:2,trust:1}],['说“技能重要，生日明年再过”。','她笑着说你真是钢铁直男。',{meme:1,stress:1}]]
+ ],
+ sister:[
+ ['s01','电台里的一声晚安','晚棠下播音乐房后轻声说：“今天想多跟你聊一会。”',['认真听她讲今天遇到的事。','她渐渐放松，愿意主动分享生活。',{bond:2,trust:2}],['开玩笑要她录一百条晚安语音。','她说你可真会点播，还是发来一条。',{meme:1,bond:1}]],
+ ['s02','山顶看日出','晚棠约你凌晨看日出，给你选了一个几乎没人去的山坡。',['陪她静静看完日出。','她说你是难得愿意听风的人。',{bond:2,trust:1}],['一路催她赶紧打本。','她笑着说你真是效率型侠客。',{stress:1,practice:1}]],
+ ['s03','御姐音不是点歌机','群里有人让晚棠反复说暧昧台词，评论越来越不礼貌。',['帮她转移话题，尊重她的意愿。','她私聊向你道谢。',{trust:2,bond:1}],['也跟着起哄让她多说两句。','她结束了语音，之后回复变慢。',{stress:2}]],
+ ['s04','合拍的慢旅行','晚棠想拍一组“江湖四季”的风景照，需要一个肯慢慢走的人。',['陪她找光线，认真完成合拍。','你们把照片做成纪念相册。',{bond:2,trust:1}],['给照片配上“宿命对视”抽象剪辑。','她笑到停不下来，发给朋友一起看。',{meme:2,bond:1}]],
+ ['s05','她还有老侠缘','你看见晚棠与旧侠缘还有主页展示。她说对方是很久以前的搭子，忘了取消。',['问清关系边界，不替她做决定。','她主动解释旧关系，也愿意讨论公开与否。',{trust:2,clear:1}],['偷偷截屏，发群里问“我是不是被绿了”。','半张截图招来各种猜测，她非常不满。',{scandal:3,stress:2,jealous:1}]],
+ ['s06','真正的成年人会道歉','你忙忘了约好的拍照时间。晚棠没有吵，只说“我等了好久”。',['主动道歉，重新约一个确定时间。','她温柔说：“我不是要你随叫随到，只希望你重视。”',{trust:2,bond:1}],['怪她“休闲玩家时间太多”。','她沉默了一会儿，结束了组队。',{stress:3}]],
+ ['s07','前男友的消息','晚棠说有位现实前任联系她，希望复合。她没隐瞒，问你怎么看。',['尊重她自己决定，也表达你的感受。','你们第一次聊起过往与未来。',{trust:2,clear:1}],['要求立刻看她的全部聊天记录。','她觉得被监视，态度冷淡下来。',{stress:3,jealous:2}]],
+ ['s08','她说不用买大套','晚棠分享时装预览，随后补一句：“看看就好，我自己买得起。”',['夸她眼光好，提议去拍免费搭配。','她说跟你相处不累。',{bond:2,trust:2}],['硬要送礼，反复问她爱不爱你。','她很认真地说礼物不等于关系合同。',{gift:1,spent:1,stress:2}]],
+ ['s09','深夜状态反常','晚棠最近总说累。你在群里听到有人猜她同时跟三个人语音。',['先私下关心，不跟风传谣。','原来她最近家里有事，你没有增加她的压力。',{trust:2,clear:1}],['把群聊截图转给更多人求证。','几个人开始议论，她不愿再分享私生活。',{scandal:3,stress:2}]],
+ ['s10','成年人也会撒娇','她第一次在语音里小声说：“今天想有人哄哄我。”',['认真安慰，轻轻讲个睡前故事。','她笑说终于有人把她当普通人，而不是御姐人设。',{bond:2,trust:1}],['回：“御姐撒娇犯规，申请录音存档！”','她笑出了声，也提醒你不能随便录音。',{meme:2,bond:1}]],
+ ['s11','现实里的音乐会','晚棠提起附近有场音乐会，问能否一起去。',['先视频确认身份，再约白天公共场所。','她说很欣赏你的慎重和坦诚。',{verified:1,trust:2}],['不用确认，立刻买票买礼物。','她提醒你见面之前先把细节核实。',{gift:1,spent:1,unverified:1}]],
+ ['s12','退游以后还有你吗','晚棠突然说自己想休息一阵，不一定天天上燕云。',['认真回应：游戏之外也可以慢慢认识。','她说你终于听懂了。',{bond:2,trust:2,lasting:1}],['说不打游戏就不要联系了。','她点头说尊重，关系却淡了。',{stress:3}]]
+ ],
+ pvp:[
+ ['p01','论剑复盘邀约','霜刃把你刚才输掉的录像逐帧讲解。她的话很少，但每句都击中问题。',['虚心请教，自己再练一遍。','你终于打出她认可的连招。',{bond:2,trust:1,practice:1}],['吹嘘自己只是网卡。','她回：“那你先把网络练好。”',{meme:1,stress:1}]],
+ ['p02','固定队还是固定对象','霜刃问你：“来不来固定双排？别误会，是为了练配合。”',['答应训练，不拿竞技邀约强行表白。','你们配合越来越默契。',{bond:2,trust:2}],['马上叫她“老婆”并发到群里。','她发来一句：“先把操作练会。”',{stress:2,meme:1}]],
+ ['p03','竞技场的一句好球','你用霜刃教的技巧打出反制，她短暂沉默，然后说“不错”。',['感谢她的耐心指导。','她嘴角似乎翘了一下。',{bond:2,practice:1}],['在公屏宣布：“爱情使我变强！”','她无语了一会，还是回了个笑脸。',{meme:2,bond:1}]],
+ ['p04','输给她的前固定','霜刃的前固定队友来约战，问你是不是“靠恋爱上位”。',['用操作说话，不攻击任何人。','霜刃站在你这边，表示最讨厌这样挑衅。',{bond:2,trust:1,practice:1}],['拉着亲友去群里对骂。','对战还没开打，瓜房先开始制作PPT。',{scandal:3,stress:2}]],
+ ['p05','她是榜前高手','霜刃冲进榜单前列，却有人指责她“靠队友带飞”。',['支持她用公开战绩回应，不私自爆隐私。','她说你的信任比吹捧重要。',{trust:2,bond:1}],['帮她造一份“全服第一”假战绩图。','她非常反感这种弄虚作假。',{scandal:2,stress:3}]],
+ ['p06','别用我当上分工具','你发现自己开始期待霜刃每天免费带你上分。她直说：“我不是你的代打。”',['承认错误，认真练自己的操作。','你们的关系回到平等搭档。',{trust:2,bond:1,practice:1}],['装可怜：“你不带就是不喜欢我。”','她拒绝被情绪勒索。',{stress:3,exploited:1}]],
+ ['p07','两局觉障林之后','你想谈心，霜刃却先把两场觉障林打完才回复。',['说明自己需要回应，也理解她在比赛。','她答应打完给你留完整的时间。',{trust:2,clear:1}],['截图发朋友圈：“她爱的是觉障林，不是我。”','群友开始玩梗，她有些生气。',{scandal:2,stress:2}]],
+ ['p08','双皮奶之争','组队时你想尝试双皮奶阵容，霜刃却说今天不想打这种套路。',['尊重队友意愿，一起换个阵容。','你们发现新阵容很适合彼此。',{bond:2,practice:1}],['发朋友圈说她技术不行才不玩。','她要求你不要拿她当节目效果。',{scandal:2,stress:3}]],
+ ['p09','胜利还是告白','夺冠复盘结束，霜刃突然说：“其实我很喜欢跟你一起打。”',['问她是否只指竞技合作，再认真回应。','她承认了自己的心动。',{bond:2,trust:2,confess:1}],['只回“那今晚还能再带我上分吗”。','她说你果然满脑子胜率。',{practice:1,stress:1}]],
+ ['p10','刀房礼仪','你们遇到对手在刀房不断挑衅，有人提议赢了之后去截坟。',['按规则打，赢了也保持风度。','霜刃说你是少见不爱争口舌的搭档。',{bond:1,trust:2,practice:1}],['要求全队必须截坟出视频。','小摩擦被放大，开始有人恶意剪辑。',{scandal:3,stress:1}]],
+ ['p11','她的直播邀请','一位主播请霜刃上节目，她邀请你临时当搭档，但你有自己的安排。',['坦诚约好时间，不承诺免费长期上分。','她说这样合作才舒服。',{trust:2,bond:1}],['直接辞掉其他事天天为她打。','一周后你累得不行，对她也有怨言。',{spent:1,stress:2,exploited:1}]],
+ ['p12','顶着风雪的冠军','霜刃说冲榜最后一天，希望你来场边陪她。',['陪她备赛，也为自己的目标努力。','她赢下关键局，第一时间看向你。',{bond:2,trust:2,practice:1}],['在场边拉横幅：“榜一是我老婆”。','她捂脸笑了，队友刷起“断不了情根”。',{meme:2,bond:1}]]
+ ],
+ speed:[
+ ['r01','零点三秒的执念','折枝第十九次撞到同一块石头，气得说要跟这块石头结侠缘。',['帮她记下节奏点，陪她再试一次。','她成功避开石头，欢呼得像拿了冠军。',{bond:2,trust:1,practice:1}],['给石头取名“情敌一号”。','折枝笑得差点又撞上去。',{meme:2,bond:1}]],
+ ['r02','竞速妹没有晚安','折枝半夜两点还在刷路线，说“再一把就睡”已经说了十二次。',['提醒休息，明天继续努力。','她关掉计时器给你发了晚安。',{bond:2,trust:2}],['陪她无休止地刷新，第二天双双起不来。','你们很快乐但也累坏了。',{bond:1,stress:1,practice:1}]],
+ ['r03','“带我跑”还是“陪我跑”','折枝问你要不要一起竞速，却不想你单纯站旁边挂机。',['真的练一下她分享的路线。','你第一次追上她半个身位。',{bond:2,practice:1}],['全程挂机夸她“宝宝真厉害”。','她说夸得很好，下次记得动一动。',{meme:1,stress:1}]],
+ ['r04','她的录像被抄了','有人直接搬运折枝的路线视频，甚至说成自己的原创。',['帮她整理原视频时间线，礼貌申请标注。','对方补上了来源，她感谢你帮忙。',{trust:2,clear:1}],['带人去评论区围攻，顺便攻击外貌。','争议进一步扩大，她不愿被当流量工具。',{scandal:3,stress:2}]],
+ ['r05','竞速还是约会','你们约好一起看游戏里的烟花，折枝却临时发现新捷径。',['说清希望她守约，也可以另定时间。','折枝道歉，关了计时器陪你看完整场烟花。',{bond:2,trust:2}],['生闷气，第二天用沉默惩罚她。','她很困惑，问你为什么不直接说。',{stress:2,jealous:1}]],
+ ['r06','神之八秒','折枝打出完美八秒操作，群友剪成“神之八秒”的鬼畜合集。',['替她剪一版有趣且尊重本人的视频。','折枝激动地说要请你喝奶茶。',{bond:2,meme:1}],['私自挂上“我女朋友”的标题炒流量。','她皱眉提醒你们还没确认关系。',{scandal:2,stress:2}]],
+ ['r07','排行榜上的陌生ID','折枝的纪录突然被陌生玩家打破。她说对方好厉害，想认识一下。',['鼓励她正常交流，和高手一起练。','她发现你并不把每个异性都当情敌。',{trust:2,clear:1}],['要求她立刻拉黑新高手。','她说你是不是把竞争和恋爱搞混了。',{stress:3,jealous:2}]],
+ ['r08','赛道里的情话','折枝突发奇想：“你能不能把‘我喜欢你’说完的时间练成一条新路线？”',['认真陪她设计浪漫竞速彩蛋。','计时器停在你们的专属数字上。',{bond:2,trust:1,flirt:1}],['回复：“我爱你”三个字更省时间。','她大笑：“你是不是也有点竞速脑了？”',{bond:1,meme:2}]],
+ ['r09','两份邀请','你约折枝晚饭，她同一时间收到竞速比赛邀请。',['一起协调行程，不逼她二选一。','她主动提前约你，比赛也没耽误。',{bond:2,trust:2}],['说不来约会就当场斩缘。','她认真说不能拿感情当威胁。',{stress:3}]],
+ ['r10','零点一秒的秘密','折枝承认自己故意等你一起到终点，因为一个人破纪录没有两个人庆祝开心。',['告诉她不用放水，真正的并肩是各自变强。','她笑着说你才是最想一起冲线的人。',{bond:2,trust:2}],['让她以后比赛都故意输给你。','她皱眉：你是不是太想赢了？',{stress:2}]],
+ ['r11','现实竞速挑战','折枝说线下有个跑步活动，问你要不要去为她加油。',['先视频核实身份，按安全约定见面。','她开心地给你发了活动日程。',{verified:1,trust:2}],['不问地点和安全问题就直接出发。','她提醒你先把行程确认清楚。',{unverified:1,stress:1}]],
+ ['r12','冠军不应该一个人庆祝','折枝终于破了大纪录，却突然说：“我是不是把你晾在一边太久了？”',['抱抱她，告诉她你愿意并肩但也需要陪伴。','你们约定每周留一晚只属于彼此。',{bond:2,trust:2,lasting:1}],['说她现在才想起自己有对象。','她有点委屈，决定暂时专心练习。',{stress:2}]]
+ ]
+};
+for(const [arc,items] of Object.entries(heroineEvents))for(const [id,title,body,yes,no] of items)add(id,title,body,yes,no,{arc,chapters:[4,5,6,7,8],weight:1.25});
+// ----- Universal romance & gossip arcs -----
+add('u01','换情头还是换搭子','你发现她跟别人用着一组很像情侣头像的图案，对方说这是大家一起用的系列头像。',['先私聊问清关系，别按头像定罪。','她给你看了群里的整套头像模板。',{trust:2,clear:1}],['立刻在群里挂图说她无缝衔接。','聊天截图扩散，双方都很难堪。',{scandal:3,stress:2,jealous:2}],{chapters:[5,6,7,8]});
+add('u02','双人主页没你','她换了新的双人主页搭配，里面没有你。可你们还没有明确是否公开关系。',['先明确期待：主页展示对你意味着什么？','你们发现彼此理解不一样，逐渐找到折中方式。',{trust:2,clear:1}],['直接说“不换我就分手”。','她认为自己被逼着表态。',{stress:3,jealous:2}],{chapters:[6,7,8]});
+add('u03','前侠缘的突然出现','她的旧侠缘发来求组队消息，还打了个非常熟悉的昵称。',['坦诚说自己在意，也尊重她交友自由。','她主动介绍彼此认识，气氛变轻松。',{trust:2,clear:1}],['悄悄去翻旧聊天记录，再发群里求审判。','亲友开始站队，事情越来越乱。',{scandal:3,stress:2,jealous:2}],{chapters:[5,6,7,8]});
+add('u04','一张截错的图','群里有人说你“吃暧昧票”，证据是一张缺少上下文的私聊截图。',['保存完整记录，私下解释再考虑公开澄清。','误会得到控制，她也帮你澄清。',{trust:2,clear:2}],['怒而发47页PPT对线，不检查个人信息。','事情滚成大瓜，更多人加入围观。',{scandal:4,stress:2,ppt:1}],{chapters:[6,7,8,9]});
+add('u05','七夕时装的大套','游戏上新昂贵时装。她说好看，群友却怂恿你：“不买就是不爱！”',['先问她需不需要，不超预算。','她更喜欢你记住的小事，而不是大额礼物。',{trust:2,healthy:1}],['咬牙送出大套，期待她给出感情承诺。','收到礼物她很惊讶，但并没有许诺爱情。',{gift:1,spent:2,stress:1}],{chapters:[6,7,8,9]});
+add('u06','送完礼物被已读','你送过礼物后，对方最近回复变慢。你不知道她是忙还是关系淡了。',['问清近况，别把付款当“感情债”。','她解释了最近的生活安排。',{trust:2,clear:1}],['连发十条“礼物钱还我”，并在群里贴付款记录。','她觉得被控制，群友开始围观你们的争执。',{scandal:3,stress:3,spent:1}],{chapters:[7,8,9],need:'gift'});
+add('u07','“只是朋友的想念”','她说自己很想念另一个固定队友，你有点吃醋。',['问问边界，允许正常友情存在。','你们把在意和信任说清楚。',{trust:2,clear:1}],['截掉前后语境，发句“懂的都懂”。','群友真的以为出大瓜了。',{scandal:3,stress:2,jealous:1}],{chapters:[5,6,7,8]});
+add('u08','师父也进群了','她的师父在群里调侃你们“是不是要结婚”，还催着摆酒。',['开玩笑化解，不把玩笑当承诺。','大家笑着散场，关系没有被绑架。',{bond:1,trust:1}],['当场官宣，连她本人都没问。','她有些尴尬，提醒你先问自己。',{stress:2,scandal:1}],{chapters:[5,6,7,8]});
+add('u09','公开还是不公开','有人问你们是不是情侣。你们还没谈过对外怎么称呼彼此。',['私下约定双方都认可的说法。','她觉得你很尊重这段关系。',{trust:2,official:1}],['自己发“已领证”，任由网友二创。','她看到热搜式群聊，一脸问号。',{meme:2,stress:2,scandal:2}],{chapters:[6,7,8,9]});
+add('u10','账号双开之谜','群友说看到她两个账号同时在线，有人断定她“脚踏两条船”。',['先听她解释，可能是代清任务。','原来一个号是家人在帮忙，她感谢你没有乱猜。',{trust:2,clear:1}],['把截图放进瓜房，号召大家当侦探。','一场没有证据的猜测很快变成争吵。',{scandal:3,stress:2}],{chapters:[5,6,7,8]});
+add('u11','神秘的红包','一名新认识的玩家发来链接，自称点开就送时装券。',['不点陌生链接，提醒她也注意。','你们共同躲过了可疑链接。',{guard:2,trust:1}],['抢着点开，还转发给整群。','安全提示弹出，你赶紧退出页面。',{stress:1,meme:1}],{chapters:[4,5,6,7]});
+add('u12','猫猫表情包误会','你发“坏女人”表情包逗她，她却刚好心情不好，误以为你在指责。',['解释本意，并问问她今天怎么了。','你们第一次认真聊起表达方式。',{trust:2,bond:1}],['继续已读乱回，再发十个梗图。','她只回了一个问号。',{stress:2,meme:1}],{chapters:[4,5,6]});
+add('u13','“你把我当免费陪玩？”','她连续找你上分，却很少问你的安排。你开始不舒服。',['说清游戏时间和边界。','她意识到自己的疏忽，约好互相照顾。',{trust:2,clear:1}],['忍着不说，心里默默记账。','每多打一局，你都更委屈。',{stress:2,exploited:1}],{chapters:[5,6,7,8]});
+add('u14','朋友圈的宿命对视','她给你发了一段“宿命对视”剪辑，把两个人的游戏角色剪成偶像剧。',['回她一段同款视频，认真夸她。','她发来一串笑声：“你也会整活啊。”',{bond:2,meme:1}],['问她是不是拿模板给所有人都发了。','她很奇怪：我只是想分享一个好看的视频。',{stress:2,jealous:1}],{chapters:[4,5,6]});
+add('u15','小作文代写服务','梦西洲又在群里发忧郁文案，有人说他需要一位专业情感文案运营。',['一起写“早睡早起、健康生活”劝导版。','群友被逗笑，他最后也发了个早安。',{meme:2,dream:1,bond:1}],['偷偷把他造谣成“全服海王”传出去。','虚构传言引来争吵，你被要求澄清。',{scandal:3,stress:1,dream:1}],{chapters:[4,5,6,7]});
+add('u16','瓜房PPT的第48页','群友求你帮忙排版瓜条，里面却有真人ID、手机号和未核实指控。',['拒绝传播隐私，只帮做匿名梗图。','你们把话题变成了“Excel才是恋爱尽头”。',{meme:2,clear:1}],['不看内容直接帮忙转发。','你意识到自己把私人纠纷推成了公审。',{scandal:4,ppt:1,stress:1}],{chapters:[5,6,7,8,9]});
+add('u17','陪玩的点单话术','有人自称“免费陪玩”，后来却不断暗示她给自己点单。',['提醒她认清服务与感情边界。','她说你这次真像个成熟搭子。',{trust:2,clear:1}],['也跟着开玩笑问“我的奶茶呢”。','她说你学坏了，发个翻白眼表情。',{meme:1,stress:1}],{chapters:[4,5,6,7]});
+add('u18','疑似同款晚安','你看见好几位群友都收过“宝宝早点睡”，有人怀疑是群发模板。',['先别给谁定性，聊聊你真正期待的沟通。','她告诉你，有时候一句专属关心更重要。',{trust:2,bond:1}],['立刻做成“海王晚安群发器”PPT。','有人误以为你在指向现实玩家。',{scandal:2,meme:2,stress:1}],{chapters:[5,6,7,8]});
+add('u19','委屈就找康永哥','你和她因打本时间争执。群友模仿“康永哥告状”的口吻说：“她居然让我早点睡！”',['一同调侃，再说清两人的作息。','她笑了：“原来不吵也能解决问题。”',{trust:2,meme:1}],['继续用夸张文案替自己立苦主人设。','她不喜欢被拿来当段子。',{stress:2,scandal:1}],{chapters:[4,5,6,7,8]});
+add('u20','照片滤镜开大了','她发来新照片，滤镜让人物像从游戏捏脸界面直接走出。',['夸拍摄氛围，不拿照片代替身份核实。','她说以后奔现会先互相视频。',{trust:2,verified:1}],['说“就凭这张照片我可以坐一夜高铁”。','她提醒你先核实行程，别冲动。',{unverified:1,stress:1}],{chapters:[6,7,8,9]});
+add('u21','谁把聊天截屏了','你们私聊的一段土味情话被朋友截去一半发群里。',['先请朋友删除，再向她解释。','她放下心，说私聊就该有边界。',{trust:2,clear:1}],['反手把更多私聊截图发出去比谁更会说。','误会越闹越大，大家开始讨论你们的私生活。',{scandal:4,stress:2}],{chapters:[5,6,7,8,9]});
+add('u22','“有主体性”争论','她说：“你不要为了任何人失去自己。”群友却把这句话做成了渣男语录。',['讨论彼此真实需求，不给一句话定罪。','你们定下独处时间和共同时间。',{trust:2,healthy:1}],['认定这是分手暗号，宣布单方面冷战。','她觉得自己被曲解。',{stress:3}],{chapters:[5,6,7,8]});
+add('u23','我画地为牢','你给她发了两行小作文：“我画地为牢……”朋友马上接：“那你还不打本？”',['和她一起改写成搞怪情诗。','你们互相念诗笑到半夜。',{meme:2,bond:1}],['让她必须立刻回复八百字。','她笑说写作业都没这么赶。',{stress:1,meme:1}],{chapters:[4,5,6]});
+add('u24','交友简历像招聘','有人在群里发“求侠缘岗位JD”：每天上线两小时、月底汇报心动KPI。',['做一张“恋爱不打卡”反向招聘图。','她说你太会玩了。',{meme:2,bond:1}],['认真要求她也交日报和考核表。','她提醒你恋爱不该是上班。',{stress:2}],{chapters:[4,5,6,7]});
+add('u25','别人的成功爱情','你看见群友从游戏奔现到结婚的照片，开始怀疑自己进展太慢。',['尊重彼此节奏，不用别人的进度逼她。','她说你愿意慢慢来就好。',{trust:2,bond:1}],['当场订婚礼场地截图发她。','她吓了一跳：咱们还没见面呢！',{stress:2,meme:1}],{chapters:[6,7,8]});
+add('u26','皮套与人设','某主播换了新ID和头像，群里有人说他靠“皮套”骗粉。',['只看公开表现，不按网名判断真人。','你和她聊起网络人设与真实边界。',{trust:1,clear:1}],['跟风举报，完全不查证。','群里有人指出证据不完整。',{scandal:2,stress:1}],{chapters:[4,5,6,7]});
+add('u27','好友徽章排第几','她把另一个朋友的徽章放在展示栏第一位。你莫名吃味。',['直接问徽章代表什么，别自动对号入座。','原来这是她和公会朋友的纪念。',{trust:2,clear:1}],['要求她现在立刻换成你的。','她感受到压力。',{stress:2,jealous:1}],{chapters:[6,7,8]});
+add('u28','戏精群主抢人','群主开玩笑说“今天三个男生七个女生，一人两个”，还想替别人安排侠缘。',['尊重每个人自由选择，跟群主说明白。','她被你的态度打动。',{trust:2,clear:1}],['也跟着点名“给我分三个”。','她问你：“当我是奖励道具？”',{stress:3}],{chapters:[4,5,6,7]});
+add('u29','甜蜜的手机屏幕','你们连麦时，她忽然说：“你今天声音有点好听。”',['轻轻回一句“你也是”，然后继续聊天。','短暂的沉默，比土味情话更让人心动。',{bond:2,flirt:1}],['发一张尺度过大的玩笑图。','她提醒你别越过彼此边界。',{stress:2}],{chapters:[4,5,6]});
+add('u30','私信中的不明身份','一位陌生人私信称自己是“她的前任”，要你给他发私聊记录。',['拒绝交出私人聊天，向她核实。','你们没有让陌生人挑拨成功。',{trust:2,clear:1}],['立刻把私聊和账号资料全部转给他。','对方转头把内容发群里，局势失控。',{scandal:4,privacy:1,stress:2}],{chapters:[6,7,8,9]});
+add('u31','组队频道的“好兄弟”','她用变声器玩梗，故意用低沉男声叫你“老公”。你突然不知道该怎么接。',['笑着问她是不是新学的整活。','她笑得停不下来，还教你变声器参数。',{bond:2,meme:2}],['立刻认定她用假身份骗人。','她收起玩笑，说你想太多。',{stress:2}],{chapters:[4,5,6]});
+add('u32','一条送礼备注','你给她寄游戏纪念品，备注里写了“愿与你长久”。她说好甜，但还没收货。',['不把礼物当作要求，问她是否方便收。','她给你发来开心的自拍表情包。',{bond:2,trust:1}],['每天查物流并催她表态。','她说礼物还在路上，你就先急坏了。',{stress:2,gift:1}],{chapters:[5,6,7,8]});
+// late-stage relationship crises -- only appear after their causes
+add('cr01','一晚三个晚安','你发现一名队友误把发给你们的相同亲密话术复制到了三个群。她也收到了。',['和她说明误发，确认只是群友玩梗。','你们笑过后约定更清晰地表达关系。',{trust:2,clear:1}],['利用错发当证据，说自己被“三线操作”。','群里瞬间出现了一个“海王调查组”。',{scandal:3,jealous:2,stress:2}],{chapters:[7,8,9],need:'jealous'});
+add('cr02','虚假承诺的代价','有人反复暗示你“送聆音大套才会认真谈”，之前的相处却越来越敷衍。你开始意识到这是不健康的互动。',['立即停止送礼，重新确认关系。','你保住预算，发现信任比礼物更重要。',{clear:2,trust:1,gift:0}],['为了最后一次机会再充值。','这次收礼之后，聊天窗口渐渐没有回应。',{giftScam:1,spent:3,stress:2}],{chapters:[8,9],need:'gift'});
+add('cr03','主播和免费打手','她忽然要你连着七晚帮忙上分，同时自己忙着在直播间互动，几乎不与你交流。',['提出平等合作和固定休息时间。','双方调整安排后，重新找到了节奏。',{trust:2,clear:1}],['放弃全部日常，默默替她打完。','你成了免费的上分机器，却失去原本的快乐。',{exploited:2,spent:2,stress:2}],{chapters:[7,8,9],need:'exploited'});
+add('cr04','截图在群里疯传','你们的聊天被截取一小段，群友据此脑补出完全不同的恋情。你们都收到了陌生人的私信。',['只保存必要证据，要求停止传播并向平台举报。','有人删除了错误内容，局势慢慢平息。',{clear:2,trust:1}],['公开更多私密消息“以毒攻毒”。','聊天记录越传越远，最后你也成了瓜房素材。',{scandal:4,privacy:1,stress:2}],{chapters:[8,9],need:'scandal'});
+add('cr05','斩缘后遇见旧人','你们有过争执，又在觉障林排到了她曾经的固定队友。群友忽然开起旧情玩笑。',['拒绝鞭尸，赛后私下把误会说清。','你们没有让队伍摩擦变成人身攻击。',{clear:2,trust:1}],['故意挑衅并截图群发。','矛盾持续扩大，群聊成了审判现场。',{scandal:4,stress:3}],{chapters:[8,9],need:'stress'});
+add('cr06','她提出暂时冷静','争执之后，她说希望各自冷静一天，不想继续高强度争吵。',['尊重边界，约定明天认真谈。','她愿意回来把事情说清楚。',{trust:2,clear:1,stress:-1}],['拉所有共同好友给她打电话施压。','她明确要求停止联系，你们关系走向破裂。',{breakup:1,scandal:3,stress:3}],{chapters:[8,9],need:'stress'});
+// relationship pivotal interactions (varied stage 7/8/9)
+const pivots=[
+ mk('pi01','她问你是不是认真','她忽然问：“天天找我双排，你是喜欢我，还是只想找搭子？”',[opt('认真表达喜欢，也愿意慢慢互相了解。','她说可以认真试试，先把期待聊明白。',{serious:1,bond:2,trust:1}),opt('说暂时只想做朋友，不给模糊承诺。','她感谢你的坦诚，愿意保持朋友关系。',{hesitant:1,clear:1})],{weight:2}),
+ mk('pi02','缘分桥的表白挑战','群友给你出题：要不要在缘分桥向她说出心里话？',[opt('私下跟她表白，不围观、不绑架。','她认真想了想，说愿意与你相处看看。',{serious:1,bond:2,trust:1}),opt('玩梗：“我和我的战绩先结缘。”','她笑说那就先当好搭子吧。',{hesitant:1,meme:2})],{weight:2}),
+ mk('pi03','双人主页的空位','她发来一个双人展示空位，问你愿不愿意填上。',[opt('先确认我们是不是互相喜欢。','你们确定了彼此心意，再一起选服装。',{serious:1,official:1,trust:1}),opt('先做朋友，别让主页替我们决定。','她说理解，你们的搭子关系依然舒服。',{friendOnly:1,clear:1})],{weight:2}),
+ mk('pi04','她第一次吃醋','你和旧搭子打了两把，她语气酸酸地问：“今天还记得我呀？”',[opt('坦诚说她对你很重要，提出认真相处。','她笑了：“我还以为你一直不开窍。”',{serious:1,bond:2}),opt('认为她不该干涉普通组队，决定不发展恋爱。','你们保持友谊，避免期待错位。',{friendOnly:1,clear:1})],{weight:1.4})
+];
+const meetEvents=[
+ mk('meet01','奔现的第一步','她问你：“有机会要不要在线下见一面？”',[opt('先双方视频核实身份，再选公开场所。','你们互相确认都是成年人，约好了白天在人多的地方见面。',{verified:1,meetPlan:1,trust:2}),opt('直接订车票，连照片都不核实。','你一时冲动买票，心里又有点没底。',{unverified:1,meetPlan:1,risk:2})]),
+ mk('meet02','一次真实的语音','她想从游戏语音转到视频通话，你有点紧张。',[opt('开视频确认身份，也尊重对方隐私。','你们聊了很久，现实里的她更加自然。',{verified:1,meetPlan:1,trust:2}),opt('只看头像就说“结婚吧”。','她笑得不行，但提醒你还不够了解彼此。',{unverified:1,meme:1,meetPlan:1})]),
+ mk('meet03','周末的车站','她说周末有空，问你要不要在市中心见面。',[opt('先商量交通和安全，再计划见面。','你们在白天见了面，发现对方比语音里更可爱。',{verified:1,meetInPerson:1,trust:2}),opt('突然跑去她学校/公司楼下“制造惊喜”。','她觉得边界被侵犯，取消见面计划。',{stress:3,unverified:1,meetPlan:1})]),
+ mk('meet04','恋爱不是盲盒','群友告诉你“奔现就是开盲盒”，你开始怀疑网上认识的人都不可信。',[opt('先视频、再谈约会，不拿外貌制造笑点。','你们商量了双方都舒服的见面方式。',{verified:1,meetPlan:1,trust:2}),opt('赌一把，赌错算我节目效果。','你没做身份确认，面对现实更容易尴尬。',{unverified:1,meetPlan:1,risk:2})])
+];
+const finalEvents={
+ romance:[
+ mk('endLove01','江湖之外，还有你','她问：“如果不打燕云了，我们还会联系吗？”',[opt('认真经营现实关系，继续了解彼此。','从此你们的晚安不只出现在游戏里。',{lasting:1,happy:1}),opt('先做彼此稳定的伴侣，放慢节奏。','你们约好每周留时间聊天。',{lasting:1})]),
+ mk('endLove02','从游戏到现实','她发来一张你们的双人截图，说想把它当纪念日壁纸。',[opt('给她准备一份亲手做的小惊喜。','她感动地说：“这才是我想收藏的礼物。”',{lasting:1,happy:1}),opt('陪她复盘一路的误会，定下新约定。','你们互相信任，打算认真走下去。',{lasting:1,trust:2})]),
+ mk('endLove03','第一次真正的约定','她问你们接下来的一年要怎么相处。',[opt('一起列现实可实现的小目标。','你们把对方写进了计划。',{lasting:1,happy:1}),opt('不夸口说永远，先做好今天的事。','她说有你这样的态度就安心。',{lasting:1})]),
+ mk('endLove04','把未来说清楚','她提起结婚的话题，却说不想把网上认识当作冲动决定。',[opt('说可以认真发展，等现实稳定再考虑。','她认同你们该先建立真实生活的默契。',{lasting:1,happy:1}),opt('先一起约会、多了解彼此。','你们选择务实的幸福。',{lasting:1})]),
+ mk('endLove05','江湖落幕，现实开场','几个月后你们开始认真规划共同生活。她说游戏账号也许会暂时休息，但关系不会。',[opt('支持她的生活决定，一起认真规划未来。','几年后你们决定步入婚姻，回头看依然记得第一次双排。',{lasting:1,happy:1,retired:1}),opt('继续保留每周一次的江湖小约会。','你们生活里多了稳定的陪伴。',{lasting:1,happy:1})])
+ ],
+ breakup:[
+ mk('endBad01','朋友圈的最后一张图','争执越积越多，她说不想继续一段靠截图解释的关系。',[opt('尊重分开，不公开彼此隐私。','你们体面斩缘，感情最终还是没能继续。',{breakup:1}),opt('立刻写PPT拉亲友站队。','一场私人的感情争执被做成了瓜房汇报。',{guafang:1,scandal:3})]),
+ mk('endBad02','人设崩塌的一夜','有人把截取的聊天发进群，你们互相都觉得受了委屈。',[opt('整理完整记录、寻求澄清，保护隐私。','误会慢慢平息，但关系也需要结束了。',{breakup:1,clear:2}),opt('继续转发、互相艾特全群。','消息刷了九十九加，你的名字登上了瓜房首页。',{guafang:1,scandal:4})]),
+ mk('endBad03','你买的不是爱情','你送过礼物、熬过夜，对方却说没准备认真谈恋爱。',[opt('停止投入，认真告别。','你终于不再把付出当作收回感情的保证。',{breakup:1,spent:1}),opt('要求群友评理，贴出全部转账。','截图被连夜做成电子ATM表情包。',{guafang:1,spent:2,scandal:2})]),
+ mk('endBad04','换掉双人主页','你发现她的双人主页换了人。你们的关系已经争执很久。',[opt('先确认事实，再体面结束关系。','这次你没有被传闻带着走，仍然决定分开。',{breakup:1,avatarSwap:1}),opt('在大群公屏质问所有人。','争执迅速扩散，几十个人围观你的感情。',{guafang:1,avatarSwap:1,scandal:3})])
+ ],
+ risky:[
+ mk('endRisk01','车站的那个人','你没做身份核实便奔现。来接你的成年人与你想象中的头像人物不一致，还坦承此前误导了你。',[opt('坦然沟通，结束不适合的网恋。','见面变成了成年人之间的一次坦诚告别。',{catfish:1}),opt('把这次乌龙当作搞怪故事，但不公开对方隐私。','你们各自离开，群友只知道你突然变得爱用反诈表情包。',{catfish:1,meme:2})]),
+ mk('endRisk02','好兄弟，你也来奔现？','你来到约定地点，发现“女友”的身份与此前描述不同：原来对方是成年男性，曾在游戏里用女性身份与你暧昧。',[opt('明确表达失望，选择和平结束。','你提醒自己以后先核实身份，也尊重对方作为人的尊严。',{catfish:1,brother:1}),opt('问清缘由，决定以后只做普通网友。','你们并未成为情侣，却有了段离谱的江湖回忆。',{catfish:1,brother:1,meme:1})]),
+ mk('endRisk03','车票与红色感叹号','你准备奔现时才发现对方发来的个人信息互相矛盾，聊天框却突然无法联系。',[opt('停止出行，保护自己的钱和隐私。','你退掉车票，决定以后认真核实身份。',{catfish:1,guard:1}),opt('发帖讲述匿名经历，提醒群友避坑。','你没有曝光真人信息，但还是经历了尴尬一晚。',{catfish:1,meme:1})])
+ ],
+ solo:[
+ mk('endSolo01','你自己的江湖','这段关系没有发展成恋爱，你却仍想把游戏玩好。',[opt('开始认真练论剑。','你逐渐找到训练节奏，江湖还有新的目标。',{careerTry:1,careerPvp:1}),opt('和朋友继续看风景、打觉障林。','你过得舒心，也留下了不错的搭子。',{solo:1})]),
+ mk('endSolo02','舍不得删的好友','她仍在好友列表，但你们都知道不适合谈恋爱。',[opt('开始研究竞速身法。','不断刷新自己的最好成绩，让你找回成就感。',{careerTry:1,careerSpeed:1}),opt('偶尔一起打本，保持朋友关系。','没有绑定也可以自在相处。',{solo:1})]),
+ mk('endSolo03','没有恋爱也能成名','有人邀请你尝试直播觉障林，但你此前只是普通玩家。',[opt('小概率接受直播尝试，认真练内容。','你搭起了一个小直播间，还要慢慢积累观众。',{careerTry:1,careerStream:1}),opt('不做主播，继续普通玩家生活。','江湖不必每个人都成名。',{solo:1})]),
+ mk('endSolo04','帮会的和平使者','你被邀请调解两名群友因侠缘产生的误会。',[opt('耐心听双方陈述，劝他们不要传播隐私。','你的态度让群里冷静了下来。',{mediator:1,clear:2}),opt('只当一个轻松的瓜友，不必出头。','江湖依旧热闹。',{solo:1})]),
+ mk('endSolo05','百业人脉王','有人邀请你当百业活动组织者，帮忙安排新玩家入门。',[opt('先做好活动规则，给大家安排公平的组队机会。','你在江湖里认识了越来越多朋友。',{socialLegend:1,social:2}),opt('只愿带好几个新人，认真教他们操作。','你的徒弟们渐渐学会独当一面。',{mentor:1,practice:1})])
+ ]
+};
+
+
+// A few rare routes make every legacy ending attainable without suddenly granting fame.
+add('u33','双人直播邀约','有人邀请你们一起试播双排节目。她问你愿不愿意把互相相处的过程也分享给观众。',['答应先小范围试播，征得彼此同意。','你们第一次合作直播，气氛意外地自然。',{coupleStream:1,trust:2,bond:2}],['不把恋爱当表演，保留私人空间。','你们约好只在游戏内互动。',{trust:2}],{chapters:[8],need:'serious',rare:true,weight:.35});
+add('u34','退游还是继续','她说最近工作忙，想暂时退游，问你们的关系是否也要结束。',['说游戏只是起点，现实仍然可以相伴。','她感动地说希望和你一起规划未来。',{retirePlan:1,trust:2,bond:1}],['先把恋爱只留在游戏里。','她说会认真考虑。',{stress:1}],{chapters:[8],need:'serious',rare:true,weight:.35});
+
+// Expansion pass: extra character-exclusive branches; no reused text across heroines.
+const extraHeroEvents={
+ disciple:[
+ ['dx01','手把手教没教明白','小栀把机关说明截图发你：“你会不会觉得我笨呀？”',['先鼓励她，再画个简单操作图。','她成功通关，说想把你画的图当壁纸。',{bond:2,trust:2}],['回“建议把笨蛋写进ID”。','她知道你是玩笑，却还是有点难过。',{stress:1,meme:1}]],
+ ['dx02','室友的恋爱审判','小栀室友听说她有了游戏搭子，隔空喊“别给他买大套！”',['笑着说别乱花钱，慢慢了解就好。','小栀说室友终于放心了。',{trust:2,bond:1}],['立刻打字“请把我列入婚礼名单”。','室友回“先把校园卡办好吧”。',{meme:2,stress:1}]],
+ ['dx03','运动会与约会','小栀要参加校园运动会，刚好撞上你们的打本计划。',['让她好好比赛，晚上发战报给你。','她把奖牌照片第一时间发给你。',{trust:2,bond:1}],['赌气说这比双排重要吗。','她说现实里的朋友和比赛也很重要。',{stress:2}]],
+ ['dx04','小栀不是你的作品','你把小栀教会了一套连招，亲友夸：“这是你培养出来的成品！”',['说是她自己练出来的。','小栀笑着说你真会夸人。',{trust:2,bond:2}],['骄傲宣称她的进步都是你的功劳。','她沉默了会，说有点不舒服。',{stress:2}]],
+ ['dx05','她做的表情包','小栀画了一张你们一起摔下山崖的Q版表情包，打算发群里。',['问她能不能给你也做一张单人版。','你们开了个小小的江湖表情包工作室。',{meme:2,bond:2}],['说“把我画这么丑是想分手吗”。','她解释只是想让你笑。',{stress:1}]],
+ ['dx06','成人课表和游戏时间','她下周有课、兼职和社团活动，问能不能把双排改到周末。',['赞同她的安排，也规划自己的时间。','你们的相处反而更稳定了。',{trust:2,bond:1}],['要求她全天候随时陪你。','她告诉你，恋爱不能代替现实生活。',{stress:3}]]
+ ],
+ sister:[
+ ['sx01','山水照里的第二个人','晚棠打算发一组国风写真，问能不能只露你的游戏角色剪影。',['同意并一起选构图。','你第一次感到被认真邀请进她的世界。',{bond:2,trust:1}],['要求她必须写“我男友”。','她说你们还没商量公开边界。',{stress:2}]],
+ ['sx02','她说自己不是情感客服','晚棠陪你聊了整晚，第二天很累。你突然意识到自己总向她倾诉。',['问问她的心情，也听她分享。','她说终于有人记得她也会疲惫。',{trust:2,bond:1}],['继续抱怨到凌晨，不听她说晚安。','她关了麦，暂时不想聊天。',{stress:2}]],
+ ['sx03','晚棠的旧相册','她给你看以前拍的江湖照片，其中有她与旧搭子的合影。',['欣赏照片并尊重她的过去。','她讲起从前的开心事。',{trust:2}],['指着每张问“这个是不是前男友”。','她有些无奈，收起相册。',{stress:2,jealous:1}]],
+ ['sx04','茶馆的偶遇','你在游戏茶馆里看见晚棠独坐听雨，旁边玩家问她要不要组队。',['坐下来问她今天过得如何。','她说最喜欢你这种自然的陪伴。',{bond:2,trust:1}],['立刻宣称“这位我承包了”。','晚棠示意你别替她回答。',{stress:2}]],
+ ['sx05','朋友圈的“独立女性”','晚棠分享自己独处时的快乐，你的朋友嘲笑“谈恋爱还独立什么”。',['支持她保留独处时间。','她表示认真关系也可以拥有自由。',{trust:2,bond:1}],['要求她少发这种动态。','她不想因为恋爱而改变生活。',{stress:2}]],
+ ['sx06','一张过期的演出票','晚棠整理抽屉，翻出一张想与你看的演出票，发现日期已经过去。',['一起挑下一场演出，别责备她。','你们重新定下了现实的约会计划。',{trust:2,bond:1}],['开玩笑说“这就是成年人敷衍”。','她没笑，反而有点失落。',{stress:2}]]
+ ],
+ pvp:[
+ ['px01','她认可你的第一局','霜刃看完你的录像，终于说：“这局真打得不错。”',['把胜利归功于彼此配合。','她说你今天终于会团队协作了。',{bond:2,trust:1}],['截图写“我带飞了榜前女高手”。','她无语：你是来打比赛还是开直播？',{stress:1,meme:1}]],
+ ['px02','胜负之外的休息','霜刃连续输三把，忽然问你有没有好看的风景可以看。',['带她去河边看落日。','她第一次主动关掉了论剑界面。',{bond:2,trust:2}],['说赢不回来就不许休息。','她严肃说自己有权决定休息。',{stress:3}]],
+ ['px03','练习赛的红字','有人赛后私信嘲讽霜刃，她反而平静地关掉了聊天框。',['尊重她的做法，继续复盘。','她告诉你强者不必回应每句嘲讽。',{trust:2,practice:1}],['替她开骂并挂截图。','她说不要替她扩大争议。',{scandal:2,stress:2}]],
+ ['px04','她教你反制技','霜刃看着你失败七次之后问“还来吗？”',['继续练一会儿，再请她吃个夜宵。','她终于笑了：“有点进步。”',{bond:2,practice:1}],['说自己只是陪她玩恋爱模拟器。','她反问你是不是不想好好练。',{stress:1,meme:1}]],
+ ['px05','队伍内讧','两名亲友因为阵容吵起来，霜刃让你来做战术决定。',['先让双方冷静，尝试换个配合方案。','你们赢下了关键一局。',{trust:2,bond:1,practice:1}],['告诉他们“你们都不如我女朋友”。','她脸红了一秒，随后提醒你认真指挥。',{meme:1,stress:1}]],
+ ['px06','她不想成为奖杯','你开玩笑说“榜一女友就是我最大的成就”。霜刃突然认真了。',['道歉，说你欣赏的是她这个人。','她说这才是她愿意听的。',{trust:2,bond:2}],['坚持说自己就是在炫耀。','她不喜欢被当作身份标签。',{stress:3}]]
+ ],
+ speed:[
+ ['rx01','计时器的第三页','折枝给你发了三页计时器截图，最后一页居然有个手绘爱心。',['发现她的小心思，认真回应。','她急忙说只是手滑，耳朵却红了。',{bond:2,flirt:1}],['只给她指出计时器格式错误。','她无语：“你这人真是纯理工脑。”',{meme:1,stress:1}]],
+ ['rx02','竞速妹也会迷路','折枝比赛路线上飞得很快，现实地图却把她绕到奇怪的出口。',['陪她慢慢找路，顺便聊天。','她说不计时的旅行原来也很快乐。',{bond:2,trust:1}],['把迷路视频剪成“竞速妹转圈”公开发。','她笑着让你赶紧删掉。',{stress:1,meme:1}]],
+ ['rx03','纪录共享还是独占','折枝找到一段新捷径，问你要不要一起公开给其他玩家。',['尊重她署名，一起整理教程。','你们的合作收到了不少感谢。',{trust:2,bond:1}],['抢先发教程只写自己的名字。','她认真说这会损害彼此信任。',{stress:3,scandal:1}]],
+ ['rx04','她的“再来一把”','折枝说完“再来一把”又连续开了六次计时，你发现她其实在回避谈心。',['先暂停计时，温柔问问她在担心什么。','她终于放下手柄，认真和你聊了会。',{trust:2,bond:1}],['赌气退出队伍不解释。','她不明白你为何突然不开心。',{stress:2}]],
+ ['rx05','外卖和纪录','折枝点的外卖已经凉了，还在挑战个人记录。',['提醒她吃饭，明天还有机会。','她边吃边说你快成她的生活管理员了。',{trust:2,bond:1}],['以“你不吃我也不吃”威胁她。','她说你太会给压力了。',{stress:2}]],
+ ['rx06','两个人的计时挑战','折枝设计了一个双人合作线路，说只想和你来完成。',['认真合作，把过程录成纪念视频。','你们的成绩一般，笑容却格外灿烂。',{bond:2,trust:1}],['背着她把路线拆成单人冲榜。','她觉得你忽视了两人约好的初衷。',{stress:2}]]
+ ]
+};
+for(const [arc,items] of Object.entries(extraHeroEvents))for(const [id,title,body,yes,no] of items)add(id,title,body,yes,no,{arc,chapters:[4,5,6,7,8],weight:1.2});
+
+function startGame(){setup.name=(document.getElementById('playerName')?.value||'少侠').trim().slice(0,12)||'少侠';const hero=randomOne(heroines);game={name:setup.name,origin:'newbie',temperament:'rational',role:'普通玩家',stats:{...defaultStats},turn:1,flags:{},visited:{},log:[],hero,npc:hero,eventsCompleted:0,bond:0,trust:0,stress:0,scandal:0,career:null,historyTypes:{},narrative:[]};screen='game';chooseEvent()}
+function wantsFlag(k){return !!(game.flags[k] || (k==='stress'&&game.stress>=2)||(k==='scandal'&&game.scandal>=2)||(k==='jealous'&&game.flags.jealous)||(k==='gift'&&game.flags.gift)||(k==='exploited'&&game.flags.exploited));}
+function chooseWeighted(a){let t=a.reduce((s,e)=>s+e.weight,0),r=Math.random()*t;for(const e of a){r-=e.weight;if(r<=0)return e}return a[a.length-1]}
+function stageEvent(){const g=game,t=g.turn,f=g.flags;
+ if(t===3)return mk('meeting-'+g.hero.id,'命运的组队邀请',`${g.hero.where}\n${g.hero.hook}`,[opt('自然回应，先从一起玩开始。',`你和${g.hero.name}加了好友。没想到普通的晚上，就这样开始了一段新故事。`,{bond:2,met:1}),opt('有点害羞，还是主动邀请她组队。',`她说：“你是不是有点紧张？没事，我也紧张。”`,{bond:1,met:1,shy:1})]);
+ if(t===10){let type='romance';if(f.friendOnly)type='solo';else if(f.unverified&&f.meetPlan&&!f.verified)type='risky';else if(g.scandal>=4||g.stress>=5||f.breakup||f.giftScam)type='breakup';else if(!f.serious){type=g.bond<6?'solo':'romance'}else if(g.stress>=3&&g.trust<4)type='breakup';
+   let candidates=finalEvents[type].filter(x=>!g.visited[x.id]);if(type==='romance'&&f.retirePlan)candidates=candidates.filter(e=>e.id==='endLove05');if(!candidates.length)candidates=finalEvents[type];return randomOne(candidates)}
+ if(t===7&&!f.serious&&!f.friendOnly){return randomOne(pivots)}
+ if(t===9&&!f.friendOnly&&f.serious&&g.stress<5&&g.scandal<5){let pool=meetEvents.slice();if(f.verified)pool=pool.filter(e=>e.id==='meet03'||e.id==='meet04');return chooseWeighted(pool.map(e=>({...e,weight:e.id==='meet03'?3:1})))}
+ if(t===9&&f.friendOnly){const candidates=finalEvents.solo.filter(x=>!g.visited[x.id]);return randomOne(candidates.length?candidates:finalEvents.solo)}
+ if(t===9&&!f.serious&&!f.friendOnly)return mk('lateConfess','最后一次认真回答',`${g.hero.name}停下手里的事情，认真问：“我们每天都在一起，你是想跟我谈恋爱，还是只想当搭子？”`,[opt('坦诚说喜欢她，希望现实中也慢慢了解。','她说自己也有好感，愿意再向前一步。',{serious:1,bond:2,trust:2,verified:1}),opt('现在还不想谈恋爱，先尊重彼此的节奏。','她感谢你的坦诚。你们决定维持朋友关系。',{friendOnly:1,clear:1})]);
+ const eligible=contentEvents.filter(e=>e.chapters?.includes(t)&&(!e.arc||e.arc===g.hero.id)&&(!e.need||wantsFlag(e.need))&&(!e.exclude||!wantsFlag(e.exclude))&&!g.visited[e.id]);
+ const crisis=eligible.filter(e=>e.id.startsWith('cr'));
+ const unique=eligible.filter(e=>e.arc===g.hero.id);
+ const common=eligible.filter(e=>!e.arc&&!e.id.startsWith('cr'));
+ let pool;
+ if(t<=2)pool=common;
+ else if(crisis.length && (g.stress>=2||g.scandal>=2||f.gift||f.exploited) && Math.random() < .38) pool=crisis;
+ else if(unique.length && Math.random() < .67)pool=unique;
+ else pool=common.length?common:unique;
+ if(!pool.length)pool=eligible;
+ if(!pool.length)return randomOne([mk('fallback'+t,'江湖的晚安',`${g.hero.name}发来消息：“明天有空吗？想继续和你一起玩。”`,[opt('认真答应，并约好时间。','你们又多了一个共同期待。',{bond:1,trust:1}),opt('发个有趣的表情包，慢慢聊。','她被逗笑，发来一个晚安。',{bond:1,meme:1})])]);
+ return chooseWeighted(pool)
 }
-function startGame(){setup.name=(document.getElementById('playerName')?.value||'少侠').trim().slice(0,12)||'少侠';const hero=rr(heroines);game={name:setup.name,origin:'newbie',temperament:'rational',role:'普通玩家',stats:{...defaultStats},turn:1,flags:{},visited:{},log:[],hero,npc:hero,eventsCompleted:0,bond:0,trust:0,dream:Math.random()<.4,career:null};screen='game';chooseEvent()}
-function chooseEvent(){if(!game)return;if(game.turn>10){finishGame();return}currentEvent=stageEvent();game.offeredChoices=currentEvent.choices;showTurn()}
-function showTurn(){if(!game)return;screen='game';const ev=currentEvent,h=game.hero;const showHero=game.turn>=3;el(hdr()+`<section class="panel story-panel"><div class="flex"><div class="hud"><span class="pill">第 ${game.turn} / 10 回合</span><span class="pill">${showHero?`${h.emoji} ${esc(h.name)} · ${esc(h.label)}`:'普通玩家'}</span></div><button class="navbtn quit" onclick="confirmQuit()">结束本局</button></div><div class="progress"><span style="width:${game.turn/10*100}%"></span></div><div class="scene"><div class="chapter">CHAPTER ${String(game.turn).padStart(2,'0')} · ${showHero?'心动江湖':'缘分将至'}</div><h2>${esc(ev.title)}</h2><p style="white-space:pre-line">${esc(ev.body)}</p></div><div class="scene-question">这一刻，你会……</div><div class="story-choices">${ev.choices.map((c,i)=>`<button class="choice" onclick="doChoice(${i})"><span><b>${'AB'[i]}.</b> ${esc(c.text)}</span><span class="arrow">›</span></button>`).join('')}</div><p class="tiny" style="text-align:center;margin-top:17px">你的选择会被故事记住 · 不显示属性变化</p></section>`+footer())}
-function doChoice(i){if(!game||!currentEvent||!currentEvent.choices[i])return;const c=currentEvent.choices[i],g=game;for(const [k,v] of Object.entries(c.changes||{})){if(k==='bond'||k==='trust')g[k]+=v;else g.flags[k]=v}g.log.push({turn:g.turn,event:currentEvent.id,choice:c.text,result:c.result});g.eventsCompleted++;g.turn++;
- if(g.turn===9&&g.flags.friendOnly&&g.flags.careerTry&&Math.random()<.12){g.career=rr(['论剑玩家','竞速玩家','觉障林主播','陪玩']);g.role=g.career;}
- chooseEvent()}
-function resolveEnding(){const f=game.flags,g=game;let id='E37';if(f.catfish){id='E13'}else if(f.breakup){id=f.spent?'E23':'E19'}else if(f.friendOnly){if(g.career==='论剑玩家')id='E25';else if(g.career==='竞速玩家')id='E26';else if(g.career==='觉障林主播')id='E27';else if(g.career==='陪玩')id='E28';else id='E37'}else if(f.meetInPerson&&f.lasting){id=f.happy?(g.hero.id==='pvp'?'E06':g.hero.id==='speed'?'E04':'E01'):'E10'}else if(f.serious&&f.lasting){id=f.happy?'E03':'E10'}else if(f.serious){id=f.gift&&g.bond<5?'E23':'E10'}else if(f.ambiguous&&f.solo){id='E19'}else if(f.lasting){id='E10'}else if(f.solo){id='E37'}else if(f.dreamMeme&&g.bond<4){id='E38'}else{id='E19'}return endings.find(e=>e.id===id)||endings[36]}
-// 结局只按已发生情节判定；未发生的照骗、婚礼、瓜房不凭空出现。
-function hdr(){return `<div class="top"><div class="brand"><span class="brandmark">缘</span>恋与燕云 <span class="tiny">SIMULATOR 1.3</span></div><div class="topright"><span class="tiny">已通关 ${save.runs} 局</span><button class="navbtn" onclick="showHome()">⌂ 首页</button></div></div>`}
-function showAbout(){screen='about';el(hdr()+`<section class="panel"><button class="back" onclick="showHome()">← 返回首页</button><h1 class="section-title">版本 V1.3 · 恋爱剧情重构</h1><p>每局10回合，第3回合必定遇见一位女主，后续剧情以关系推进为核心。不同女主有不同相遇和相处场景。</p><p>保留结局与CG图鉴、本地记录、每通关5局一次争锋工作室推广。全部主角均为虚构成年人；“女大学生徒弟”也设定为成年人。</p><button class="btn secondary small" onclick="showAd()">查看争锋工作室推广</button></section>`+footer())}
+function chooseEvent(){if(!game)return;if(game.turn>10){finishGame();return}currentEvent=prepareEventChoices(stageEvent());game.offeredChoices=currentEvent.choices;game.visited[currentEvent.id]=true;showTurn()}
+function showTurn(){if(!game)return;screen='game';const ev=currentEvent,h=game.hero;const showHero=game.turn>=3;el(hdr()+`<section class="panel story-panel"><div class="flex"><div class="hud"><span class="pill">第 ${game.turn} / 10 回合</span><span class="pill">${showHero?`${h.emoji} ${esc(h.name)} · ${esc(h.label)}`:'普通玩家'}</span></div><button class="navbtn quit" onclick="confirmQuit()">结束本局</button></div><div class="progress"><span style="width:${game.turn/10*100}%"></span></div><div class="scene"><div class="chapter">CHAPTER ${String(game.turn).padStart(2,'0')} · ${showHero?'江湖心事':'缘起'}</div><h2>${esc(ev.title)}</h2><p>${esc(ev.body).replace(/\n/g,'<br>')}</p>${game.log.length?`<div class="notice choice-feedback" role="status"><small>上一回合 · ${esc(game.log[game.log.length-1].choice)}</small><br>${esc(game.log[game.log.length-1].result)}</div>`:''}<div class="scene-question">你会怎么做？</div><div class="story-choices">${ev.choices.map((c,i)=>`<button class="choice ${c.hidden?'hidden-choice':''}" onclick="doChoice(${i})"><b>${'ABCDE'[i]}.</b><span>${c.hidden?'<small class="hidden-badge">✦ 隐藏奇遇</small>':''}${esc(c.text)}</span><span class="arrow">❯</span></button>`).join('')}</div></div><p class="tiny" style="margin-top:22px;opacity:.7">每次至少四种选择 · 偶遇第五个隐藏奇遇 · 事件会记住你的选择</p></section>`+footer())}
+function doChoice(i){if(!game||!currentEvent||!currentEvent.choices[i])return;const c=currentEvent.choices[i],g=game;
+ for(const [k,v] of Object.entries(c.delta||{})){if(['bond','trust','stress','scandal'].includes(k))g[k]=Math.max(0,g[k]+v);else if(typeof v==='number' && ['meme','practice','spent','risk','jealous','gift','clear','social','healthy','dream'].includes(k))g.flags[k]=(g.flags[k]||0)+v;else g.flags[k]=v}
+ g.log.push({turn:g.turn,event:currentEvent.id,choice:c.text,result:c.result,hero:g.hero.id});g.eventsCompleted++;g.turn++;
+ if(g.turn===10&&g.flags.friendOnly&&g.flags.careerTry&&Math.random()<.08){g.career=randomOne(['论剑玩家','竞速玩家','觉障林主播','陪玩']);g.role=g.career}
+ chooseEvent();
+}
+function resolveEnding(){const f=game.flags,g=game;let id='E37';const n=()=>Math.random();
+ if(f.catfish)id=f.brother?'E33':(f.risk>=2&&n()<.4?'E20':'E13');
+ else if(f.guafang||g.scandal>=7)id=f.ppt?'E35':g.scandal>9?'E24':'E11';
+ else if(f.privacy&&g.scandal>=4)id='E15';
+ else if(f.giftScam)id='E12';
+ else if(f.breakup||g.stress>=5){if(f.spent>=3)id=n()<.5?'E16':'E23';else if(f.avatarSwap)id=n()<.5?'E14':'E17';else if(f.exploited)id='E22';else if(f.jealous>=2)id='E21';else id=n()<.4?'E18':'E19'}
+ else if(f.friendOnly||!f.serious){if(f.mediator)id='E31';else if(f.socialLegend)id='E29';else if(f.mentor)id='E32';else if(f.practice>=3&&f.careerTry)id='E30';else if(g.career==='论剑玩家'||(f.careerPvp&&n()<.06))id='E25';else if(g.career==='竞速玩家'||(f.careerSpeed&&n()<.06))id='E26';else if(g.career==='觉障林主播'||(f.careerStream&&n()<.06))id='E27';else if(g.career==='陪玩')id='E28';else if(f.dream>=1&&f.meme>=2&&n()<.26)id='E38';else if(f.ppt)id='E34';else if(f.meme>=5)id='E36';else if(g.bond>=7&&g.stress<=2)id='E10';else id='E37'}
+ else if(f.meetInPerson&&g.trust>=3){if(f.retired)id='E08';else if(f.coupleStream&&f.lasting)id='E07';else if(f.happy&&g.bond>=7)id=n()<.12?'E02':g.hero.id==='pvp'?'E06':g.hero.id==='speed'?'E04':'E01';else id='E10'}
+ else if(f.verified&&f.lasting)id=f.coupleStream?'E07':f.retired?'E08':n()<.28?'E09':'E03';
+ else if(f.lasting&&g.bond>=9&&g.stress<=2)id=f.coupleStream?'E07':n()<.20?'E05':'E03';
+ else if(g.stress>=3&&g.trust<3)id=f.spent?'E23':'E19';
+ else if(g.scandal>=4)id='E11';
+ else if(g.trust>=3&&g.bond>=6)id=n()<.2?'E05':'E10';
+ else id=n()<.35?'E19':'E10';
+ return endings.find(e=>e.id===id)||endings[36];
+}
+function hdr(){return `<div class="top"><div class="brand"><span class="brandmark">缘</span>恋与燕云 <span class="tiny">SIMULATOR 1.8</span></div><div class="topright"><span class="tiny">已通关 ${save.runs} 局</span><button class="navbtn" onclick="showHome()">⌂ 首页</button></div></div>`}
+function showAbout(){screen='about';el(hdr()+`<section class="panel start-panel"><button class="back" onclick="showHome()">← 返回首页</button><div class="eyebrow">ROMANCE & JIANGHU · V1.8</div><h1 class="section-title">关于恋与燕云</h1><p>10回合人生模拟器，随机遇见四位性格不同的成年女主，第3回合必定登场。每个事件至少4个选项，有32%的概率出现第5个隐藏搞怪选项；隐藏选项也可能增加压力，并不保证好结局。游戏内含大世界日常、情感沟通、侠缘、竞速、论剑、觉障林、送礼、关系误会、瓜房风波与网络热梗。</p><p>游戏事件借鉴玩家社区的社会情境，但故事人物均为虚构，不代表对现实个人的指控；请勿传播真实玩家隐私。</p><p>20张CG已加入素材目录，按结局解锁；可在CG画廊预览素材。每通关5局显示一次争锋工作室推广。</p><button class="btn secondary small" onclick="showAd()">查看推广示例</button><button class="btn secondary small" onclick="resetSave()" style="margin-left:10px">清空本机记录</button></section>`+footer())}
+
+// V1.8 — authored additional choices. Existing A/B branches stay intact.
+const choiceProfiles={
+ verifiedWarm:{verified:1,trust:1,bond:1},calm:{trust:1,stress:-1,clear:1},warm:{bond:1,trust:1},space:{stress:-1,bond:-1},awkward:{stress:1},pressure:{stress:2,bond:-1},jealous:{jealous:1,stress:2},practice:{practice:2,bond:-1},social:{social:2},meme:{meme:2},gift:{gift:1,spent:1,bond:1},risk:{risk:1,stress:1},serious:{serious:1,trust:1,bond:1},friend:{friendOnly:1,clear:1},split:{breakup:1,clear:1},lasting:{lasting:1,trust:1},happy:{lasting:1,happy:1,bond:1},gossip:{scandal:2,stress:1},privacy:{privacy:1,scandal:3,stress:1},solo:{solo:1,friendOnly:1,clear:1}
+};
+const extraChoiceRows=`
+pre1|自己发起一支新手散步队。|你带着三名路人迷路，最后记住了彼此的ID。|social|今晚关掉招募频道，独自练连招。|你的连招顺了些，却错过了今晚的热闹。|practice
+pre2|先约一局试配合，合不来就散。|试打后双方都轻松了，没人需要立刻承诺长期在线。|calm|一次报名三个固定，先把位置占满。|三个队长同时喊你，你发现分身乏术。|pressure
+pre3|把短片改成自己的单人练剑预告。|你的片尾写着“情根维护中”，群友改催你更新。|meme|认真要求朋友撤下短片。|朋友收起玩笑，也知道了你的边界。|calm
+pre4|给自己安排一个完全不上线的晚上。|吃完热饭再回来看消息，你没那么急着证明自己了。|calm|跟风给陌生网友也买一件时装。|对方道谢后就离线了，你没换来期待中的亲近。|gift
+pre5|保存录像，自己拆解每次被反制的原因。|你没再争嘴上输赢，只把下一次失误减掉一个。|practice|约对方打赌，输了就改搞怪ID一天。|你又输了，顶着“本服嘴硬冠军”逛了一晚。|meme
+pre6|私聊问他今晚是不是遇到什么难事。|他收起群里的文案，认真聊了几句工作压力。|social|屏蔽深夜小作文，明天再看群消息。|你少看了一场热闹，换来一夜清静。|calm
+pre7|自己开训练房，让争执的两人换位体验。|两个人各失误一次，终于肯一起看录像。|social|退出这队，今晚不替别人调解。|你换了一支安静的队伍，没再参与这场争吵。|space
+pre8|追问招募者能接受怎样的相处节奏。|对方答不上来，你决定先做普通网友。|calm|照抄广告也发一条，看看谁先露馅。|两份广告撞在一起，你也成了围观对象。|gossip
+pre9|主动接一个新手，先试着教一晚。|你终于明白同时回八个人消息有多难。|social|给每个徒弟起个编号方便管理。|徒弟们嫌像工号，没人愿意被叫“七号”。|awkward
+pre10|约朋友第二天白天再打。|你们终于不用在困得睁不开眼时互相甩锅。|social|定半小时闹钟，到点强制下线。|你保住睡眠，也第一次没被“最后一把”拖住。|calm
+pre11|问问红绳的材料和普通款有何区别。|摊主支支吾吾，你把价格记进了避坑笔记。|calm|买一根送给路过的孤狼玩家。|对方道谢离开，玄学消费没有附赠爱情。|gift
+pre12|把频道的梗接成一首打油诗。|几个路人轮流续句，你们莫名组了一队。|social|关闭附近频道，去练今天没过的机关。|耳根清净后，你终于把机关解开了。|practice
+u01|坦白自己会在意情头，但不要求她立即更换。|她第一次知道你在意的是被确认，而不是一张图片。|warm|也换个陌生搭子的情头试她反应。|你们开始隔着头像赌气，谁也没问清楚。|jealous
+u02|提议拍一套个人照，各自保留自己的主页。|你们发现亲近也可以不靠主页证明。|calm|不问她，直接把合照设成官宣图。|她觉得被迫接受了尚未商量的公开关系。|pressure
+u03|请她自己决定是否回复，今晚另约时间。|她感谢你留了空间，你也没再盯着聊天框。|calm|私下加前侠缘，想套出他们的往事。|你的试探传回她耳朵，关系多了一道裂缝。|jealous
+u04|先退出讨论，等看到完整上下文再发言。|你没有追上群里的热度，却避开了错误站队。|calm|凭半张图发一条阴阳怪气的动态。|她看得懂你在暗指谁，误会反而更深。|gossip
+u05|约定各自预算，送一份小而用心的纪念品。|这份礼物没有让谁透支，反而更容易珍惜。|warm|为了排面刷信用额度也要买。|收款提示很热闹，账单却只有你一个人面对。|gift
+u06|暂停送礼，给对方一个自己回复的机会。|你没有再用消费换回应，也慢慢看清相处节奏。|calm|另发红包，希望通知能把她叫回来。|红包收了，等待却没有因此结束。|gift
+u07|问清楚双方怎样称呼这段关系。|模糊的话终于变成了可以讨论的期待。|calm|假装自己也有很多暧昧对象。|她不知你在逞强，只觉得你不值得认真。|pressure
+u08|请师父分享游戏经验，私事留在私聊里。|群里聊回了玩法，你们也少了一轮围观。|social|为了证明亲密，当众翻出师徒私聊。|原本普通的进群变成了一场尴尬的关系展示。|privacy
+u09|先商量哪些内容可以公开，哪些只属于两人。|她愿意和你一起写下舒服的公开边界。|warm|暂时不官宣，但继续接受别人介绍侠缘。|她发现后不确定你到底在给谁留位置。|pressure
+u10|承认自己没有证据，先不参与猜测。|你把注意力放回今晚的组队，没有继续查岗。|calm|悄悄记下两个号的所有上下线时间。|你越记录越焦虑，她也察觉自己像被监控。|jealous
+u11|请发链接的人在公开频道说明来源。|对方没再回复，你也没有把链接继续转出去。|calm|转成文字问群友有没有见过这种套路。|群友补充了几条辨认方法，链接没人再碰。|social
+u12|收起表情包，给她留一点安静时间。|你没急着证明自己没错，她缓过来后主动回了消息。|calm|解释“别人都觉得好笑，你怎么这么敏感”。|她更难过的成了你对她感受的否定。|pressure
+u13|这一局打完就停，约下次换她陪你做任务。|交换一次安排后，你们发现付出可以对等。|calm|背着她另找固定，用失联表达不满。|她只看见你突然消失，没听见你真正的委屈。|pressure
+u14|提议一起重拍一个只属于你们的镜头。|旧模板里添了两人的小细节，成了新的纪念。|warm|偷偷拿剪辑去逗另一位暧昧对象。|同款视频绕回群里，她觉得心意被复制了。|gossip
+u15|不接段子，提醒他想聊心事可以直说。|他删掉一半修辞，群里少了一晚情感猜谜。|social|抢着接单，承诺替他每天写十篇。|你忙着替人深情，自己的消息却回不完了。|awkward
+u16|只做一份如何辨认断章取义的匿名教程。|你把排版手艺用在解释证据上，没有加进真人素材。|social|拒绝排版，也退出吃瓜讨论群。|你少了群聊热度，却保住一晚清静。|space
+u17|提议先把服务价格和内容写清楚。|对方不再能拿暧昧替收费作解释。|calm|替她把所有费用都付了，盼她更依赖你。|你付了钱，她却不喜欢被当作需要认领的人。|gift
+u18|和她约一种只在两人之间使用的晚安。|你们约好一个小暗号，没再靠猜模板确认心意。|warm|也复制同一句晚安给所有好友。|你想证明不在意，结果让她更不敢认真。|pressure
+u19|今晚先停一局，各自休息后再谈安排。|暂停争执没有让关系散掉，反而让语气软下来。|calm|把群友拉进语音，现场判谁更委屈。|两个人的安排变成投票，你们都更难下台。|gossip
+u20|先聊她的日常，等双方愿意再约视频。|照片不再是审题，你们也没被催着马上见面。|warm|向她索要一整套证明材料才肯继续聊天。|她觉得自己在被审查，选择暂停联络。|pressure
+u21|请她决定要不要回应，你协助处理删除。|你没有再替她发言，她觉得自己的感受被听见了。|warm|在群里假装不认识她，想把风头躲过去。|她独自面对起哄，对你也失去了些信任。|pressure
+u22|承认自己也需要独处，约好下一次一起玩。|两个人的空间不再等于冷淡。|calm|嘴上说尊重，随后每十分钟问一次在哪。|她发现你的行动与承诺完全相反。|jealous
+u23|只写两句真实的小事，不要求押韵。|她记住了那次等她下课，比华丽情诗更久。|warm|把小作文撤回，决定今晚先不谈感情。|气氛淡了一点，你也没再逼自己演深情。|space
+u24|写一份自己的时间表，请她一起协商。|你们找到交集，也保留了彼此空闲的晚上。|calm|投递一句“我不够优秀，自动放弃竞争”。|你把自嘲当退路，她却不知道该怎么挽留。|space
+u25|请她一起选一个下周能完成的小目标。|你们终于有了自己的进度，而不是追别人的婚礼。|warm|悄悄按别人情侣清单逐项考核她。|比较没有让你安心，只让她觉得自己一直不及格。|pressure
+u26|只聊自己见过的直播表现，不推断私生活。|话题回到公开内容，没有再往真人身上延伸。|calm|为了显得消息灵通，编一段内部爆料。|别人追问出处时，你再也圆不回来。|gossip
+u27|把自己的展示栏也按纪念意义重新整理。|你慢慢意识到，第一格并不能量出全部感情。|calm|取消她的徽章，等她自己来哄你。|她看见你的操作，只觉得关系在被互相试探。|jealous
+u28|另开一个自由组队贴，让大家自己报名。|群友不必等着被分配，你也认识了新搭子。|social|默默退出活动，不想再被安排关系。|你避开了起哄，也错过了和她一起玩的晚上。|space
+u29|坦白被夸后有点害羞，认真谢谢她。|你的短暂结巴让她笑了，聊天比刚才更自然。|warm|装作没听见，把话题切回装备。|暧昧停在半空，她也不再追问。|space
+u30|保存陌生私信，先屏蔽对方再商量处理。|你们不用继续回应挑拨，今晚终于安静下来。|calm|反复追问她的每段旧关系，让她逐一自证。|陌生人的一句话让你们吵到深夜。|jealous
+u31|也换个播音腔，和她演十秒江湖广播。|你们一本正经地报天气，先把自己笑破了音。|meme|坦白这种玩笑会让自己不舒服，请她换回原声。|她关掉变声器，知道了你的玩笑边界。|calm
+u32|告诉她不用急着回应，收到后自己决定怎么留。|礼物终于只是心意，没有附赠答卷。|warm|要求她收到后必须在朋友圈公开致谢。|她担心每份礼物都会变成一项公开义务。|pressure
+u33|只试播玩法，不直播两人的私聊。|她愿意尝试合作，也放心私人关系不会被剪成素材。|warm|先斩后奏，拿暧昧片段做开播预告。|她看到预告才知道自己的私事成了引流噱头。|privacy
+u34|约好退游后的联系频率，不急着谈共同生活。|你们给现实安排留出空间，也保留了联系。|warm|要求她必须继续每天上线证明在乎。|她本就疲惫，又背上了一份上线考核。|pressure
+cr01|请当事人澄清群发用途，你不替别人定罪。|解释发回群里后，三份晚安不再自动等于三段恋情。|calm|冷处理她的所有晚安，看看她会不会着急。|她不明白自己做错了什么，你却越等越委屈。|jealous
+cr02|暂停暧昧，先独自整理已经花掉的预算。|你第一次看清自己为了等待承诺付出了多少。|space|明确不接受以充值换关系，结束这段相处。|你停止了这场条件交换，仍需要时间消化失落。|split
+cr03|退出上分安排，只保留普通朋友联系。|你拿回了自己的晚上，也接受关系可能淡下来。|friend|为了让她看见自己，故意在直播对局里摆烂。|比分变成了报复工具，她和队友都很失望。|pressure
+cr04|暂时关闭陌生人消息，让她先休息。|你们没继续追着每条评论解释，终于能安静交谈。|calm|谁都不解释，先把她删了避风头。|她独自留在风波里，你们的关系也被你切断了。|split
+cr05|这局只打游戏，赛后各自冷静一晚。|你们没有当场解决矛盾，但也没再扩大它。|space|故意让她和旧队友单独聊，随后暗中监听。|你的不信任被发现，原有误会变成了新的争执。|jealous
+cr06|写好想说的话，但等约定时间再发送。|你把焦虑留在草稿里，没有再次打断她休息。|calm|承认暂时无法好好相处，提出和平分开。|你们停止互相消耗，这段关系就此告一段落。|split
+`;
+const authoredExtras={};
+function registerChoiceRows(rows){for(const line of rows.trim().split('\n')){const [id,a,ar,ap,b,br,bp]=line.split('|');if(!choiceProfiles[ap]||!choiceProfiles[bp])throw Error('Invalid choice profile '+id);authoredExtras[id]=[opt(a,ar,{...choiceProfiles[ap]}),opt(b,br,{...choiceProfiles[bp]})]}}
+registerChoiceRows(extraChoiceRows);
+registerChoiceRows(`
+d01|开共享标记，让她自己走完最后一段。|她第一次不用你代打也成功过关，兴奋地跑来报喜。|warm|替她清掉全部机关，再说她什么都不用学。|她不再求教，只觉得自己在队里没有用处。|pressure
+d02|约定考完再上线，留一句加油就收起消息。|小栀安心备考，没有为了回你消息熬夜。|calm|每天问她复习到哪一页，比导师还准时。|她开始害怕打开你的对话框。|pressure
+d03|问她更喜欢怎样称呼你，先别急着定关系。|小栀认真想了想，决定先叫你最初的游戏ID。|warm|规定只能在你面前撒娇，别人都不行。|她觉得师徒称呼突然变成了一条束缚。|jealous
+d04|让她选地点和动作，你负责按快门。|她认真摆好姿势，还挑了一张你的傻笑当壁纸。|warm|拍完只修自己的脸，把她裁到画面边缘。|她看着成片问：原来我是路人背景板？|awkward
+d05|约一局她指挥、你只做队友。|她指挥时磕磕绊绊，却终于能自己做决定。|warm|说练技术太累，她只要负责可爱。|她收起求教的话，觉得你没把她的目标当回事。|pressure
+d06|让小栀自己选训练方式，不替她选师父。|她知道不必为了学东西向谁表忠心。|calm|拉两个师父比一场，谁赢谁管她。|小栀退出围观，说自己不是谁的战利品。|pressure
+d07|先确认她是否方便收件，不方便就保留电子心意。|小栀松了口气，没有被迫解释宿舍安排。|calm|嫌她收件麻烦，连续催她给详细住址。|原本的好意让她开始担心自己的边界。|pressure
+d08|也写一段你被她帮助过的小事。|她发现自己不只是被照顾的人，读了很久才回复。|warm|给感谢信逐句打分，要求她重新组织语言。|她的真诚忽然像交了一份不合格作业。|pressure
+d09|建议你们各自写清相处期待，再交换看。|小栀说出害怕依赖太深，你也坦白了自己的犹豫。|calm|当众宣布她是你的专属徒弟，不准别人带。|她觉得自己被贴上标签，开始减少上线。|jealous
+d10|告诉她可以有自己的朋友，不用每局都陪你。|小栀玩得更自在，回头分享的事也更多了。|warm|嘴上说不恋爱脑，实际取消所有自己的安排。|你把空闲全押在她身上，迟迟没回复时更焦虑。|pressure
+d11|问她想怎样纪念毕业，等她自己提邀请。|她给你讲了很多校园小事，不必靠突然出现证明关心。|warm|没问过就把毕业照设成自己的公开头像。|她不希望现实照片被这样传播。|privacy
+d12|把知识点做成一张小卡片，约定明天复习。|她带着卡片下线，第一次觉得练习不必熬夜。|calm|每答错一道就罚她陪你多打一局。|考题变成了占用她时间的理由，她不再想参加。|pressure
+dx01|让她反过来给你讲一遍操作步骤。|讲到一半她自己发现问题，小栀得意得像刚毕业。|warm|替她操作完再夸一句“看，多简单”。|她还是没学会，也更不好意思继续问你。|awkward
+dx02|请她自己决定跟室友分享多少，不参与答辩。|小栀不必夹在朋友和你之间当传声筒。|calm|做一张自我优势对比表，让室友投票。|你的认真竞聘把小栀尴尬到关了语音。|awkward
+dx03|运动会结束后再约，先给她加油。|她把赛后第一张奖牌照片发给了你。|warm|赌气说以后所有约定都让位给她学校。|她不知道一次改期为什么被说成永远亏欠。|pressure
+dx04|请她制定下一周自己的游戏目标。|小栀把不含你的单人挑战也写了进去，你学着尊重。|calm|翻出教学记录，提醒她今天全靠你培养。|她觉得每次进步都像欠了你一笔账。|pressure
+dx05|请她给表情包加署名，再陪她发给朋友。|她开心地说原来自己的小作品也值得被认真介绍。|warm|偷偷去掉她署名，当成自己原创去邀功。|有人问到原作者，她看着你沉默了很久。|gossip
+dx06|把两人的空闲时间圈交集，少见也可以认真玩。|小栀不必逃课赶场，你也留出了自己的生活。|calm|让她截图每天课表，逐条解释为什么没空。|她关掉日历，不愿再交一份行踪报告。|jealous
+s01|先问晚棠今晚愿不愿意连麦，不勉强晚安。|她感到被体谅，反而主动多聊了几分钟。|warm|把她的晚安录成闹钟，没问就发给群友听。|晚棠不喜欢自己的声音被当成公共素材。|privacy
+s02|带好补给，等她睡醒再看下一次日出。|你们没有赶上这一场天亮，却都没有为约会透支。|calm|抱怨等日出太无聊，让她全程陪你聊天。|她想要的安静被你的不耐烦打断。|pressure
+s03|聊聊你也喜欢的歌，而不是要求她表演。|晚棠发现你愿意听的是她本人。|warm|用送礼金额当作点歌券。|她说陪伴不是你付费后就该提供的服务。|pressure
+s04|一人选一个停靠点，把路线交替决定。|你们在两个都没计划过的岔路发现了一片花。|warm|把行程排成打卡表，每站只停三十秒。|晚棠说这趟慢旅行比上班还赶。|pressure
+s05|承认自己有点在意，但不要求她清空过去。|她愿意讲现在的选择，而不是被迫否认从前。|warm|要求她逐个删掉曾经一起玩的异性。|晚棠觉得你的安心建立在剥夺她的朋友上。|jealous
+s06|具体说出自己哪句话伤人，并调整今后的做法。|晚棠听见了行动安排，不只是一句对不起。|calm|送一件贵礼物代替解释。|她退回礼物，说价格无法替你把话说清。|gift
+s07|问她今晚需不需要独处，明天再约。|她自己处理完旧事，再来找你聊新的安排。|calm|冒充她回复前任，替她宣布断绝联系。|晚棠发现后，最介意的成了你的越权。|pressure
+s08|把预算留给自己，和她一起做一张风景明信片。|晚棠认真收藏了那张不值钱却有回忆的卡片。|warm|坚持送贵礼物，说她不收就是不在乎你。|她说拒收不是一道需要你攻克的难题。|pressure
+s09|只留一句“想聊我在”，然后继续自己的安排。|晚棠缓过来后主动找你，没有背上必须解释的压力。|calm|不断翻她动态，猜每句话是不是在暗示你。|你越猜越紧张，回话也开始带刺。|jealous
+s10|问她想被怎样安慰，不擅自替她解决问题。|她说想安静待一会，你们就一起听完一首歌。|warm|回一句“你都这么大了还撒娇”。|晚棠收回了难得露出的依赖。|pressure
+s11|先聊各自喜欢的曲目，再商量是否同行。|你们第一次把现实兴趣聊得这样具体。|warm|没问她就买两张昂贵前排票，要求她赴约。|她的行程被你提前决定，期待也变成了负担。|pressure
+s12|约定即使少联系，也直接说明而不突然消失。|晚棠愿意保留联系，你们不再拿上线天数量感情。|calm|说不上游戏就没话可聊了。|她发现你们对关系的期待并不相同。|space
+sx01|先夸风景，等她愿意再讲照片的故事。|晚棠说起同行的老朋友，没觉得自己在接受审问。|warm|放大反光里的身影，逼她立刻解释。|一张旅行照变成了你们的侦查现场。|jealous
+sx02|先问她今天有没有余力听，再决定说多少。|她觉得自己的状态也被认真看见。|calm|说既然关系亲近，她就该随时接住你。|晚棠疲惫地关掉语音，不想再当全天候热线。|pressure
+sx03|只聊她主动分享的那页，不翻找其他照片。|她安心地讲了从前的旅行，你听见了更完整的她。|warm|拿自己和相册里每个人比较。|晚棠不愿再分享旧事，怕每张照片都要解释。|jealous
+sx04|先问她和朋友聊完没有，另约一桌。|晚棠结束聊天后自己走过来，没有谁被晾着。|calm|直接坐在她旁边，把朋友的话题全部打断。|你的熟络让整桌人都有些不自在。|awkward
+sx05|问问这条动态对她意味着什么。|她说独立也可以亲近，前提是能自己做选择。|warm|把动态理解为不需要你，赌气不回消息。|你们多了一段不知从何解释的沉默。|pressure
+sx06|接受错过，把下一次演出留给双方都方便的日子。|晚棠不用为一张过期的票继续内疚。|calm|反复提票价，让她补偿一个同等价值的约会。|她觉得每次见面都像在偿还欠款。|pressure
+p01|请霜刃挑一个最关键的失误，下局只练这一点。|她喜欢你落实反馈的速度，复盘越讲越认真。|warm|把整段复盘做成她夸你的集锦。|霜刃发现技术建议被删光，剩下的只有夸奖片段。|awkward
+p02|先约定队伍训练和私人聊天分开。|霜刃觉得配合不必附带暧昧义务。|calm|要求先确认关系，才肯继续跟队。|她不愿用恋爱身份交换一个队伍位置。|pressure
+p03|认真复述她刚才的关键判断。|霜刃发现你夸的是操作，眼神都亮了一点。|warm|当着对手说她只是运气好。|你想显得客观，她却听见自己的努力被轻轻抹掉。|pressure
+p04|邀对方赛后一起复盘，找出自己输了在哪。|霜刃看见你愿意承认差距，比赢一场更欣赏你。|calm|拒绝复盘，说她还和前固定配合得这么好。|她想讲战术，你却把每个配合都当成旧情。|jealous
+p05|问她愿不愿意带你看一次高分段录像。|你们从围观榜单变成了共同研究。|warm|到处宣传自己已经拿下榜前女高手。|霜刃听说后，让你把那句炫耀收回去。|gossip
+p06|轮换分工，这晚也由你来承担难打的位置。|她终于能放心交给你一部分压力。|warm|先装作答应，开局后仍只等她带飞。|霜刃发现安排又落空，不再愿意替你兜底。|pressure
+p07|让她选下一局玩法，你负责补位。|两局之后你们不用争谁陪谁，玩得更顺了。|warm|连续秒开下一把，不给她说累的机会。|她退出匹配，说自己不是无限续杯的队友。|pressure
+p08|分别写下双方打法的优点，下局各试一次。|争论变成了试验，霜刃愿意和你一起看结果。|calm|赌输赢，谁输了就承认自己不懂游戏。|她说复盘没必要变成人身评判。|pressure
+p09|先打完眼前比赛，结束后再单独聊心意。|她打得专注，也认真赴了赛后那场约。|warm|故意送掉最后一局，好让她安慰你。|霜刃发现后比输比赛更失望。|pressure
+p10|向房主确认规则，不懂的先在练习里试。|霜刃看见你尊重约定，愿意带你再打一轮。|calm|借女高手搭子的名头让房主给你特权。|她当场否认特殊待遇，你在刀房很难下台。|gossip
+p11|只出镜操作部分，先约定不聊私人关系。|霜刃放心开播，你们留下了一段不错的配合录像。|calm|开播就喊她老婆，靠弹幕起哄逼她接话。|她关掉连麦，说比赛不是替你官宣的舞台。|gossip
+p12|把她队友和幕后训练也写进祝贺里。|霜刃觉得你看见了冠军背后所有人的努力。|warm|庆功时强调自己陪她最多，所以功劳最大。|她听见的祝贺渐渐变成了你在领奖。|pressure
+px01|把这局的突破记进训练表，明天继续练。|霜刃看到你的认真，约好了下一次切磋。|practice|向群友说她的认可等于对你有意思。|她不得不澄清，技术夸奖也变得难以开口。|gossip
+px02|约好半小时休息，回来再决定是否继续。|霜刃第一次没把休息当作输给意志力。|calm|说她怕输才不敢继续排。|她摘下耳机，不想再用疲惫证明实力。|pressure
+px03|标出自己的失误，和她各承担一半复盘。|红字不再只是责备，变成了下场训练的目标。|calm|截掉自己的失误，只留她被击倒的片段。|霜刃看过完整录像，不愿继续和你争辩。|gossip
+px04|请求多打一局，让她检查你是否真的学会。|她看到你把反制打出来，比收到情话还高兴。|warm|嘴上说学会了，实际完全不愿练。|她下次不再主动讲技巧，怕又白费心思。|awkward
+px05|先暂停队列，让每个人只说自己的失误。|霜刃也放缓语气，队伍终于能谈下一局。|calm|不看录像就站她这边，指责所有队友。|她不需要偏袒，队里却因你更加对立。|gossip
+px06|向她道歉，把夸耀对象改回她的实力。|霜刃愿意继续相处，前提是你把她当队友和人。|calm|说公开炫耀她是别人求都求不来的待遇。|她不再给你展示亲密关系的机会。|pressure
+r01|帮折枝拆分计时，让她自己选要突破的一段。|她终于知道零点三秒具体丢在了哪里。|warm|为了哄她开心，悄悄把计时截图改快。|折枝核对录像后，宁愿面对真实的失败。|pressure
+r02|把晚安改成赛后一句简短留言，不等即时回复。|折枝跑完看到留言，主动给你讲今晚的进展。|calm|每跑完一趟就追问她为什么还没回晚安。|计时器外又多了一份让她紧绷的倒数。|pressure
+r03|请她教一个技巧，其余路线自己练。|折枝看见你一点点跟上，开始期待真正并肩跑。|practice|让她登录你的账号，替你把纪录都刷了。|她发现你想要的是成绩单，不是一起跑的过程。|pressure
+r04|征求她同意后，整理带日期的原创记录。|折枝保留了署名证据，也不用马上加入骂战。|calm|为了给她出气，凭空补一段抄袭者的私生活。|不实爆料让原本清楚的署名争议也陷入争吵。|gossip
+r05|改成跑完一起散步，约会不必占整晚。|折枝既守住训练，也记得为你留一小段路。|warm|嘴上说随她，随后全程阴阳怪气地倒计时。|她跑得心烦，也不知道如何把你哄好。|pressure
+r06|先保存这次录像，明天再验证能否稳定复现。|折枝把兴奋变成研究，你们找到了关键的落点。|calm|夸口说自己闭眼也能跑出来。|真到起点你连续摔落，折枝只好重新教起。|awkward
+r07|问她想不想研究那位玩家的公开路线。|陌生ID变成了新的学习目标，而不是假想情敌。|calm|用小号加对方，打听和折枝的关系。|折枝发现你的试探，不再乐意分享榜单消息。|jealous
+r08|把她说过的赛道暗号写进只给她的留言。|折枝一眼就认出来，回了你们第一次跑图的坐标。|warm|要求她每次冲线都先在公屏喊你名字。|她想专注计时，却被迫替关系做广告。|pressure
+r09|告诉她你也有自己的安排，另约共同时间。|折枝不用二选一，你也没有把等待当成牺牲。|calm|替她拒绝另一份邀请，事后再通知她。|她介意的不是去哪，而是自己的选择被拿走。|pressure
+r10|让她独自跑一轮，你只在终点等反馈。|折枝找到零点一秒，你们庆祝的是她自己的突破。|warm|拿她没突破的记录反复打趣。|她没接你的梗，只默默把计时器收了起来。|pressure
+r11|先商量彼此体力，走一条双方都能完成的路线。|现实里的步速慢下来，你们反而聊了更多。|warm|逞强跟最难线路，不舒服也不肯暂停。|挑战提前结束，折枝也担心下次你还会硬撑。|risk
+r12|先问她想怎样庆祝，再邀请愿意来的朋友。|折枝终于不用按别人想象演一场冠军庆功。|warm|把庆功改成公开表白，让她当场回答。|纪录夜突然变成关系考试，她笑不出来了。|pressure
+rx01|替她找出第三页里最稳定的三次成绩。|折枝第一次认真看见自己一直在进步。|warm|只圈最快那次，嫌其他记录都没意义。|她觉得你也只在乎好看的数字。|pressure
+rx02|让她先认地图，你们慢跑一遍不计时。|折枝发现迷路那段居然有一片没看过的湖。|warm|一边催她一边说竞速玩家怎么会认不出路。|她本来想笑自己，现在只想关掉语音。|pressure
+rx03|先保留作者名，约一次公开讲解再发布。|折枝确认了分享方式，也给自己留足准备时间。|calm|要求所有人付费才能看她的路线。|你替她做了未商量的决定，她撤回了合作。|pressure
+rx04|说自己今晚也累了，约好明天接着练。|折枝跟着停下，终于愿意聊聊纪录以外的事。|calm|自己另开一局，故意让她也尝尝被晾着。|你们各盯着自己的屏幕，谁都没等来想要的回应。|pressure
+rx05|约定吃完饭再上线，你也先去吃自己的。|折枝拍来一张热饭照片，计时器终于歇了一会。|calm|把她的外卖拍照发群，嘲笑她只会肝纪录。|她不喜欢自己的生活被拿去当公开段子。|gossip
+rx06|先设一个两人都能做到的小目标。|第一次同时冲线虽然不快，却让折枝特别开心。|warm|嫌她路线拖累你，临时改成自己单刷。|双人线路只剩她一人，她没再发第二次邀请。|pressure
+`);
+registerChoiceRows(`
+meeting-disciple|请小栀先说卡住的步骤，你只给提示不代做。|她亲手解开机关，兴奋地加你好友说下次还要请教。|warm|老实说自己也不懂，邀她一起查攻略。|你们对着攻略各走错一次，最后一起笑着过关。|social
+meeting-sister|先听完这首曲子，再问晚棠是否愿意带你逛逛。|她收好琴，说刚好有一条不赶路的小径。|warm|坦白自己不懂琴，只觉得这里很安静。|晚棠没有考你乐理，给你留了一个安静坐着的位置。|calm
+meeting-pvp|请霜刃指出一个失误，自己练完再回来。|她看见你愿意练，主动约了下次复盘。|practice|不装高手，直接承认刚才被打懵了。|霜刃笑了一下，说至少你不嘴硬，愿意再带你打一局。|warm
+meeting-speed|帮折枝录下起跑节拍，先观察她的路线。|她边看录像边讲落点，你们慢慢聊熟了。|warm|说明自己不擅长竞速，但愿意在终点等她。|折枝冲线后听见你的欢呼，终于不再只盯着数字。|social
+pi01|承认有好感，但提出先用一周认真了解彼此。|她接受试着相处，也请你别把试试看当模糊借口。|serious|不回答，故意反问她有多少个搭子。|她没等来心意，先等来一场盘问。|jealous
+pi02|约到没人的桥边，先说出让你心动的一件小事。|她听完认真点头，愿意和你尝试更亲近的关系。|serious|当着全群大喊，让大家一起催她答应。|她觉得自己被推到台上，原本的话也不愿再说。|pressure
+pi03|先留空位，约一场只谈彼此期待的聊天。|聊过后你们愿意认真相处，不再让一张主页代替承诺。|serious|不愿确定关系，却要求她把位置永久给你留着。|她问为什么自己的空位要替你的犹豫负责。|pressure
+pi04|承认喜欢她，同时商量双方都能保留普通队友。|你们开始认真相处，也没有把朋友关系当成禁区。|serious|故意说旧搭子更懂你，想看她更在意自己。|她不想继续被比较，退出了今晚的队伍。|jealous
+lateConfess|承认喜欢，但说清现在能提供的陪伴和限制。|她愿意试着相处，要求你以后用行动兑现今天的话。|serious|明确说不想谈，也不再维持暧昧称呼。|她接受了答案，你们重新划好了朋友的距离。|friend
+meet01|现在还没准备好见面，先继续线上了解。|她接受延期，没有因为没见面就否定这段相处。|calm|先聊各自期待，愿意时再一起做见面计划。|你们谈到现实里的作息，发现要先磨合的事还很多。|warm
+meet02|今天不方便视频，明确约好另一个时间。|她没有被突然挂断，也知道你没有故意回避。|calm|拒绝视频却催她立刻赴约。|她不愿在缺少了解时被推进见面计划。|pressure
+meet03|提出这周先不见，等两个人行程都宽松些。|期待暂时搁置，你们也不用仓促赶场。|calm|坦白现实接触还让你紧张，今晚先视频聊聊。|你们完成了身份确认，把真正的见面留到准备好以后。|verifiedWarm
+meet04|告诉群友自己会判断，不再把奔现当节目。|起哄声停下来，你也能听见自己真实的犹豫。|calm|暂缓奔现，先观察对方是否言行一致。|你留下了解的时间，没有急着拿车票证明勇气。|space
+endLove01|约一个双方都能坚持的固定联系时间。|游戏之外，你们也为彼此留了一个稳定的位置。|lasting|承认自己只想保留游戏里的关系。|她不愿继续期待不同的未来，你们决定分开。|split
+endLove02|一起整理纪念册，只收双方愿意保留的片段。|相册里没什么昂贵的东西，却写满了共同记忆。|happy|嫌纪念太麻烦，说她太把游戏当真。|她珍惜的故事被你轻轻推开，话越来越少。|pressure
+endLove03|先约定冲突时怎样暂停和修复。|未来并未写满保证，却有了可以一起解决问题的方法。|lasting|答应所有目标，事后却说自己只是随口一说。|她不再敢把你的承诺写进计划。|pressure
+endLove04|坦白现实还有困难，但愿意一件件共同解决。|她看见你愿意承担具体事情，关系慢慢稳定下来。|lasting|发现期待不同，认真提出结束这段关系。|你们没有因为已经走得很远就继续勉强。|split
+endLove05|尊重各自事业，先规划稳定见面和生活节奏。|你们把离开江湖后的陪伴变成了日常。|happy|不愿再面对现实责任，提出各走各的路。|多年计划停在这一晚，这段故事还是散场了。|split
+endBad01|先把共同物品和账号权限分清，再停止联络。|交接结束后，你们各自退出了彼此的生活。|split|请中立朋友只协助交接，不替任何一方争输赢。|告别少了一些拉扯，但感情没有因此恢复。|split
+endBad02|不追着每个围观者解释，先保护好自己的生活。|风波渐渐退去，你接受了关系已经结束。|split|把公开争吵转为私下告别，不再加新的截图。|你们没能和好，却终于停止互相消耗。|split
+endBad03|列清自己的账单，今后不再拿消费换承诺。|钱没换回爱情，但你开始重新掌握自己的生活。|split|承认这段关系期待不一致，删掉待付款的礼物。|最后一份礼物没有送出，你们也没有继续。|split
+endBad04|停止盯着主页，约一次把结束的话说清。|你不再反复刷新那张图，故事也走到了最后。|split|先退共同队伍，把情绪留给可信任的朋友。|你得到了一些陪伴，也接受旧关系不会回来。|split
+endRisk01|取消后续约会，回到人多的车站独自返程。|你没有继续一段以误导开始的关系，也记住了核实的重要。|solo|不急着追问，先结束见面并停止交换更多个人资料。|你平稳离开，这场奔现没有变成想象中的爱情。|solo
+endRisk02|为这次误导划清界限，从此不再联系。|你们各自离开，没有让失望继续消耗自己。|solo|结束暧昧，今后只保留公开群里的普通交流。|这场身份乌龙没有继续发展成恋情。|friend
+endRisk03|把可疑信息留作记录，不再接受新的付款要求。|你停止追着红色感叹号等解释，保住了后续预算。|solo|请朋友陪自己退票，把今晚留给现实生活。|失望没有马上消散，但你不再一个人陷在聊天框里。|solo
+endSolo01|整理这十回合认识的人，组织一次休闲活动。|没有恋爱官宣，你也收获了愿意再约的朋友。|social|给游戏放个假，把时间留给现实兴趣。|你关上客户端，这段江湖不必用恋爱证明价值。|solo
+endSolo02|把她留在好友列表，但不再每天等消息。|你开始按自己的安排上线，偶尔碰见仍会打招呼。|solo|认真告别暧昧称呼，重新介绍自己的近况。|关系回到了普通朋友，不再让彼此误会。|friend
+endSolo03|先帮朋友做一次直播切片，再决定要不要出镜。|你尝试了内容制作，也知道成名没有那么突然。|social|只录给自己看，把这一局当旅行纪念。|没有流量和排行榜，你仍留下了自己的江湖。|solo
+endSolo04|先询问双方是否需要你参与，不替他们裁决。|双方愿意各自说话，你只是帮他们把话听完整。|calm|建议暂停群聊争执，让当事人自己决定下一步。|你没有变成裁判，群里也终于安静下来。|solo
+endSolo05|只负责一场小活动，先试试自己能否承担。|你安排出一晚热闹，也知道组织者需要多少耐心。|social|拒绝职务，保持随时能来玩的普通成员身份。|你保留了轻松自在的江湖日常。|solo
+`);
+// Fifth choices are scene-aware comic detours; they are not guaranteed rewards.
+const hiddenPools={
+ disciple:[
+ ['把教学过程改编成“小栀当师父，你当菜鸟”反向课堂。','小栀认真讲了五分钟，你故意演错一步被她当场识破。',{meme:2,bond:1,mentor:1}],
+ ['一本正经颁发“新手村禁止自卑许可证”。','她笑着收下虚构证书，但提醒你别光整活忘了听她说话。',{meme:2,stress:1}],
+ ['突然用机关NPC语气念出自己的发言。','小栀被你逗得忘了接话，随后说正事还是得好好回答。',{meme:2,bond:-1}]
+ ],
+ sister:[
+ ['用报幕腔宣布：“今晚江湖电台，由晚棠监督我闭嘴。”','她笑着把话筒接过去，你安静听完了这一段。',{meme:2,trust:1}],
+ ['当场写一首不押韵的山水打油诗。','晚棠听到第三句就笑场，你们的话题暂时绕远了。',{meme:2,bond:1}],
+ ['开口就是“尊敬的月亮用户，您的忧愁套餐已到期”。','她笑了一下，却提醒你不要用客服腔躲开认真聊天。',{meme:2,stress:1}]
+ ],
+ pvp:[
+ ['申请“嘴强王者降级证”，请霜刃签字。','她签了个“待练”，又给你布置了两轮基础训练。',{meme:2,practice:1}],
+ ['用赛事解说腔播报自己刚才的心理活动。','霜刃说节目效果满分，正事请在下句认真回答。',{meme:2,stress:1}],
+ ['提议打一局只能用最不熟悉连招的友谊赛。','你俩同时失误，终于在输赢之外笑了一回。',{meme:2,bond:1,practice:1}]
+ ],
+ speed:[
+ ['给计时器配音：“我只是块表，别再盯我了！”','折枝笑得起跑慢了半拍，今晚的纪录先欠着。',{meme:2,bond:1}],
+ ['申请担任终点吉祥物，只负责一本正经鼓掌。','折枝冲线时看见你在空气中剪彩，差点笑出声。',{meme:2,social:1}],
+ ['宣布进行一场“谁先着急谁就输了”的慢走赛。','她陪你走了十步就忍不住想冲刺，你们只好重新聊正事。',{meme:2,stress:1}]
+ ],
+ pre:[
+ ['用任务NPC口吻发布：“悬赏一位正常人，奖励一句晚安。”','群友集体自称正常，频道里一个可信的也没有。',{meme:2,social:1}],
+ ['把自己改名为“本服情绪价值待充值”。','大家以为你在开新服务，私信突然多到回不过来。',{meme:2,stress:1}],
+ ['发起“谁先恋爱脑谁请奶茶”的匿名投票。','你投了自己一票，最后发现全群都押你最先破功。',{meme:2,social:1}]
+ ],
+ social:[
+ ['提议所有人先用猫猫叫交流十秒。','猫叫结束后谁也没听懂谁，但语气总算软了一点。',{meme:2,stress:-1}],
+ ['宣布启动“江湖恋爱售后工单”，先给自己排个号。','你排到九十九号，大家都说自己的工单更急。',{meme:2,social:1}],
+ ['认真打开空白表格，标题写“如何呢，又能怎”。','表格仍然空着，对方问你能不能先把正事说完。',{meme:2,stress:1}]
+ ],
+ crisis:[
+ ['申请“暂停营业十分钟”，对着空茶杯念一段冷静咒。','你被自己逗笑，先放下手机；矛盾并没有凭空消失。',{meme:2,stress:-1}],
+ ['把想发的小作文改成一段只给自己听的相声。','讲完发现自己也有嘴硬的地方，你没有再立刻发出去。',{meme:2,clear:1}],
+ ['郑重宣读“本人停止加戏，现进入喝水环节”。','大家短暂沉默，你却还得自己面对未解决的后果。',{meme:2}]
+ ],
+ meet:[
+ ['带一张“本人比头像加载慢”的自制手牌，但先征得她同意。','她回了一个笑哭表情；见面安排仍按原计划慢慢确认。',{meme:2,bond:1}],
+ ['模拟车站广播朗读自己的紧张，不提真人信息。','你读到自己名字时卡了壳，两人终于没那么拘谨。',{meme:2}],
+ ['提出先排练一次“见面后认错人该怎么道歉”。','排练笑成一团，之后你们还是回到了身份和行程的正题。',{meme:2,clear:1}]
+ ]
+};
+function extraChoicesFor(ev){
+ const choices=authoredExtras[ev.id];
+ if(choices)return choices.map(c=>({...c,delta:{...c.delta}}));
+ // Covers future/generated scenes without ever clipping existing authored options.
+ return [opt(`先把「${ev.title}」里自己的顾虑说清楚。`,'你没有立即表态，先把真正介意的事情讲了出来。',{trust:1,clear:1}),opt('承认今晚没有余力，约个时间再认真回应。','事情暂时搁置，你也接受这次退后可能让关系慢下来。',{stress:-1,bond:-1})];
+}
+function prepareEventChoices(ev){
+ const prepared={...ev,choices:ev.choices.map(c=>({...c,delta:{...c.delta}}))};
+ for(const c of extraChoicesFor(ev)){if(prepared.choices.length>=4)break;if(!prepared.choices.some(x=>x.text===c.text))prepared.choices.push(c)}
+ while(prepared.choices.length<4)prepared.choices.push(opt('说明自己还没想好，暂时保留判断。','你没有给出答案，关系也暂时停在原地。',{bond:-1}));
+ // A single roll per encounter; showTurn only renders this prepared array.
+ if(prepared.choices.length===4 && Math.random()<.32){
+  let group=game.turn<=2?'pre':ev.id.startsWith('endBad')||ev.id.startsWith('endRisk')||ev.id.startsWith('cr')?'crisis':ev.id.startsWith('meet0')?'meet':ev.arc||game.hero.id;
+  const pool=hiddenPools[group]||hiddenPools.social;
+  const unseen=pool.filter((_,i)=>!game.hiddenSeen?.[`${group}-${i}`]);
+  const source=unseen.length?unseen:pool;
+  const item=randomOne(source),key=`${group}-${pool.indexOf(item)}`;
+  game.hiddenSeen=game.hiddenSeen||{};game.hiddenSeen[key]=true;
+  let delta={...item[2]};
+  // Comic detours cannot bypass the established final crisis.
+  if(ev.id.startsWith('endBad'))delta.breakup=1;
+  if(ev.id.startsWith('endRisk')){delta.catfish=1;if(ev.id==='endRisk02')delta.brother=1;}
+  if(ev.id.startsWith('endSolo'))delta.friendOnly=1;
+  prepared.choices.push({...opt(item[0],item[1],delta),hidden:true});
+ }
+ if(ev.id.startsWith('meeting-'))for(const c of prepared.choices)c.delta.met=1;
+ // Every final risky alternative retains the identity-mismatch outcome.
+ if(ev.id.startsWith('endRisk'))for(const c of prepared.choices){c.delta.catfish=1;if(ev.id==='endRisk02')c.delta.brother=1;}
+ return prepared;
+}
 
 </script></body></html>
