@@ -25,19 +25,32 @@ for(const [id,count] of Object.entries(save.found||{})){if(redBookIds.has(id))sa
 const store=()=>{try{localStorage.setItem(KEYS,JSON.stringify(save))}catch(e){}};
 // 匿名游戏事件统计；公共免费计数服务，不收集玩家昵称、地址或聊天内容。
 const GAME_STATS_NS='skycity0221-delta-knife-game';
-const GAME_STATS_KEY='game';
+const GAME_STATS_BASE='https://abacus.jasoncameron.dev/hit/';
 const statsBeacons=[];
-function trackGameStats(action){
- if(!['visit','start','finish','win','red'].includes(action))return;
+function sendStatHit(name){
  try{
   const img=new Image();
   statsBeacons.push(img);
-  if(statsBeacons.length>40)statsBeacons.shift();
+  if(statsBeacons.length>50)statsBeacons.shift();
   img.onload=img.onerror=()=>{const i=statsBeacons.indexOf(img);if(i>=0)statsBeacons.splice(i,1)};
-  img.src='https://counterapi.com/pixel.gif?ns='+encodeURIComponent(GAME_STATS_NS)+'&action='+encodeURIComponent(action)+'&key='+encodeURIComponent(GAME_STATS_KEY)+'&trackOnly=true&t='+Date.now()+Math.random().toString(36).slice(2);
+  img.src=GAME_STATS_BASE+encodeURIComponent(GAME_STATS_NS)+'/'+encodeURIComponent(name)+'?t='+Date.now()+Math.random().toString(36).slice(2);
  }catch(e){}
 }
-
+function trackGameStats(action){
+ if(!['visit','start','finish','win','red'].includes(action))return;
+ sendStatHit(action);
+ if(action==='visit'){
+  const day=new Date().toISOString().slice(0,10).replaceAll('-','');
+  sendStatHit('day-'+day);
+  try{
+   const k='run-knife-anonymous-device-counted-v014';
+   if(!localStorage.getItem(k)){
+    localStorage.setItem(k,'1');
+    sendStatHit('browser-first');
+   }
+  }catch(e){}
+ }
+}
 let char=DATA.characters[0],map=DATA.maps[0],run=null,page='home';
 const isRed=g=>g.grade==='red';const total=()=>run.bag.reduce((s,g)=>s+g.price,0);const used=()=>run.bag.reduce((s,g)=>s+g.slots,0);
 function itemsTable(arr){return arr.map(g=>`<div class="item"><div><b class="${isRed(g)?'gold':''}">${g.name} ${isRed(g)?'<span class="badge">大红</span>':''}</b><small>${g.group} · ${g.slots}格 · ${N(Math.round(g.price/g.slots))}/格</small></div><b>${N(g.price)}</b></div>`).join('')}
