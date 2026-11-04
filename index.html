@@ -34,7 +34,7 @@ function trackGameStats(action){
   statsBeacons.push(img);
   if(statsBeacons.length>40)statsBeacons.shift();
   img.onload=img.onerror=()=>{const i=statsBeacons.indexOf(img);if(i>=0)statsBeacons.splice(i,1)};
-  img.src='https://counterapi.com/api/'+GAME_STATS_NS+'/'+action+'/'+GAME_STATS_KEY+'?trackOnly=true&t='+Date.now()+Math.random().toString(36).slice(2);
+  img.src='https://counterapi.com/pixel.gif?ns='+encodeURIComponent(GAME_STATS_NS)+'&action='+encodeURIComponent(action)+'&key='+encodeURIComponent(GAME_STATS_KEY)+'&trackOnly=true&t='+Date.now()+Math.random().toString(36).slice(2);
  }catch(e){}
 }
 
