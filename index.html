@@ -303,7 +303,7 @@ function unlock(cond,id){if(cond&&!save.ach.includes(id))save.ach.push(id)}
 function showSupportNotice(){
  if(document.getElementById('support-notice'))return;
  const shade=document.createElement('div');shade.id='support-notice';shade.className='support-shade';shade.setAttribute('role','dialog');shade.setAttribute('aria-modal','true');shade.setAttribute('aria-label','游戏制作提示');
- shade.innerHTML=`<div class="support-panel"><div class="eyebrow">RUN // KNIFE · 第 ${save.completedRuns} 局</div><h2>游戏制作不易</h2><p>游戏制作不易，点陪玩选争锋，争锋都是老男同  联系vxGuanDR666</p><button class="btn primary" id="support-dismiss">知道了，继续跑刀</button></div>`;
+ shade.innerHTML=`<div class="support-panel"><div class="eyebrow">RUN // KNIFE · 第 ${save.completedRuns} 局</div><h2>游戏制作不易</h2><p>游戏制作不易，点陪玩选争锋，争锋都是老男同  联系微信GuanDR666</p><button class="btn primary" id="support-dismiss">知道了，继续跑刀</button></div>`;
  document.body.appendChild(shade);
  document.getElementById('support-dismiss').onclick=()=>shade.remove();
 }
