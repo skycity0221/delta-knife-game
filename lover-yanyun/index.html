@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#110d23"><title>恋与燕云模拟器 | 江湖心动测试</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@400;500;600;700&display=swap');
+:root{--bg:#0b0918;--surface:#18142d;--surface2:#221d3c;--line:#ffffff23;--cream:#fff5ec;--muted:#b4aac6;--pink:#ff72b6;--red:#fc517d;--gold:#f8d29c;--violet:#9879ff;--green:#89e3bd;--shadow:0 24px 80px #050211aa}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--cream);background:var(--bg);font-family:'Noto Sans SC','Microsoft YaHei',sans-serif;min-height:100vh}body:before{content:'';position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 88% 7%,#9d2c7040,transparent 37%),radial-gradient(circle at 6% 68%,#653bbc35,transparent 42%);z-index:-1}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.42;cursor:not-allowed}.hide{display:none!important}.shell{max-width:1120px;margin:auto;padding:18px 22px 80px}.top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 0 14px}.brand{display:flex;align-items:center;gap:10px;font-family:'Noto Serif SC',serif;font-weight:900;letter-spacing:2px}.brandmark{width:35px;height:35px;display:grid;place-items:center;background:linear-gradient(135deg,#ff79b0,#a474ff);border-radius:12px;color:#fff;box-shadow:0 0 28px #ff77b757}.topright{display:flex;align-items:center;gap:10px}.tiny{font-size:12px;color:var(--muted)}.navbtn{border:1px solid #ffffff28;color:#f8e8fa;border-radius:99px;padding:9px 13px;background:#ffffff09}.navbtn:hover{border-color:var(--pink);background:#ffffff15}.hero{min-height:610px;position:relative;overflow:hidden;border:1px solid #ffffff35;border-radius:30px;box-shadow:var(--shadow);background:radial-gradient(ellipse at 75% 50%,#c6518d65 0%,transparent 38%),radial-gradient(ellipse at 33% 6%,#6746a97a 0%,transparent 44%),linear-gradient(137deg,#100c20,#34203f 58%,#0c0b1c)}.hero:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0e0a1edb 0%,#0f0b1c70 55%,#130e230b),repeating-linear-gradient(118deg,transparent 0 70px,#ffffff09 71px 72px,transparent 73px 145px)}.hero:after{content:'❤';position:absolute;right:-37px;top:-160px;color:#ff9ecd0b;font-size:600px;transform:rotate(-18deg);font-family:serif;pointer-events:none}.particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}.petal{position:absolute;color:#ffb8d3a0;font-size:18px;animation:float 9s linear infinite}.petal:nth-child(1){left:75%;animation-delay:-2s}.petal:nth-child(2){left:42%;animation-delay:-5s}.petal:nth-child(3){left:88%;animation-delay:-8s}.petal:nth-child(4){left:24%;animation-delay:-4s}.petal:nth-child(5){left:60%;animation-delay:-1s}@keyframes float{from{transform:translateY(-35px) rotate(0deg);opacity:0}15%{opacity:1}85%{opacity:.8}to{transform:translateY(680px) rotate(260deg);opacity:0}}.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:76px 7%;min-height:610px;max-width:720px}.eyebrow{letter-spacing:4px;color:var(--gold);font-size:12px;font-weight:600}.hero h1{font-family:'Noto Serif SC',serif;font-size:clamp(43px,7.3vw,88px);line-height:1.25;letter-spacing:7px;margin:16px 0;text-shadow:0 8px 40px #f15e9350}.hero h1 em{font-style:normal;background:linear-gradient(95deg,#fff,#ffc4df 52%,#f1a6ff);-webkit-background-clip:text;color:transparent}.tagline{font-size:clamp(15px,2vw,20px);color:#f5d9e8;margin-bottom:10px}.hero-desc{max-width:480px;color:#cebed8;line-height:1.9;font-size:14px}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{border:0;border-radius:14px;padding:14px 22px;font-weight:700;color:#fff;background:linear-gradient(115deg,#ff629d,#bc6bf7);box-shadow:0 12px 34px #fa58a840;transition:transform .15s,filter .15s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.secondary{background:#ffffff10;border:1px solid #ffffff3b;box-shadow:none;color:var(--cream)}.btn.gold{background:linear-gradient(115deg,#b58a52,#f5bb75);color:#241b2b}.btn.small{padding:10px 14px;font-size:13px}.hero-decoration{position:absolute;z-index:1;right:7%;top:18%;width:32%;height:65%;min-width:200px;border:1px solid #ffbcd331;border-radius:160px 160px 20px 20px;transform:rotate(9deg);background:linear-gradient(140deg,#ffaad52b,transparent 40%,#aa71d42c);box-shadow:0 0 90px #d96baf45,inset 0 0 40px #e486ce1a}.hero-decoration:before{content:'缘';font-family:'Noto Serif SC',serif;font-weight:900;position:absolute;font-size:clamp(100px,17vw,205px);color:#f6b6d747;top:20%;left:25%;text-shadow:0 0 50px #ff4da15e}.hero-decoration:after{content:'LOVE · DESTINY';position:absolute;bottom:14%;left:18%;letter-spacing:5px;font-size:10px;color:#ffc5e2}.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 32px}.strip .mini{background:#ffffff09;border:1px solid var(--line);border-radius:16px;padding:15px;text-align:center}.mini strong{display:block;color:var(--gold);font-size:22px;margin-bottom:4px}.mini span{font-size:12px;color:var(--muted)}.section-title{font-family:'Noto Serif SC',serif;letter-spacing:2px;margin:16px 0}.panel{border:1px solid var(--line);background:linear-gradient(150deg,#211a39ee,#100e20f5);box-shadow:var(--shadow);border-radius:24px;padding:25px;margin:18px 0}.panel p{line-height:1.9;color:#e1d5e7}.panel .muted,.muted{color:var(--muted)}.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.choice{display:flex;align-items:flex-start;justify-content:space-between;text-align:left;gap:12px;background:#ffffff09;color:var(--cream);border:1px solid var(--line);border-radius:16px;padding:17px;margin-bottom:10px;width:100%;line-height:1.7;transition:all .18s}.choice:hover{border-color:#ff8fcd9a;background:#ff83c617;transform:translateX(3px)}.choice b{color:var(--gold)}.choice .arrow{color:var(--pink);font-size:18px}.option{border:1px solid var(--line);background:#ffffff08;color:var(--cream);border-radius:15px;padding:17px 14px;text-align:left;width:100%;min-height:96px}.option:hover,.option.selected{border-color:var(--pink);background:#ff78b21c}.option strong{display:block;margin-bottom:6px}.option small{display:block;color:var(--muted);line-height:1.5}.choice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:12px}.formline{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0}.formline input{background:#ffffff12;color:white;border:1px solid #ffffff3b;outline:none;padding:14px;border-radius:12px;max-width:100%;flex:1}.formline input:focus{border-color:var(--pink)}.flex{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.stat{background:#ffffff08;border-radius:13px;padding:12px}.stat-top{display:flex;justify-content:space-between;gap:6px;font-size:12px;color:#ded0e8}.track{height:5px;background:#ffffff25;border-radius:99px;margin-top:9px;overflow:hidden}.track span{display:block;height:100%;background:linear-gradient(90deg,#a179f6,#ff7eaf);border-radius:99px}.chapter{margin:12px 0 16px;font-size:12px;color:var(--gold);letter-spacing:2px}.scene{position:relative;padding:23px 0 6px}.scene h2{font-family:'Noto Serif SC',serif;font-size:clamp(23px,3vw,35px);line-height:1.4;margin:8px 0 14px}.scene p{white-space:pre-line;font-size:16px;line-height:2;color:#ecdeeb}.notice{margin:16px 0;border-left:3px solid var(--pink);background:#f86eaf12;padding:12px 15px;border-radius:0 12px 12px 0;color:#ffe1f0;font-size:13px;line-height:1.8}.hud{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.pill{background:#ffffff0c;border:1px solid var(--line);border-radius:99px;padding:8px 12px;font-size:12px;color:#eee0f4}.progress{height:5px;background:#ffffff1d;border-radius:99px;margin:14px 0}.progress span{display:block;background:linear-gradient(90deg,#fcb4d7,#c1a2ff);height:100%;border-radius:99px;transition:width .4s}.relationship{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin:18px 0}.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(145deg,#b26fd5,#f079a5);display:grid;place-items:center;font-size:20px}.relcopy{flex:1;min-width:140px}.relcopy small{display:block;color:var(--muted);margin-top:3px}.toast{position:fixed;z-index:90;bottom:30px;left:50%;transform:translateX(-50%);max-width:min(90%,500px);background:#28203d;border:1px solid #ff9bc8aa;padding:14px 20px;border-radius:14px;box-shadow:var(--shadow);line-height:1.7;text-align:center}.overlay{position:fixed;inset:0;z-index:60;background:#080511e8;display:grid;place-items:center;padding:20px;overflow:auto;backdrop-filter:blur(9px)}.modal{width:min(100%,590px);max-height:92vh;overflow:auto;border-radius:26px;background:linear-gradient(145deg,#291a40,#100e22);border:1px solid #fab8d962;padding:26px;box-shadow:0 20px 120px #e55db02c}.modal h2{font-family:'Noto Serif SC',serif}.modal p{line-height:1.9}.cgslot{aspect-ratio:4/3;border-radius:17px;position:relative;overflow:hidden;border:1px solid #ffffff2c;background:radial-gradient(circle at 80% 20%,#ef73b44d,transparent 40%),linear-gradient(145deg,#51335c,#211a3e 52%,#12132c);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;text-align:center;padding:18px}.cgslot .symbol{font-family:serif;font-size:65px;color:#ffe4fa86}.cgslot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.cgslot .cg-overlay{position:absolute;left:0;right:0;bottom:0;padding:22px 14px 12px;background:linear-gradient(180deg,transparent 0%,rgba(8,11,19,.18) 18%,rgba(8,11,19,.84) 100%);text-align:left;z-index:2}.cgslot .cg-overlay b{display:block;color:#fff2df;font-size:14px;line-height:1.5}.cgslot .cg-overlay small{display:block;color:#e6d1d2;margin-top:4px;line-height:1.45}.cgslot .cg-fallback{position:relative;z-index:1;display:flex;flex-direction:column;gap:8px;align-items:center}.cgslot.locked{filter:grayscale(1);opacity:.45}.cgslot.locked .symbol{font-size:48px}.cg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:15px}.cg-card{background:#ffffff0b;border:1px solid var(--line);border-radius:19px;overflow:hidden;padding:8px}.cg-card.unlockable{cursor:pointer}.cg-card.unlockable:hover{transform:translateY(-2px)}.cg-caption{padding:10px 7px;font-size:13px}.cg-caption small{display:block;color:var(--muted);margin-top:3px}.ending-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:11px}.ending-card{border:1px solid var(--line);background:#ffffff09;border-radius:14px;padding:14px}.ending-card.locked{opacity:.5}.ending-card strong{display:block;margin:6px 0}.ending-card p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}.badge{font-size:11px;border-radius:30px;background:#fe9aca23;color:#ffb6d8;border:1px solid #ff94b549;padding:3px 8px}.back{color:var(--muted);background:none;border:0;padding:7px 0}.end-hero{text-align:center;padding:26px 0}.end-hero .laurel{font-size:65px;color:var(--gold)}.end-hero h2{font-family:'Noto Serif SC',serif;font-size:38px;margin:10px 0}.end-hero p{max-width:620px;margin:16px auto;line-height:2}.ending-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px 0}.footer{font-size:12px;color:#b6a5c6;text-align:center;margin:38px 0;line-height:1.9}.ad-head{font-size:11px;letter-spacing:4px;color:var(--gold)}.ad-graphic{border:1px solid #ffcbaf68;background:linear-gradient(135deg,#28142f,#803150 50%,#2d1b3f);border-radius:20px;padding:35px 15px;text-align:center;margin:18px 0}.ad-graphic h2{font-size:37px;letter-spacing:6px;color:white;text-shadow:0 0 35px #ff93c4}.ad-graphic p{color:#ffe6ec}.ad-graphic .wechat{font-weight:900;color:#ffe4ac;letter-spacing:2px;font-size:20px}.rule{font-size:13px;line-height:1.9;color:var(--muted)}.highlight{color:var(--pink)}@media(max-width:650px){.shell{padding:12px 13px 55px}.hero,.hero-inner{min-height:545px}.hero-inner{padding:46px 23px}.hero-decoration{opacity:.45;right:-14%;top:30%}.hero h1{letter-spacing:2px;font-size:49px}.hero-desc{max-width:290px}.strip{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.three{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}.panel{padding:18px;border-radius:19px}.modal{padding:20px}.topright .tiny{display:none}.cg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cg-caption{font-size:12px}.cgslot .symbol{font-size:42px}.btn{padding:13px 16px}}
+
+/* v1.1 Mobile first layout & cleaner pacing */
+.creator-credit{font-size:11px;color:#f5d5e6a8;letter-spacing:2px;margin:0 0 14px;position:relative;z-index:3}
+.start-panel{max-width:570px;margin:18px auto}.starter-note{background:#ffffff09;border:1px solid #ffffff1b;border-radius:13px;padding:14px;line-height:1.8;color:#e6cddf;font-size:13px;margin:16px 0 22px}.start-full{width:100%;min-height:54px}.story-panel{max-width:680px;margin:14px auto}.story-choices{display:grid;gap:12px;margin-top:18px}.story-choices .choice{margin:0;align-items:center;min-height:74px;font-size:15px}.scene-question{color:#ffb9dd;font-size:13px;letter-spacing:2px;margin-top:13px}.quit{font-size:12px}.scene{padding-top:12px}
+@media(max-width:650px){.shell{padding:10px 12px 24px}.top{padding-bottom:8px}.brand{font-size:14px;letter-spacing:0}.brand .tiny{display:none}.brandmark{width:29px;height:29px;border-radius:9px}.topright .navbtn{padding:7px 10px;font-size:12px}.hero,.hero-inner{min-height:530px}.hero-inner{padding:52px 20px}.hero-decoration{right:-34%;top:24%;opacity:.36}.hero h1{font-size:56px;line-height:1.24}.hero-desc{font-size:13px;line-height:1.85}.cta-row{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:10px}.cta-row .btn:first-child{grid-column:1/-1;font-size:16px;min-height:52px}.cta-row .btn{padding:12px 7px;font-size:12px}.strip{gap:8px;margin:10px 0 18px}.strip .mini{padding:11px 8px}.mini strong{font-size:19px}.panel{padding:18px 16px;margin:10px 0}.story-panel{min-height:calc(100dvh - 120px);display:flex;flex-direction:column}.story-panel .scene{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:200px}.scene h2{font-size:26px}.scene p{font-size:16px;line-height:1.95}.story-choices .choice{padding:18px 14px;min-height:76px}.footer{font-size:10px;margin:25px 0 8px}.modal{max-height:90dvh}.cg-grid{gap:8px}.cg-card{padding:5px}}
+@media(prefers-reduced-motion:reduce){.petal{animation:none}.btn,.choice{transition:none}}
+
+/* V1.2 —— 参考玩家提供的武侠图片，重构手机竖屏视觉 */
+:root{--bg:#080d15;--surface:#121a24;--surface2:#1b2831;--line:#d8b98a33;--cream:#fff2df;--muted:#c3b6af;--pink:#f1a1b0;--red:#a8394e;--gold:#e4c28e;--violet:#b39bc0;--shadow:0 22px 74px #03080ce0}
+body{background:#081018;color:var(--cream)}
+body:before{background:radial-gradient(circle at 9% 10%,#76395020,transparent 37%),radial-gradient(circle at 95% 88%,#627a7d22,transparent 40%)}
+.brandmark{background:linear-gradient(145deg,#826044,#b87a77);border-radius:3px;box-shadow:0 0 20px #b58f6630}
+.brand{font-family:'Noto Serif SC',serif;color:#f6e4c8}
+.hero{min-height:680px;background:#111923 url('assets/hero-lake.jpg') center 52%/cover no-repeat;border:1px solid #ead1a750;border-radius:7px;box-shadow:0 20px 55px #020608b8}
+.hero:before{background:linear-gradient(90deg,#07121dea 0%,#0b1420cc 43%,#18202b4e 88%),linear-gradient(0deg,#10141cdb 0%,transparent 45%,#08101b36 100%)}
+.hero:after{content:'';position:absolute;inset:0;background:url('assets/hero-ink.jpg') no-repeat 94% 70%/auto 79%;mix-blend-mode:screen;opacity:.22;filter:saturate(.4);transform:none;pointer-events:none}
+.hero-decoration{right:4%;top:7%;height:86%;width:35%;transform:none;background:url('assets/hero-duo.jpg') center/cover;border:1px solid #c79d8066;border-radius:140px 140px 10px 10px;opacity:.42;box-shadow:0 0 70px #a567764f}
+.hero-decoration:before{content:''}.hero-decoration:after{content:'';}
+.hero-inner{min-height:680px;padding:76px 7%;max-width:740px;justify-content:flex-end}
+.hero h1{font-family:'Noto Serif SC',serif;letter-spacing:8px;text-shadow:1px 2px 18px #071019,0 0 25px #32212c;font-size:clamp(50px,8vw,91px)}
+.hero h1 em{background:linear-gradient(95deg,#fff0d2,#f2cdb3 45%,#f2a7b7);-webkit-background-clip:text;color:transparent}
+.eyebrow{color:var(--gold)}.hero-desc{color:#f5e5dc;max-width:460px;text-shadow:0 2px 10px #030b11}
+.hero .tagline{color:#ffe0dc;text-shadow:0 3px 15px #091019}
+.btn{background:linear-gradient(115deg,#a64557,#d18c85);box-shadow:0 8px 25px #8b3b4c42;border:1px solid #f0c7a970;border-radius:6px;color:#fff8ed}
+.btn.gold{background:linear-gradient(115deg,#85623d,#d6ad70)}
+.btn.secondary,.navbtn{border-color:#d5b9945c;border-radius:6px;background:#111b26bb;color:#f6e9d8}
+.panel{background:linear-gradient(155deg,#19232beF,#0c141cef);border:1px solid #e1c0963d;border-radius:12px}
+.choice{background:#18232bc9;border:1px solid #bb9d7d4f;border-radius:8px}.choice:hover{background:#63425156;border-color:#dcbf9e}
+.choice b{color:#edc69d}.choice .arrow{color:#edc69d}
+.progress span{background:linear-gradient(90deg,#a86675,#d2b387)}
+.pill{border:1px solid #b79b7550;background:#18232b;color:#e9d6c5}
+.scene h2,.section-title,.modal h2{font-family:'Noto Serif SC',serif}
+.scene .chapter{color:#d6b78d}.modal{background:linear-gradient(160deg,#28313a,#101722);border-color:#bf986d66;border-radius:12px}
+.creator-credit{font-size:11px;letter-spacing:2px;color:#dbc9ad;opacity:.72;padding:6px 0 0}
+.strip .mini{border-color:#b5a28235;background:#ffffff07;border-radius:8px}
+.footer{color:#a8a29a}
+@media(max-width:700px){
+ .shell{padding:9px 10px 60px}.top{padding:8px 1px 12px}.brand{font-size:14px;letter-spacing:0}.brandmark{width:28px;height:28px}.topright .tiny{display:none}.topright .navbtn{padding:7px 9px;font-size:12px}
+ .hero{min-height:calc(100svh - 100px);max-height:830px;min-height:600px;border-radius:6px;background-position:51% center}
+ .hero:before{background:linear-gradient(0deg,#0b1420f5 0%,#0b1620d7 41%,#10202a30 85%),linear-gradient(90deg,#08111d66,transparent)}
+ .hero:after{background-size:110% auto;background-position:center 15%;opacity:.13}
+ .hero-decoration{top:6%;right:5%;width:52%;height:46%;min-width:0;border-radius:110px 110px 7px 7px;opacity:.64;box-shadow:0 0 35px #e8bca32b}
+ .hero-inner{min-height:600px;justify-content:flex-end;padding:35px 22px 31px}
+ .hero h1{font-size:clamp(47px,14vw,69px);line-height:1.2;margin:11px 0 8px}
+ .hero .tagline{font-size:15px;margin:0 0 4px}.hero-desc{font-size:12px;line-height:1.7;max-width:390px}
+ .cta-row{gap:9px;margin-top:17px;width:100%;display:grid;grid-template-columns:1fr 1fr}.cta-row .btn:first-child{grid-column:span 2}.cta-row .btn{min-width:0;width:100%;padding:12px 8px;font-size:13px}
+ .strip{grid-template-columns:repeat(2,1fr);gap:7px;margin:11px 0 18px}.strip .mini{padding:10px 8px}.mini strong{font-size:19px}.mini span{font-size:11px}
+ .panel{padding:17px 15px;margin:10px 0;border-radius:9px}.scene{padding:17px 0 5px}.scene h2{font-size:25px}.scene p{font-size:15px;line-height:1.88}
+ .choice{padding:15px 14px;font-size:14px;min-height:66px}.two{grid-template-columns:1fr;gap:0}.hud{gap:5px}.pill{padding:6px 10px;font-size:11px}.navbtn.quit{font-size:11px;padding:6px 8px}
+ .modal{padding:16px}.cg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+}
+@media(prefers-reduced-motion:reduce){.petal{animation:none}}
+
+/* V1.5 rebuilt visual system — mobile-first, photographic wuxia romance */
+:root{--bg:#090f15;--surface:#121b23;--surface2:#16212a;--cream:#f9efdf;--gold:#efd2a5;--pink:#eaa6ad;--muted:#c8c1b5;--line:#c6a47e38}
+body{background:#071017;color:#f8eddf}
+.shell{max-width:1160px}
+.top{padding:12px 2px 18px;border-bottom:1px solid #c7a5742a;margin-bottom:16px}
+.brand{letter-spacing:2px;font-family:'Noto Serif SC',serif;font-size:14px}
+.brandmark{border-radius:50%;width:28px;height:28px;background:transparent;border:1px solid #e7d4b090;color:#e7d4b0;box-shadow:none;font-size:15px}
+.topright .tiny{display:none}
+.hero{min-height:690px;border:1px solid #bda47a55;border-radius:12px;background:#10202a;box-shadow:0 28px 90px #0008;isolation:isolate}
+.hero:before,.hero:after{display:none}
+.hero-scene{position:absolute;inset:0;overflow:hidden;z-index:0}
+.hero-photo{position:absolute;inset:-1%;width:102%;height:102%;object-fit:cover;object-position:69% 34%;filter:saturate(.88) contrast(1.06) brightness(.82)}
+.hero-scene:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0b1520f2 0%,#101d27b7 40%,#0a142438 76%),linear-gradient(0deg,#08111bef 0%,transparent 52%,#0d152228 100%)}
+.hero-wash{position:absolute;z-index:1;right:-7%;bottom:-17%;height:57%;width:47%;background:url('assets/hero-ink.jpg') center/contain no-repeat;mix-blend-mode:screen;opacity:.15;pointer-events:none}
+.hero-inscription{position:absolute;z-index:2;right:22px;top:22px;writing-mode:vertical-rl;font-family:'Noto Serif SC',serif;letter-spacing:6px;font-size:12px;color:#ffedd5bb;border-right:1px solid #eec9a17c;padding-right:10px}
+.hero-inner{position:relative;z-index:3;min-height:690px;padding:75px 7% 65px;justify-content:flex-end;max-width:630px}
+.hero .eyebrow{letter-spacing:5px;color:#ead2b6;font-size:11px}
+.hero h1{margin:17px 0 10px;font-weight:600;font-family:'Noto Serif SC',serif;font-size:clamp(66px,8.3vw,112px);line-height:1.08;letter-spacing:13px;color:#fff3e1;text-shadow:0 4px 30px #0009}
+.hero h1 em{color:#f6d0c9;background:none;-webkit-text-fill-color:initial}
+.hero .tagline{color:#f7d1cc;font-size:17px;letter-spacing:2px;font-family:'Noto Serif SC',serif;line-height:1.65;margin-top:14px}
+.hero-desc{color:#efe4d8de;max-width:370px;font-size:13px;line-height:1.9;margin-top:14px}
+.creator-credit{font-size:10px!important;letter-spacing:3px!important;color:#d4c5b6!important;opacity:.66!important;margin-top:8px}
+.cta-row{gap:10px;margin-top:25px;align-items:center}
+.hero .cta-row .btn:first-child{min-width:230px;font-size:15px;padding:16px 22px;background:linear-gradient(110deg,#8d3d4e,#b66b72);border:1px solid #efc4ae;border-radius:5px}
+.hero .cta-row .btn.secondary{background:#15212ad5;border-radius:5px;border:1px solid #d6ba9580;font-size:12px;padding:14px 12px}
+.hero-detail{display:flex;gap:9px;align-items:center;color:#dfcaae99;font-size:10px;letter-spacing:2px;margin-top:23px}
+.hero-detail:before{content:'';width:42px;height:1px;background:#c5a47b8a}
+.hero-decoration{display:none!important}
+.particles{display:none}
+.home-epilogue{display:grid;grid-template-columns:1fr 1.3fr;gap:16px;margin:18px 0 10px}
+.home-epilogue .scene-image{min-height:180px;border-radius:9px;overflow:hidden;position:relative;border:1px solid #d2b49250;background:url('assets/hero-lake.jpg') center 47%/cover}
+.home-epilogue .scene-image:after{content:'浮生如梦 · 江湖有缘';position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,#07131ef1,transparent);padding:46px 16px 15px;font-family:'Noto Serif SC',serif;color:#f9e7d2;font-size:15px;letter-spacing:3px}
+.home-epilogue .scene-copy{background:#13212b;border:1px solid #e3c69e39;border-radius:9px;padding:24px}
+.home-epilogue h2{font-family:'Noto Serif SC',serif;font-size:24px;font-weight:500;margin:7px 0 9px;color:#f8e7cf}
+.home-epilogue p{color:#c8bdb2;line-height:1.9;font-size:13px}
+.cgslot .cg-overlay{padding:26px 14px 12px}
+.cgslot .cg-overlay small{display:none}
+.cg-card.unlockable{cursor:pointer}
+.cg-card.unlockable:hover{border-color:#d9b691}
+.cgslot img{object-fit:contain;background:#0b1119}
+.cgslot{background:#111923}
+.cgslot.locked{opacity:1;filter:none;background:#111a21}
+.cgslot.locked img{filter:blur(13px) brightness(.26) grayscale(.7);transform:scale(1.07)}
+.cgslot.locked .cg-lock{position:absolute;z-index:3;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#f6e5d0;font-family:'Noto Serif SC',serif;text-shadow:0 3px 12px #000}
+.cgslot.locked .cg-lock span{font-size:12px;color:#e2c6a7;margin-top:9px}
+.cg-preflight{border:1px solid #d1b58b45;background:#19232b;padding:12px 14px;border-radius:9px;display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 18px;font-size:12px;color:#dfd2c2;flex-wrap:wrap}
+.cg-preflight button{border:1px solid #d1b58b6e;background:transparent;color:#f3dabd;border-radius:5px;padding:8px 12px}
+@media(max-width:700px){
+ .shell{padding:8px 10px 40px}
+ .top{margin-bottom:10px}
+ .top .brand .tiny{display:none}
+ .hero{min-height:720px;border-radius:8px}
+ .hero-scene{inset:0}
+ .hero-photo{inset:0;width:100%;height:66%;object-fit:cover;object-position:54% 20%;filter:saturate(.95) brightness(.92)}
+ .hero-scene:after{background:linear-gradient(0deg,#0b1520 23%,#0b1520f5 35%,#0b1520a8 48%,#0b152000 77%),linear-gradient(90deg,#0b152033,transparent)}
+ .hero-wash{height:52%;width:85%;bottom:-12%;right:-17%;opacity:.12}
+ .hero-inscription{top:18px;right:16px;font-size:10px}
+ .hero-inner{min-height:720px;max-width:none;padding:315px 25px 31px;justify-content:flex-end;align-items:flex-start}
+ .hero h1{font-size:clamp(56px,15vw,78px);letter-spacing:9px;line-height:1.05;margin:10px 0}
+ .hero .eyebrow{font-size:10px;letter-spacing:3px}
+ .hero .tagline{font-size:14px;letter-spacing:1px;margin-top:9px}
+ .hero-desc{font-size:12px;line-height:1.8;margin:10px 0 0}
+ .hero .cta-row{display:grid;width:100%;grid-template-columns:1fr 1fr;gap:9px;margin-top:18px}
+ .hero .cta-row .btn:first-child{grid-column:span 2;width:100%;font-size:15px;padding:15px 12px;min-width:0}
+ .hero .cta-row .btn.secondary{font-size:12px;padding:12px 9px}
+ .hero-detail{font-size:9px;margin-top:14px}
+ .home-epilogue{grid-template-columns:1fr;gap:10px}
+ .home-epilogue .scene-image{min-height:210px;background-position:center 52%}
+ .home-epilogue .scene-copy{padding:18px}
+ .home-epilogue h2{font-size:20px}
+ .strip{grid-template-columns:repeat(2,1fr)}
+ .cg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .cg-caption{font-size:11px;padding:8px 5px}
+ .cgslot .cg-overlay{padding:22px 8px 8px}
+ .cgslot .cg-overlay b{font-size:10px}
+ .cgslot.locked .cg-lock{font-size:13px}
+}
+@media(max-width:375px){.hero{min-height:680px}.hero-inner{min-height:680px;padding:285px 20px 24px}.hero h1{font-size:53px}}
+</style></head><body><main id="app" class="shell"></main><div id="toast" class="toast hide"></div><div id="modalHost"></div><script>
+'use strict';
+const STORAGE='lover-yanyun-v1'; // 兼容旧版本图鉴存档
+const paths={newbie:{name:'初入江湖',desc:'没有资源，没有故事，一切从零开始。',stats:{eq:2,guard:2}},duel:{name:'论剑苗子',desc:'你坚信剑比情话更可靠。',stats:{skill:13,fame:2}},forest:{name:'觉障林混子',desc:'野外偶遇，可能遇到爱情，也可能遇到五排。',stats:{skill:7,charm:4}},anchor:{name:'直播新人',desc:'刚开播三天，直播间观众有两位，其中一位是自己。',stats:{fame:12,charm:6,money:-8}},escort:{name:'陪玩预备役',desc:'麦克风很好，接单经验为零。',stats:{money:9,eq:7,fame:3}}};
+const temperaments={romantic:{name:'恋爱脑',desc:'心动很快，吃亏也可能很快。',stats:{romance:17,eq:4,guard:-8}},rational:{name:'清醒派',desc:'不拒绝爱情，也不轻易交出所有。',stats:{guard:18,romance:-8}},social:{name:'社牛',desc:'从未见过你怕的陌生人。',stats:{charm:14,fame:5,eq:4}},introvert:{name:'闷骚怪',desc:'表面高冷，私聊中表情包高手。',stats:{skill:7,eq:6}},ambitious:{name:'野心家',desc:'江湖排行榜比情头更有吸引力。',stats:{skill:9,fame:9,romance:-10}}};
+const defaultStats={skill:28,speed:16,charm:26,eq:30,money:60,fame:8,romance:27,guard:35,scandal:2,energy:78,affection:0};
+const endings=[
+['E01','缘分桥的另一端','good','你们从线上相识到线下重逢，最终在现实中认真相爱。',5],['E02','双排到双人婚礼','good','那年第一次双排，你没想到最后会一起交换戒指。',8],['E03','长久恋爱中','good','没有轰轰烈烈的结局，只有每天睡前一句晚安。',10],['E04','七夕奔现成功','good','七夕车站的人群里，你一眼就认出了那个熟悉的人。',4],['E05','全百业最甜情侣','good','大家本来等着吃瓜，结果被你们塞了一嘴糖。',7],['E06','技术情侣档','good','你负责切后排，她负责把你的名字写进未来。',6],['E07','主播情侣营业成功','good','从连麦直播到一起生活，你们的频道从未散场。',9],['E08','退游结婚','good','江湖暂别，但你们选择在现实里继续同行。',10],['E09','先侠缘后领证','good','当年的一键结缘，最终变成了现实中的两本证。',8],['E10','江湖不散场','good','没有急着定义未来，但你们始终选择彼此。',1],
+['E11','喜提瓜房PPT','bad','某天早上醒来，你发现自己的感情经历被整理成了47页汇报。',11],['E12','大套蒸发术','bad','聆音时装刚送出去，对方的好友申请却再也发不出去。',13],['E13','假照翻车夜','bad','奔现的那一刻，你发现自己爱上的头像和现实毫无关系。',12],['E14','对象无缝衔接','bad','分手消息还未撤回，对方的双人主页已经换了人。',14],['E15','私密危机','bad','信任被辜负，你选择求助和保护自己，而不是继续被流言伤害。',15],['E16','电子ATM','bad','你以为自己在谈恋爱，对方以为你在提供无限额服务。',16],['E17','情头不是和你换的','bad','你盯着熟悉的情头，却发现自己只是误会了主角。',14],['E18','双人主页没有你','bad','你们私聊里说了无数次永远，公开主页上却没有你的位置。',11],['E19','她说你只是搭子','bad','原来你眼里的爱情，只是她顺手点开的双排邀请。',11],['E20','奔现后被拉黑','bad','你的返程车票还没出票，聊天框里已经只剩红色感叹号。',12],['E21','备胎二号','bad','你从聊天记录里发现，这句晚安曾同时发送给三个人。',14],['E22','主播的免费打手','bad','她拿到了名气与战绩，你只拿到了睡眠不足。',19],['E23','恋爱脑破产','bad','热恋时期买下的所有礼物，最后只换来一次沉默。',16],['E24','黑历史巡回展','bad','最糟糕的不是分手，而是你成了各个群里的吃瓜表情包。',15],
+['E25','论剑榜一','career','你的名字挂在论剑榜顶端。江湖记住了你的剑。',17],['E26','竞速天花板','career','新的纪录诞生了，没人记得你熬过多少次失败。',18],['E27','觉障林大主播','career','从零人直播间到万人围观，你终于成了觉障林的传说。',19],['E28','陪玩头牌','career','技术、情商、口碑三开花，你的档期已经排到下个月。',20],['E29','百业风云人物','career','江湖消息总能最先传到你这里，但你更懂如何保护朋友。',20],['E30','独狼封神','career','没有固定情缘，没有复杂关系，你用一场场胜利写下自己的故事。',17],['E31','燕云社交大师','career','最强的技能不是输出，是让不同的人坐下来好好说话。',20],['E32','全服知名带人王','career','你带过的人遍布江湖，走到哪儿都有人叫你师父。',19],
+['E33','奔现竟是好兄弟','meme','约定的见面地点出现一位男生。你发现先前对身份的想象与现实不同；认真确认后，两人选择坦诚做朋友。',12],['E34','瓜房主持人','meme','你已经不想谈恋爱了，只想提醒所有人发截图先打码。',11],['E35','PPT制作大师','meme','你的PPT排版太优秀，众人纷纷邀请你制作商业汇报。',11],['E36','截坟艺术家','meme','你没有收获对象，却因为奇妙的截坟表情包一夜成名。',20],
+['E37','江湖寻常客','career','你没有上热搜，也没有登顶榜单。做日常、打打本、和朋友闲聊，平凡而自在的一段燕云时光。',1],
+['E38','深夜情感观察员','meme','群里又出现伤感小作文。你见过许多江湖故事，决定不盲从传闻，也不把别人的情绪当作戏台。',11]
+].map(([id,name,kind,desc,cg])=>({id,name,kind,desc,cg}));
+const cgData=[
+['初遇双排夜','夜色江湖，古桥旁两名玩家第一次组队，游戏感 UI 轻叠加','初遇'],['缘分桥定情','暮色古桥与烟花，两名成年侠客互相对望，粉金光效','定情'],['七夕送大套','华丽古风时装礼盒和游戏送礼提示，浪漫粉紫','赠礼'],['深夜语音心动','窗边暖灯、手机语音通话界面、含蓄暧昧氛围','心动'],['第一次奔现','现代高铁站，两个成年年轻人笑着相认，电影感','奔现'],['情侣双排连胜','武侠双人并肩战斗、连胜高光，不使用真实游戏UI','并肩'],['双人主页官宣','古风双人肖像展示、红粉彩绸与花瓣','官宣'],['婚服结局','成年男女中式婚服、大气庄重、霞光','婚礼'],['现实牵手散步','都市黄昏，成年情侣牵手散步，暖色镜头','余生'],['长久恋爱纪念照','现实生活相册拼贴、纪念日蛋糕、温暖质感','十年'],
+['瓜房审判夜','搞怪投影和PPT剪影、群消息围观，完全虚构匿名信息','瓜房'],['假照翻车现场','车站两名成年男性误会身份的诙谐表情，友善喜剧','翻车'],['大套被骗','虚构华丽时装礼盒、好友删除提示，破碎心形','被骗'],['无缝衔接情头','手机两个不一致的情侣头像、新配对提示，失落','情头'],['私密危机','手机大量模糊通知，主人公寻求支持，非露骨','隐私'],['电子ATM破防','满桌外卖小票、游戏礼盒和钱包、喜剧夸张','破防'],['论剑榜一登顶','剑客站在风雪擂台高处，金色榜首光效','剑冠'],['竞速纪录诞生','武侠身法飞跃长空，金色计时纪录，速度感','飞影'],['觉障林主播高光','电竞直播间、大屏武侠竞技画面、弹幕灯光','顶流'],['百业全服成名','江湖群侠齐聚庆祝，旗帜与烟火，电影群像','成名']
+].map(([name,prompt,symbol],i)=>({id:i+1,name,prompt,symbol,file:(window.CG_EMBED?.[i+1]||`assets/cg${String(i+1).padStart(2,'0')}.jpg`)}));
+const namedNPCs=[{name:'阿棠',icon:'🌸',type:'warm'},{name:'阿绫',icon:'🦋',type:'sharp'},{name:'小鱼',icon:'🐟',type:'fun'},{name:'墨染',icon:'🌙',type:'mystery'},{name:'听雪',icon:'❄️',type:'calm'}];
+const event=(id,title,body,choices,condition,weight=1)=>({id,title,body,choices,condition,weight});
+const choice=(text,delta={},result='',flag='',set={})=>({text,delta,result,flag,set});
+const events=[
+// 初始事件：只负责建立普通玩家的日常，不直接凭空制造恋爱或事业身份
+ event('start_daily','上线的第一件小事','周末晚上，你打开《燕云十六声》。好友列表里有人在打本，有人在论剑，也有人只是挂机看风景。',[
+ choice('先找人组队，江湖总要有点人气。',{charm:4,eq:3},'你进了一个热闹的临时队。','socialized'),
+ choice('先做日常，再看看今晚会发生什么。',{money:3,skill:3},'你清完日常，顺手整理了背包。','daily')],s=>s.turn<=2,6),
+ event('firstmeet','缘分桥的陌生人','你在缘分桥拾到一片红叶。留言只有一行：“不急着结缘，先找个一起玩的人。”',[
+ choice('回复红叶，先从普通朋友做起。',{affection:12,eq:4},'你和{npc}互加了游戏好友。','met'),
+ choice('拍下红叶留个纪念，继续逛江湖。',{guard:6,charm:2},'你暂时还想一个人玩。','solo')],s=>!s.flags.met&&s.turn<=6,5),
+ event('team','临时队友','组队打本时，一位队友主动帮你解释机制。打完后问你要不要加好友，下次继续。',[
+ choice('加个好友，约好下次组队。',{affection:9,eq:4},'你认识了{npc}，聊得不错。','met'),
+ choice('道谢后离队，继续自己的节奏。',{guard:4,skill:3},'这局很顺利，你记住了一个技巧。','solo')],s=>!s.flags.met,5),
+ event('forest_daily','今晚打觉吗','群友喊你上觉障林，队里还缺一个位置。有人研究撤离路线，有人却只想在附近频道整活。',[
+ choice('跟队友先商量路线和撤离时机。',{skill:7,eq:3},'你们至少不会因为沟通失误白给。','forestPlayed'),
+ choice('进去主打一个气氛，顺便拍拍风景。',{charm:5,energy:4},'虽然没打出高光，但笑话不少。','forestPlayed')],s=>true,5),
+ event('street','大世界奇遇','你在路边遇到两位玩家，一个在弹琴，一个举着伞原地发呆。路过的人都在围观。',[
+ choice('坐下听曲，和大家闲聊一会儿。',{charm:4,eq:5},'你收到了几句很有意思的江湖故事。','socialized'),
+ choice('趁着没人注意，去探索附近的地图。',{skill:4,energy:5},'你顺手发现了一处很美的风景。','explore')],s=>true,4),
+ event('nightduo','凌晨两点的双排邀请','{npc}发来一句：“还没睡？觉障林缺个搭子，要不要来两把？”',[
+ choice('一起打两把，边打边聊。',{affection:12,romance:5,energy:-6},'你们聊到了游戏之外的话题。','bond'),
+ choice('明天再打，今晚确实该睡了。',{affection:3,guard:5,energy:8},'对方回了个晚安，约你明天上线。','boundary')],s=>s.flags.met&&!s.flags.breakup,5),
+ event('voice','从语音到私聊','{npc}在语音里讲了个冷笑话，你笑得差点没躲过技能。对方说：“原来你这么好说话。”',[
+ choice('认真聊聊彼此平时喜欢做什么。',{affection:13,eq:7,romance:4},'你们的关系从游戏搭子变得更熟悉。','bond'),
+ choice('继续讲土味情话，把队友都整沉默。',{affection:8,charm:9,romance:6},'队友疯狂扣问号，你们倒是笑得开心。','flirt')],s=>s.flags.met&&!s.flags.breakup,5),
+ event('friend','好友列表里那个人','你发现自己最近总是不自觉点开{npc}的主页。对方刚好发来消息：“你又上线啦？”',[
+ choice('坦白说：确实挺期待和你一起玩的。',{affection:14,romance:9},'气氛稍微暧昧了一点。','flirt'),
+ choice('回个表情包，先保持自然相处。',{affection:6,guard:6},'你们依旧是舒服的搭子。','bond')],s=>s.flags.met&&!s.flags.breakup,4),
+ event('confess','红叶上的第二句话','你和{npc}已经一起玩过好几次。对方问你：“在游戏里结个侠缘，你会当成现实恋爱吗？”',[
+ choice('把话说清楚：若认真喜欢，可以慢慢走到现实。',{affection:18,eq:8,romance:9},'你们决定以认真相处为前提，尝试发展关系。','serious'),
+ choice('游戏侠缘先是游戏关系，不要急着默认恋爱。',{affection:7,guard:12,eq:6},'你们说清了边界，继续一起玩。','boundary')],s=>s.flags.met&&!s.flags.serious&&!s.flags.breakup&&s.turn>=3,5),
+ event('official','双人主页要写谁','{npc}提到想换双人主页。你知道有人在意官宣，也有人只把主页当作游戏装饰。',[
+ choice('先确认彼此关系，再决定展示方式。',{affection:13,eq:8,guard:4},'你们确认彼此的期待，决定公开双人展示。','official'),
+ choice('先不改，避免把游戏展示当作恋爱承诺。',{affection:3,guard:9},'对方理解了你的谨慎。','boundary')],s=>s.flags.serious&&!s.flags.official&&!s.flags.breakup,5),
+ event('past_lover','旧侠缘还挂着','你和{npc}聊到从前的游戏关系。你发现对方主页上仍有过去的侠缘展示，心里有点别扭。',[
+ choice('直接问清楚：现在是什么关系？',{eq:11,guard:8,affection:4},'你们认真讨论了边界，没有靠猜测解决问题。','clearBoundary'),
+ choice('忍住不问，去群里发一条阴阳怪气的动态。',{scandal:12,affection:-13,romance:7},'朋友开始问你们是不是吵架了。','jealous')],s=>s.flags.serious&&!s.flags.clearBoundary&&!s.flags.breakup,4),
+ event('gift','七夕时装上新','商城上新了一套昂贵的聆音时装，{npc}在聊天时提了一句“真好看”。你们并没有约定互送礼物。',[
+ choice('量力而行，先问是否真的想互赠礼物。',{guard:9,affection:6,eq:6},'对方说一起拍照更重要。','giftCareful'),
+ choice('直接买下大套，希望对方因此更爱你。',{money:-42,romance:13,affection:8,guard:-10},'你送出了礼物，但礼物不能证明对方的真心。','gift')],s=>s.flags.met&&!s.flags.gift&&s.turn>=3,4),
+ event('gift_pressure','“不送就是不爱”？','你刚认识的网友突然让你买时装：“你若真的喜欢我，就别问这么多。”',[
+ choice('拒绝，把感情和消费分开。',{guard:14,eq:7},'你守住了自己的预算。','resistedGift'),
+ choice('咬咬牙送大套，期待之后能得到承诺。',{money:-45,romance:18,guard:-15},'道谢消息很短，对方却很快失去联系。','giftScam')],s=>s.flags.met&&!s.flags.serious&&!s.flags.giftScam&&s.turn>=4,3),
+ event('verify','从照片聊到见面','你和{npc}聊起现实生活，发现双方还没有认真核实过年龄和身份，也没讨论过见面的边界。',[
+ choice('先语音或视频相互确认，再谈见面。',{guard:15,eq:8,affection:8},'双方愿意坦诚沟通，彼此更安心。','verified'),
+ choice('头像那么好看，还需要确认什么？',{romance:17,guard:-15,affection:7},'你把头像当成了真实承诺。','unverified')],s=>s.flags.met&&!s.flags.verified&&!s.flags.unverified&&s.turn>=4,5),
+ event('meet','线下见面的邀请','{npc}说：“如果以后见面，你想选哪里？”你们第一次把奔现认真摆上了桌面。',[
+ choice('约白天公共场所，并提前说好彼此期待。',{affection:12,guard:9,eq:8},'你们认真安排了安全又轻松的见面。','plannedMeet'),
+ choice('冲动买票，什么都没确认就出发。',{romance:12,money:-17,guard:-13},'你选择了临时奔现，心跳得很快。','riskyMeet')],s=>s.flags.serious&&!s.flags.plannedMeet&&!s.flags.riskyMeet&&s.turn>=5,5),
+ event('meet_result','终于见到本人','约定的日子到了。你在人群中寻找那张熟悉的头像。真正重要的不是照片好不好看，而是彼此是否真诚。',[
+ choice('尊重双方真实身份，聊聊是否继续认真相处。',{affection:13,eq:9,guard:6},'你们把误会聊清楚，决定如何继续。','metInPerson'),
+ choice('发现关键信息前后矛盾，礼貌结束见面。',{guard:16,affection:-18},'你保护了自己的边界，安全结束见面。','meetDisappointed')],s=>(s.flags.plannedMeet||s.flags.riskyMeet)&&!s.flags.metInPerson&&!s.flags.meetDisappointed,8),
+ event('reality','现实里的普通日子','奔现之后，{npc}问：“我们不每天打游戏，也还会好好相处吗？”',[
+ choice('认真经营现实生活，彼此都保留自己的空间。',{affection:15,eq:10,guard:5},'你们开始学习如何在现实中相处。','lasting'),
+ choice('坚持每天在线，谁不上线谁就是不爱。',{romance:15,affection:-15,scandal:5},'要求越来越多，你们有些疲惫。','clingy')],s=>s.flags.metInPerson&&!s.flags.lasting&&!s.flags.clingy,7),
+ event('misunderstanding','“只是打两把”','你看到{npc}和别人双排，对方没有提前告诉你。你忽然有点吃醋。',[
+ choice('先问清楚，不把双排直接等同于出轨。',{eq:10,affection:7,guard:3},'一场小误会被好好说开了。','clearBoundary'),
+ choice('在大群里发一段意味深长的小作文。',{scandal:16,affection:-17,romance:8},'朋友们开始围观，你们的矛盾更难收场。','publicFight')],s=>s.flags.serious&&!s.flags.publicFight&&s.turn>=5,3),
+ event('breakup','关系突然降温','最近{npc}总是很晚才回复。你们已经为同样的问题吵过几次。',[
+ choice('约定认真谈一次，尊重彼此是否继续。',{eq:10,guard:8,affection:3},'无论结果如何，你都试着好好处理。','talked'),
+ choice('一气之下斩缘，在群里放狠话。',{scandal:16,affection:-23,romance:8},'关系在冲动中急转直下。','breakup')],s=>(s.flags.publicFight||s.flags.jealous||s.flags.clingy)&&!s.flags.breakup,6),
+ event('new_avatar','分手后的新情头','你们刚断缘，便看到前任主页换了新的双人展示。你想起曾经说过的那些话。',[
+ choice('承认难过，但不去追问和骚扰。',{guard:9,eq:9},'你关掉了主页，开始恢复自己的节奏。','movedOn'),
+ choice('发消息质问，把截图转给整个好友群。',{scandal:19,romance:8},'你的截图很快被二次传播。','avatarDrama')],s=>s.flags.breakup&&!s.flags.avatarDrama&&!s.flags.movedOn,6),
+ event('privacy','私聊截图该不该转','朋友发来一段别人暧昧私聊的截图，要你帮忙转到群里。你不知道截图是否经过同意。',[
+ choice('拒绝转发，提醒对方保护隐私。',{guard:12,eq:8},'聊天群逐渐冷静下来。','privacySafe'),
+ choice('不加判断就转发，还添一句戏谑评论。',{scandal:26,guard:-8},'有人指出你在传播未经同意的私聊。','privacyRisk')],s=>s.turn>=3,4),
+ event('guafang','瓜房里出现你的名字','有人开始把群里的争吵做成PPT。你发现标题提到了自己，但很多细节被讲错。',[
+ choice('只澄清必要事实，不公开他人隐私。',{eq:12,guard:11,scandal:-16},'你把争论控制在事实范围内。','clarified'),
+ choice('当场回怼，做一份更长的PPT反击。',{scandal:20,fame:8},'一夜之间，全群都成了PPT评委。','ppt')],s=>(s.flags.publicFight||s.flags.avatarDrama||s.flags.privacyRisk)&&!s.flags.clarified&&s.turn>=5,7),
+ event('dreamxizhou','凌晨的伤感文学','你加入的燕云聊天群里，一位ID叫「梦西洲」的中年大叔角色说自己喝了两杯，又在深夜发文：“酒入愁肠，江湖无人懂我。”群里有人调侃他每天借忧郁文案吸引年轻女生安慰。这是虚构江湖段子，真相并不明确。',[
+ choice('回一句：叔，先喝水，别拿情绪当交友暗号。',{eq:9,charm:6,guard:5},'群友笑成一片，话题转向正常聊天。','dreamCalled'),
+ choice('不猜测他人动机，私下提醒群友交友注意边界。',{guard:12,eq:8},'大家决定少传播猜测，多保护自己。','dreamCalm')],s=>s.turn>=2,5),
+ event('dream_follow','梦西洲的第二篇小作文','隔了一晚，「梦西洲」又发来一段伤感文案：“若有人肯懂我，天涯又何妨。”有人问要不要把它做成群聊表情包。',[
+ choice('做一张不带私人信息的武侠文案梗图。',{charm:8,fame:5},'你的“江湖文学鉴赏”梗图在朋友间传开。','dreamMeme'),
+ choice('劝群友别围攻，开局觉障林转移话题。',{eq:8,skill:6},'大家用一场闹哄哄的五排收尾。','dreamResolved')],s=>(s.flags.dreamCalled||s.flags.dreamCalm)&&!s.flags.dreamResolved&&!s.flags.dreamMeme,5),
+ event('meme','梗图比操作还出圈','队友在群里喊：“这波属于是把恋与燕云玩成PPT模拟器了！”群友疯狂刷表情包。',[
+ choice('一起接梗，笑归笑不贴真人信息。',{charm:8,eq:5},'你成了群聊里的气氛组。','socialized'),
+ choice('不看热闹，练会刚才失误的操作。',{skill:7,speed:3},'下次同样的局面，你更有把握了。','practice')],s=>true,4),
+ event('game_life','到底是江湖还是上班','工作或上学忙了一整天，你发现自己最近上线太久。今晚要不要早点休息？',[
+ choice('按时休息，明天再陪朋友玩。',{energy:15,eq:6},'你发现生活和游戏都能安排得很好。','rest'),
+ choice('再打一局就睡——这是第几次说了？',{skill:7,energy:-12},'又打到了凌晨，明天一定改。','practice')],s=>true,5),
+ event('friend_group','百业里的热心人','百业群里有人问新手问题，群友们七嘴八舌，有些人甚至开始互相阴阳。',[
+ choice('耐心解释游戏机制，顺便缓和气氛。',{eq:10,fame:6},'群里有人认真向你道谢。','mediator'),
+ choice('发个表情包，跟朋友约下一局。',{charm:6,energy:4},'气氛缓和后，你们又组起了队。','socialized')],s=>true,4),
+ event('lone','独自练习的一晚','好友都没在线。你路过清冷的练武场，忽然觉得安静也挺好。',[
+ choice('练几轮论剑基础连招。',{skill:11,energy:-6},'你练出了更稳定的手感。','practice'),
+ choice('练身法跑图，看看能不能快一点。',{speed:11,energy:-6},'你渐渐记住了每个转弯。','speedPractice')],s=>true,4),
+ event('opportunity_rank','意外的论剑指导','你偶然匹配到一位高手，对方看了你的操作，说你有天赋，愿意带你练一段时间。',[
+ choice('接受指导，认真复盘自己的连招。',{skill:22,energy:-10},'你的水平突然上了一个台阶。','rank'),
+ choice('谢谢指导，我还是想随便玩。',{eq:5,energy:8},'你没有急着成为高手。','casual')],s=>s.turn>=3,3),
+ event('opportunity_speed','偶然刷到一条竞速视频','你照着朋友发来的路线跑了一遍，意外刷出不错的成绩。有人邀请你进竞速讨论群。',[
+ choice('认真研究路线，试试极限提速。',{speed:25,energy:-9},'你第一次认真计时研究身法。','speed'),
+ choice('保存视频，下次有空再练。',{speed:5,eq:4},'你暂时仍然是休闲玩家。','casual')],s=>s.turn>=3,3),
+ event('opportunity_stream','高光剪辑突然有了流量','你随手发的一段觉障林残局视频突然被很多人点赞，有朋友问你要不要试试直播。',[
+ choice('尝试直播，把玩法讲给路人听。',{fame:26,skill:5},'第一次直播的人数比想象中多。','stream'),
+ choice('继续当普通玩家，有空再分享剪辑。',{charm:5,skill:4},'你并不想把游戏变成工作。','casual')],s=>s.turn>=3,3),
+ event('opportunity_escort','有人想付费点你双排','一位群友听说你脾气好、懂配合，问你能不能接几单陪玩。',[
+ choice('先明确服务内容、时间和价格。',{money:13,eq:9,guard:7},'你谨慎地接下第一单。','escort'),
+ choice('谢谢，我想保持普通朋友关系。',{eq:5,affection:3},'你继续自由组队。','casual')],s=>s.turn>=3,3),
+ event('opportunity_forest','觉障林残局一打五','你在觉障林意外打出一次精彩残局，群友说这操作不去练五排太可惜了。',[
+ choice('试着固定训练，认真研究阵容和撤离。',{skill:22,fame:6},'你开始系统研究觉障林。','forest'),
+ choice('纯属运气好，还是快乐五排吧。',{charm:8,eq:3},'群友说你真是个欢乐喜剧人。','casual')],s=>s.turn>=3,3),
+ event('opportunity_player','同时收到几条暧昧消息','最近有几个搭子频繁找你聊天。你发现自己很享受被关注，却还没有承诺过任何关系。',[
+ choice('对每个人说清边界，不玩感情文字游戏。',{eq:10,guard:7},'关系反而更轻松。','boundary'),
+ choice('同时发展几段暧昧，看看谁先认真。',{charm:13,romance:4,scandal:12},'你的聊天列表开始变得复杂。','player')],s=>s.flags.met&&s.turn>=4&&!s.flags.serious,2),
+ event('workday','现实比游戏更长','你刚准备继续上线，却看到明天还有一堆现实事情没做。',[
+ choice('做好计划，留点时间给自己。',{energy:12,money:6,guard:5},'无论有没有侠缘，你都过得踏实。','balanced'),
+ choice('关掉待办，先去和队友打两把。',{skill:6,charm:5,energy:-6},'江湖之夜又开始了。','forestPlayed')],s=>true,3)
+];
+let save=readSave(),game=null,screen='home',setup={name:'少侠',path:'newbie',temperament:'rational'},currentEvent=null,lastEnding=null;
+function readSave(){try{const p=JSON.parse(localStorage.getItem(STORAGE)||'{}');return{runs:p.runs||0,seen:p.seen||{},cgs:p.cgs||{},achievements:p.achievements||{},history:p.history||[],sound:p.sound!==false}}catch{return{runs:0,seen:{},cgs:{},achievements:{},history:[],sound:true}}}
+function persist(){try{localStorage.setItem(STORAGE,JSON.stringify(save))}catch(e){toast('浏览器无法保存进度，请检查隐私模式或存储权限。')}}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function el(s){document.getElementById('app').innerHTML=s}function toast(s){const t=document.getElementById('toast');t.textContent=s;t.classList.remove('hide');clearTimeout(toast.timer);toast.timer=setTimeout(()=>t.classList.add('hide'),2800)}
+function hdr(){return `<div class="top"><div class="brand"><span class="brandmark">缘</span>恋与燕云 <span class="tiny">SIMULATOR 1.5</span></div><div class="topright"><span class="tiny">已通关 ${save.runs} 局</span><button class="navbtn" onclick="showHome()">⌂ 首页</button></div></div>`}
+function showHome(){screen='home';game=null;currentEvent=null;el(hdr()+`<section class="hero"><div class="hero-scene"><img class="hero-photo" src="assets/hero-duo.jpg" alt="樱花树下相伴而立的两位江湖侠客"><div class="hero-wash"></div></div><div class="hero-inscription">江湖有梦 · 情缘未央</div><div class="hero-inner"><div class="eyebrow">A TALE OF LOVE & JIANGHU</div><h1>恋与<br><em>燕云</em></h1><div class="tagline">十次抉择，遇见你的江湖心动。</div><div class="hero-desc">在《燕云十六声》的江湖里，缘分桥初遇、觉障林双排、深夜耳语，可能通向一场盛大的爱情，也可能成为瓜房里的离谱传说。</div><div class="creator-credit">沈狂狂狂狂制作</div><div class="cta-row"><button class="btn" onclick="showSetup()">开始我的江湖情缘　❥</button><button class="btn secondary" onclick="showEndings()">✧ 结局图鉴</button><button class="btn secondary" onclick="showCGs()">▧ CG画廊</button></div><div class="hero-detail">恋爱 · 奇遇 · 反转 · 人生</div></div></section><section class="home-epilogue"><div class="scene-image" role="img" aria-label="参考武侠画面中的孤舟与雨夜荷塘"></div><div class="scene-copy"><div class="eyebrow">缘起十回合</div><h2>江湖那么大，偏偏遇见你。</h2><p>她也许是黏人的小徒弟、温柔的御姐、高冷的论剑高手，或总在刷纪录的竞速少女。你们的故事，从一次寻常上线开始。</p></div></section><section class="strip"><div class="mini"><strong>${save.runs}</strong><span>已经历的人生</span></div><div class="mini"><strong>${Object.keys(save.seen).length}/${endings.length}</strong><span>结局收集</span></div><div class="mini"><strong>${Object.keys(save.cgs).length}/20</strong><span>心动CG收藏</span></div><div class="mini"><strong>10</strong><span>人生回合</span></div></section>`+footer())}
+function footer(){return `<div class="footer">恋与燕云模拟器 · 玩家同人创作 / 非官方作品<br>角色、包括故事中的昵称，均为虚构改编，不代表现实人物。请勿传播他人私密内容。<br>争锋工作室推广为游戏内独立展示。</div>`}
+function showSetup(){screen='setup';setup.path='newbie';setup.temperament='rational';el(hdr()+`<section class="panel start-panel"><button class="back" onclick="showHome()">← 返回首页</button><div class="eyebrow">CHAPTER 00 · 普通玩家的故事</div><h1 class="section-title">今晚，上线吗？</h1><p class="muted">你只是一个普通的燕云玩家。可能收获一段爱情，也可能突然走上另一条江湖路。</p><label class="tiny" for="playerName">给自己取个昵称</label><div class="formline"><input id="playerName" maxlength="12" value="${esc(setup.name)}" placeholder="输入昵称" autocomplete="off"></div><div class="starter-note">♥ 10个回合，一段意想不到的江湖人生。职业、情缘与结局，都留给命运和你的选择。</div><button class="btn start-full" onclick="startGame()">❤ 开始第 ${save.runs+1} 段人生</button></section>`+footer())}
+function rand(max){return Math.floor(Math.random()*max)}function adjust(delta){for(const [k,v] of Object.entries(delta||{})){if(k in game.stats)game.stats[k]=Math.max(k==='money'?0:0,Math.min(k==='money'?200:100,game.stats[k]+v))}}
+function startGame(){setup.name=(document.getElementById('playerName')?.value||'少侠').trim().slice(0,12)||'少侠';setup.path='newbie';setup.temperament='rational';const st={...defaultStats};game={name:setup.name,origin:'newbie',temperament:'rational',role:'普通玩家',stats:st,turn:1,flags:{},visited:{},log:[],npc:namedNPCs[rand(namedNPCs.length)],eventsCompleted:0};screen='game';chooseEvent()}
+function weightedPick(pool){let total=pool.reduce((x,e)=>x+e.weight,0),r=Math.random()*total;for(const e of pool){r-=e.weight;if(r<=0)return e}return pool[pool.length-1]}
+const rareEventIds=new Set(['opportunity_rank','opportunity_speed','opportunity_stream','opportunity_escort','opportunity_forest','opportunity_player']);
+const mandatoryFollowups=new Set(['meet_result','reality','guafang','new_avatar']);
+function eligibleEvent(e){return e.condition({...game.stats,flags:game.flags,turn:game.turn});}
+function chooseEvent(){
+ if(!game)return;
+ if(game.turn>10){finishGame();return;}
+ let pool=events.filter(e=>!game.visited[e.id]&&eligibleEvent(e));
+ if(!pool.length)pool=events.filter(eligibleEvent);
+ // 连锁剧情优先，但并非每次都强制：为事件留出合理的时间间隔。
+ let follow=pool.filter(e=>mandatoryFollowups.has(e.id));
+ const romanceChain=new Set(['nightduo','voice','friend','confess','official','past_lover','verify','meet','misunderstanding','breakup']);
+ const romance=pool.filter(e=>romanceChain.has(e.id));
+ if(follow.length&&Math.random()<.86){currentEvent=weightedPick(follow);}
+ else if(game.flags.met&&romance.length&&Math.random()<.60){currentEvent=weightedPick(romance);}
+ else{
+   const normal=pool.filter(e=>!rareEventIds.has(e.id)&&!mandatoryFollowups.has(e.id));
+   const rare=pool.filter(e=>rareEventIds.has(e.id));
+   const hasCareer=game.role!=='普通玩家';
+   const pickRare=!hasCareer&&rare.length&&Math.random()<.075;
+   currentEvent=weightedPick(pickRare?rare:(normal.length?normal:pool));
+ }
+ game.visited[currentEvent.id]=(game.visited[currentEvent.id]||0)+1;showTurn();
+}
+function statPanel(){const cols=[['skill','剑术'],['speed','竞速'],['charm','魅力'],['eq','情商'],['money','财力'],['fame','名气'],['romance','恋爱脑'],['guard','警惕心']];return `<div class="stats">${cols.map(([k,n])=>`<div class="stat"><div class="stat-top"><span>${n}</span><b>${Math.round(game.stats[k])}</b></div><div class="track"><span style="width:${Math.min(100,game.stats[k])}%"></span></div></div>`).join('')}</div>`}
+function showTurn(){if(!game)return;screen='game';const ev=currentEvent;const all=ev.choices;const choices=all.length<=2?all:all.slice(0,2);game.offeredChoices=choices;el(hdr()+`<section class="panel story-panel"><div class="flex"><div class="hud"><span class="pill">第 ${game.turn} / 10 回合</span><span class="pill">${esc(game.role)}</span></div><button class="navbtn quit" onclick="confirmQuit()">结束本局</button></div><div class="progress"><span style="width:${game.turn/10*100}%"></span></div><div class="scene"><div class="chapter">CHAPTER ${String(game.turn).padStart(2,'0')} · 江湖偶遇</div><h2>${esc(ev.title)}</h2><p>${esc(ev.body.replaceAll('{npc}',game.npc.name))}</p></div><div class="scene-question">此刻，你会……</div><div class="story-choices">${choices.map((c,i)=>`<button class="choice" onclick="doChoice(${i})"><span><b>${'AB'[i]}.</b> ${esc(c.text)}</span><span class="arrow">›</span></button>`).join('')}</div></section>`+footer())}
+function tryCareerShift(ev,c){
+ if(game.role!=='普通玩家')return '';
+ const roles={opportunity_rank:['rank','论剑玩家'],opportunity_speed:['speed','竞速玩家'],opportunity_stream:['stream','主播'],opportunity_escort:['escort','陪玩'],opportunity_forest:['forest','觉障林高手'],opportunity_player:['player','海王']};
+ const target=roles[ev.id];if(!target||c.flag!==target[0])return '';
+ if(Math.random()>=.3)return '';
+ game.role=target[1];game.flags.careerShift=true;game.flags.careerRole=target[0];
+ return `江湖机缘！你开始踏上「${target[1]}」之路。`;
+}
+function doChoice(i){
+ if(!game||!currentEvent||!game.offeredChoices?.[i])return;
+ const ev=currentEvent,c=game.offeredChoices[i];
+ adjust(c.delta);
+ if(c.flag)game.flags[c.flag]=true;
+ if(c.set)Object.assign(game.flags,c.set);
+ // 连锁状态只从明确的玩家选择产生，避免凭空结缘、奔现和被骗。
+ if(c.flag==='metInPerson')game.flags.meetResolved=true;
+ if(c.flag==='meetDisappointed')game.flags.meetResolved=true;
+ if(c.flag==='giftScam')game.flags.gift=true;
+ if(c.flag==='player')game.flags.flirtingMultiple=true;
+ const shift=tryCareerShift(ev,c);
+ game.log.push({turn:game.turn,event:ev.id,choice:c.text,result:c.result});
+ game.eventsCompleted++;game.turn++;
+ if(shift)toast(shift);
+ chooseEvent();
+}
+function nextTurn(){chooseEvent()}function confirmQuit(){if(!game)return;if(confirm('提前结束本局？将根据当前积累的属性判定结局，并计入游玩次数。'))finishGame()}
+function resolveEnding(){
+ const f=game.flags,s=game.stats;
+ const hasRelationship=!!f.serious;
+ const hasMet=!!f.metInPerson;
+ let id;
+ // 结局必须有事件因果，不允许“没遇到人就结婚”“没练技术就榜一”。
+ if(f.privacyRisk&&(s.scandal>=20||f.ppt))id='E15';
+ else if(f.giftScam)id='E12';
+ else if(f.avatarDrama)id='E14';
+ else if(f.ppt)id='E11';
+ else if(f.publicFight&&!f.clarified)id='E24';
+ else if(f.meetDisappointed)id=(f.unverified&&s.guard<35)?'E13':'E20';
+ else if(f.breakup)id='E19';
+ else if(f.lasting&&hasMet&&hasRelationship)id=s.eq>=57?'E09':'E03';
+ else if(hasMet&&hasRelationship)id=f.verified?'E01':'E04';
+ else if(hasRelationship&&f.official)id='E05';
+ else if(hasRelationship&&s.affection>=61)id='E10';
+ else if(f.flirtingMultiple&&s.scandal>=18)id='E21';
+ else if(f.gift&&s.money<25)id='E23';
+ else if(game.role==='论剑玩家'&&s.skill>=45)id='E25';
+ else if(game.role==='竞速玩家'&&s.speed>=38)id='E26';
+ else if(game.role==='主播'&&s.fame>=27)id='E27';
+ else if(game.role==='陪玩')id='E28';
+ else if(game.role==='觉障林高手')id='E30';
+ else if(game.role==='海王')id='E21';
+ else if(f.dreamMeme&&s.charm>=30)id='E38';
+ else if(f.dreamResolved&&s.eq>=34)id='E38';
+ else if(f.mediator&&s.eq>=56&&s.fame>=20)id='E31';
+ else if(f.speedPractice&&s.speed>=32)id='E26';
+ else if(f.practice&&s.skill>=47)id='E30';
+ else if(f.forestPlayed&&s.skill>=43)id='E36';
+ else if(f.met&&s.affection>=24)id='E10';
+ else if((f.dreamCalled||f.dreamCalm)&&f.dreamMeme)id='E38';
+ else if(f.socialized&&s.fame>=24)id='E29';
+ else id='E37';
+ return endings.find(x=>x.id===id)||endings[29];
+}
+function finishGame(){if(!game)return;lastEnding=resolveEnding();save.runs++;save.seen[lastEnding.id]=(save.seen[lastEnding.id]||0)+1;save.cgs[lastEnding.cg]=true;const record={name:game.name,ending:lastEnding.id,turns:game.eventsCompleted,date:new Date().toLocaleString('zh-CN'),stats:{...game.stats}};save.history.unshift(record);save.history=save.history.slice(0,20);persist();const shouldAd=save.runs%5===0;game=null;showEnding(lastEnding,shouldAd)}
+function showEnding(ending,shouldAd=false){screen='ending';const cg=cgData[ending.cg-1];el(hdr()+`<section class="panel"><div class="end-hero"><div class="eyebrow">YOUR DESTINY · ${ending.id}</div><div class="laurel">${ending.kind==='good'?'♥':ending.kind==='career'?'✦':ending.kind==='bad'?'☾':'✧'}</div><h2>${esc(ending.name)}</h2><span class="badge">${({good:'心动佳话',bad:'江湖翻车',career:'独行封神',meme:'隐藏彩蛋'})[ending.kind]}</span><p>${esc(ending.desc)}</p></div><h3>✦ 结局限定 CG · ${esc(cg.name)}</h3>${cgMarkup(cg,true)}<p class="tiny">CG ${String(cg.id).padStart(2,'0')} / 20 · 已实装，达成对应结局后可在CG画廊反复查看</p><div class="ending-actions"><button class="btn" onclick="showSetup()">再次入江湖</button><button class="btn secondary" onclick="showEndings()">结局图鉴</button><button class="btn secondary" onclick="showCGs()">CG画廊</button></div></section>`+footer());if(shouldAd)setTimeout(showAd,160)}
+function cgMarkup(cg,large=false){return `<div class="cgslot" style="${large?'width:100%;max-width:650px;margin:auto;':''}"><img src="${cg.file}" alt="${esc(cg.name)}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="cg-fallback" style="display:none"><div class="symbol">${cg.symbol}</div><div style="color:#f7d8ef">CG ${String(cg.id).padStart(2,'0')} · ${esc(cg.name)}</div><small style="color:#cbaccd">图片加载失败，请确认 assets 中存在对应文件。</small></div><div class="cg-overlay"><b>CG ${String(cg.id).padStart(2,'0')} · ${esc(cg.name)}</b><small>${esc(cg.prompt)}</small></div></div>`}
+function openCG(id,preview=false){const cg=cgData.find(x=>x.id===id);if(!cg||(!preview&&!save.cgs[id]))return;document.getElementById('modalHost').innerHTML=`<div class="overlay" role="dialog" aria-modal="true" aria-label="CG预览"><div class="modal" style="width:min(100%,760px)"><div class="flex"><div class="ad-head">CG PREVIEW · ${String(id).padStart(2,'0')}</div><button class="navbtn" onclick="closeModal()">✕</button></div><h2 style="margin:10px 0 14px">${esc(cg.name)}</h2>${cgMarkup(cg,true)}<p class="rule">${esc(cg.prompt)}</p><button class="btn" style="width:100%" onclick="closeModal()">关闭</button></div></div>`}
+function showEndings(){screen='endings';el(hdr()+`<section class="panel"><button class="back" onclick="showHome()">← 返回首页</button><div class="eyebrow">DESTINY ARCHIVE</div><h1 class="section-title">人生结局图鉴</h1><p class="muted">已解锁 ${Object.keys(save.seen).length} / ${endings.length} 个首批结局。360 种为后续开发目标，当前实装38个结局判定与文本。</p><div class="ending-grid">${endings.map(e=>`<div class="ending-card ${save.seen[e.id]?'':'locked'}"><span class="badge">${e.id} · ${({good:'心动',bad:'翻车',career:'事业',meme:'彩蛋'})[e.kind]}</span><strong>${save.seen[e.id]?esc(e.name):'？？？ 未解锁'}</strong><p>${save.seen[e.id]?esc(e.desc):'继续游玩，尝试不同的人生路线。'}</p>${save.seen[e.id]?`<div class="tiny">达成 ${save.seen[e.id]} 次 · CG ${e.cg}</div>`:''}</div>`).join('')}</div></section>`+footer())}
+function showCGs(){screen='cgs';const preview=!!window.cgPreviewMode;el(hdr()+`<section class="panel"><button class="back" onclick="showHome()">← 返回首页</button><div class="eyebrow">MEMORY GALLERY</div><h1 class="section-title">心动CG画廊</h1><p class="muted">20张正式CG已装载；达成对应结局后永久解锁。为了确认图片加载正常，可以开启素材预览（不会解锁图鉴）。</p><div class="cg-preflight"><span>已收录 ${Object.keys(save.cgs).length} / 20 张 · 当前${preview?'素材预览':'正常收藏'}模式</span><button onclick="window.cgPreviewMode=!window.cgPreviewMode;showCGs()">${preview?'退出素材预览':'预览全部20张'}</button></div><div class="cg-grid">${cgData.map(cg=>{const unlocked=!!save.cgs[cg.id];const visible=unlocked||preview;return `<div class="cg-card ${visible?'unlockable':''}" ${visible?`onclick="openCG(${cg.id},${preview})"`:''}><div>${visible?cgMarkup(cg):`<div class="cgslot locked"><img src="${cg.file}" alt="CG待解锁" loading="lazy"><div class="cg-lock">✦　未解锁　✦<span>达成对应结局即可查看</span></div></div>`}</div><div class="cg-caption">CG ${String(cg.id).padStart(2,'0')} · ${visible?esc(cg.name):'神秘回忆'}<small>${unlocked?'已解锁 · 点击大图':preview?'仅素材预览 · 未解锁':'完成指定结局解锁'}</small></div></div>`}).join('')}</div></section>`+footer())}
+function showAbout(){screen='about';el(hdr()+`<section class="panel"><button class="back" onclick="showHome()">← 返回首页</button><div class="eyebrow">GAME INFORMATION</div><h1 class="section-title">关于《恋与燕云模拟器》</h1><p>这是一款以武侠网络游戏社交文化为灵感的虚构文字人生模拟器。角色、ID与事件在本作品中均为虚构改编，不代表任何具体真人经历。请在故事外尊重真实玩家的隐私与界限。</p><div class="notice">当前可玩版本：10回合快节奏循环、30+有因果关系的动态事件、38个结局、20张实装CG、第五局推广弹窗、浏览器本地存档。</div><h3>未来开发计划</h3><p>更多NPC性格与专属支线、人物关系树、剧情连锁、300+独立结局、音乐音效、章节成就、海报式结局分享。</p><h3>存档说明</h3><p>进度记录在当前浏览器的本地存储中，更换设备或清理浏览器数据可能丢失。游戏完全离线可玩，无需登录。</p><button class="btn secondary small" onclick="showAd()">查看争锋工作室广告示例</button><button class="btn secondary small" style="margin-left:10px" onclick="resetSave()">重置本机存档</button></section>`+footer())}
+function resetSave(){if(confirm('确定清空本机所有结局和CG解锁记录吗？无法撤销。')){localStorage.removeItem(STORAGE);save=readSave();showHome();toast('本机存档已重置。')}}
+function showAd(){document.getElementById('modalHost').innerHTML=`<div class="overlay" role="dialog" aria-modal="true" aria-label="争锋工作室推广"><div class="modal"><div class="flex"><div class="ad-head">AD · 争锋工作室推广</div><button class="navbtn" onclick="closeModal()">✕</button></div><div class="ad-graphic"><div style="font-size:13px;letter-spacing:6px;color:#ffd9ea">江湖同行 · 双排无忧</div><h2>争锋工作室</h2><p>游戏制作不易 · 点陪玩选争锋</p><div style="font-size:13px;color:#ffe6ee">双排 · 陪玩 · 快乐开黑</div><p>联系微信</p><div class="wechat">GuanDR666</div></div><p class="rule">已完成 ${save.runs} 局。本推广每完成5局展示一次，不影响游戏属性、结局与存档。可直接关闭继续游玩。</p><button class="btn" style="width:100%" onclick="closeModal()">继续我的江湖 ❤</button></div></div>`}
+function closeModal(){document.getElementById('modalHost').innerHTML=''}
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});showHome();
+// V1.3 故事线重构：前两回合铺垫，第3回合必定遇见女主，后续7回合关系事件。
+const heroines=[
+ {id:'disciple',name:'小栀',label:'可爱女大学生徒弟',emoji:'🌸',intro:'她刚读大学，游戏里是热情的新手，喜欢收集小动物和跑图。',where:'你在大世界帮人解了一道谜题，一个叫「小栀」的萌新在附近频道小声求带。',hook:'“师父师父！我又迷路了，这次真不是故意的。”',value:'trust'},
+ {id:'sister',name:'晚棠',label:'御姐音休闲玩家',emoji:'🌙',intro:'声音温柔成熟，不爱争排名，更喜欢看风景、拍照和聊天。',where:'缘分桥附近，你遇到一位正在弹琴的休闲玩家「晚棠」，她邀请你坐下听一曲。',hook:'“小朋友，别急着赶路，江湖的月亮今晚很好看。”',value:'warm'},
+ {id:'pvp',name:'霜刃',label:'高冷PVP女高手',emoji:'⚔️',intro:'话少、操作强，常年研究论剑与争锋，很在意尊重和实力。',where:'止戈比武结束，你被一位叫「霜刃」的高冷女高手用一招收尾。她却主动提出复盘。',hook:'“你刚才那招不差。要不要再练一局？”',value:'respect'},
+ {id:'speed',name:'折枝',label:'沉迷竞速的竞速妹',emoji:'🍃',intro:'一心刷新身法路线纪录，语速快，聊天三句离不开“再跑一把”。',where:'你跑图时险些撞上正在刷竞速路线的「折枝」。她停下来问你有没有看到捷径。',hook:'“只差零点三秒！你来帮我盯一下路线？”',value:'companion'}
+];
+function rr(a){return a[Math.floor(Math.random()*a.length)]}
+function story(title,body,a,b,id){return {id,title,body,choices:[a,b]}}
+function op(text,result,changes={}){return {text,result,changes}}
+function stageEvent(){
+ const g=game,h=g.hero,f=g.flags,t=g.turn;
+ if(t===1)return story('江湖开服，今晚去哪儿？','下班/下课后，你打开《燕云十六声》。没有固定搭子，也没有惊天人设，只想度过一个普通的夜晚。',op('逛逛大世界，顺便看看附近频道。','你沿河边漫无目的地闲逛，遇见不少有趣的玩家。',{social:1}),op('先清日常，有人喊组队再说。','你把日常清得七七八八，心情轻松不少。',{practice:1}),'start');
+ if(t===2){if(g.dream)return story('凌晨群里的深情文学','打觉群里，ID「梦西洲」的大叔又在酒后发了一大段忧郁小作文：“有人懂江湖的冷，却无人懂我的心。”有群友怀疑他是在钓年轻女孩安慰。',op('不评价真假，提醒群友别轻信陌生人的私聊。','群里笑成一团，有人说你是清醒的江湖观察员。',{wise:1,dreamCalm:1}),op('发个“叔，先把酒醒了”表情包。','大伙发了满屏表情包。梦西洲沉默三分钟，又发了一句“算了”。',{meme:1,dreamMeme:1}),'dream');
+ return story('一次看似普通的偶遇','朋友发来一条组队邀请：有人打本缺一人，有人约着看夜景。你想起自己好像很久没认识新朋友了。',op('加入临时队，跟大家说声晚上好。','这趟队伍气氛很好，有人给你点了好友申请。',{social:1}),op('去大世界散散心，等真正合拍的搭子。','你路过河岸，看见有人在弹琴、有人在练身法。',{calm:1}),'premeet')}
+ if(t===3)return story('命运的组队邀请',`${h.where}\n${h.hook}`,op('自然回应，先一起玩一会儿。',`你和${h.name}组了队，她笑着说：“原来你还挺好相处的。”`,{bond:2,met:1}),op('有点害羞，但还是答应邀请。',`你们从笨拙的开场聊起，${h.name}发现你其实很认真。`,{bond:1,met:1,shy:1}),'encounter');
+ if(t===4){const scene={disciple:'小栀又卡在一处机关前，问你能不能手把手教。',sister:'晚棠邀请你去一处山顶看日出，还说不必打怪。',pvp:'霜刃把你叫进切磋房，想帮你改掉一个习惯性失误。',speed:'折枝突然分享一张写满箭头的竞速路线截图，让你一起研究。'}[h.id];return story('从路人到固定搭子',`${scene}\n你意识到，自己开始期待她的下一条消息。`,op('认真陪她，顺便聊聊游戏之外的生活。','这一次，你们交换了更多生活趣事，聊天不再局限于游戏。',{bond:2,trust:1}),op('以搞怪方式接梗，让气氛轻松一点。','她被你逗笑了，顺势把你拉进常用组队列表。',{bond:1,humor:1}),'bond')}
+ if(t===5)return story('深夜的那条消息',`${({disciple:'做完作业的小栀',sister:'刚结束夜班的晚棠',pvp:'刚练完论剑的霜刃',speed:'还在刷路线的折枝'})[h.id]}突然私聊：“你怎么还在线？”聊天从今天的游戏，聊到明天吃什么。你发现彼此作息好像渐渐同步了。`,op('问她以后能不能固定一起玩。',`“可以呀。”${h.name}回复，过了几秒又补上一枚小爱心。`,{bond:2,steady:1}),op('调侃一句“你是不是舍不得我下线？”',`她回了一个捂脸表情包：“少自恋……不过还真有一点。”`,{bond:2,flirt:1}),'night');
+ if(t===6){if(g.dream&&Math.random()<.32)return story('又见梦西洲小作文',`你和${h.name}正在组队，群里「梦西洲」又发：“醉后无人问，醒来皆过客。”有人私聊你问该不该安慰他。${h.name}也看到了这段话。`,op('提醒朋友可以关心，但要保留边界。',`${h.name}说：“你还挺清醒的，至少不会跟着乱带节奏。”`,{bond:1,trust:2,dreamCalm:1}),op('和她一起围观群友接梗，别传播人家隐私。',`你们笑了一阵，${h.name}说这群里每天像在放连续剧。`,{bond:1,humor:1,dreamMeme:1}),'dream2')
+ return story('朋友圈里的一点酸意',`你发现${h.name}最近也常和别人双排。有人开玩笑说，她已经有“新固定”了。她主动问你：“你是不是有点不开心？”`,op('坦诚说出在意，但尊重她的正常社交。',`她认真解释：“我和别人打游戏，不代表我不在乎你。”你们聊得很坦白。`,{bond:2,trust:2,healthy:1}),op('嘴硬说没事，之后却故意冷淡。',`她察觉了你的冷淡，发来一句“有话直说嘛”，气氛有点僵。`,{bond:-2,mistrust:2,avoid:1}),'jealous')}
+ if(t===7){if(g.bond<=2)return story('还要不要继续靠近？',`${h.name}觉得你最近有些疏远，问：“我们是不是只适合偶尔组队？”这可能是最后一次认真沟通的机会。`,op('说清误会，重新邀请她一起玩。','你们把没说出口的心事讲明白，关系终于回暖。',{bond:3,trust:2,repair:1}),op('保持普通朋友，不强求她回应。','你们相互祝福，选择各自继续江湖。',{friendOnly:1,solo:1}),'repair')
+ return story('侠缘和心动，是一回事吗？',`${h.name}问你：“如果我们绑定侠缘，你会不会当真？”${({disciple:'她紧张地捏着衣袖。',sister:'她的声音轻了下来。',pvp:'她停下了手里的切磋邀请。',speed:'她第一次没急着开下一把竞速。'})[h.id]}她似乎在等一个认真回答。`,op('表明想认真了解她，也尊重她的节奏。',`她轻声说：“那就从今天开始认真试试吧。”你们约定不会把游戏绑定当成现实承诺的替代。`,{bond:2,trust:2,serious:1} ),op('先不定义关系，继续暧昧双排。',`她说“好呀”，但提醒你别默认双方已经是情侣。`,{bond:1,ambiguous:1}),'confess')}
+ if(t===8){if(f.friendOnly)return story('重新找到自己的节奏',`虽然与${h.name}没有成为情侣，你们仍偶尔打招呼。一个老玩家邀你试试高强度训练，亦有朋友想请你直播。`,op('接受挑战，试试新的江湖方向。','你开始规律练习，发现自己也能找到新的快乐。',{careerTry:1}),op('继续当休闲玩家，保留好朋友。','你仍然喜欢闲逛江湖，和朋友保持轻松联系。',{solo:1}),'solo8');
+ return story('聆音大套与真心',`${h.name}看中了一套很贵的聆音时装，随口说“好好看啊”。你听得出她是在分享喜好，并没有要求你买。可群友却调侃：“恋爱脑，该你表现了。”`,op('量力而行，陪她一起攒心仪装扮。',`她笑了：“你不用给我买，我想要的是有人陪我。”`,{bond:2,trust:1,healthy:1}),op('冲动买下大套，想借此确定关系。',`你送出了昂贵礼物。她道了谢，但你也开始担心自己是不是给了彼此太大压力。`,{gift:1,bond:1,spent:1}),'gift')}
+ if(t===9){if(f.friendOnly)return story('新的江湖机遇',`你回到普通玩家生活。${h.name}发来祝福：“找到喜欢做的事最重要。”此时一个小众圈子的邀约送到了你面前。`,op('抓住难得机会，好好投入。','你开启一段与恋爱无关的成长路线。',{careerTry:1}),op('不接邀约，继续自在闯荡。','江湖很大，你决定不让头衔定义自己。',{solo:1}),'career9');
+ if(!f.serious)return story('暧昧的分岔路',`${h.name}问：“我们每天都聊天，你到底怎么想？”这次你不能再用表情包糊弄过去。`,op('认真表白，把关系说清楚。',`她沉默了几秒：“我也想认真试试。”`,{serious:1,bond:2,trust:2}),op('说现在只想做游戏搭子。',`她点点头：“谢谢你说清楚。”你们回到普通朋友的距离。`,{friendOnly:1,solo:1}),'lateConfess');
+ if(f.gift && Math.random()<.24)return story('礼物之后的沉默',`${h.name}发现你这两天总提起那套昂贵时装，认真问：“我很感谢，但你是不是把这当作对我的要求？”你意识到送礼也会给对方压力。`,op('道歉，明确礼物不能换取感情。',`你解释清楚，${h.name}终于松了口气：“以后别为我乱花钱。”`,{trust:2,bond:1,healthy:1}),op('质问她为何没有因此更亲近你。',`她沉默后表示需要冷静。你们的相处开始变得沉重。`,{rupture:1,bond:-4}),'giftConflict');
+ if(Math.random()<.10)return story('照片里的那个人',`${h.name}说想奔现，可你发现她发来的照片和个人主页里似乎有些对不上。真实身份还需要核实，你不想做出草率决定。`,op('提出先视频确认，再决定是否见面。',`视频里双方坦诚聊了很久。你们发现先前存在误解，决定先慢慢了解。`,{verified:1,trust:1,longDistance:1}),op('只凭头像就买下车票，不再确认。',`见面安排来得太仓促，你心里埋下一丝不安。`,{unverifiedMeet:1}),'photoQuestion');
+ return story('要不要走进现实？',`${h.name}提起最近的线下见面活动。你们还没有正式见过面，现在终于有机会让关系迈出一步。`,op('先互相确认身份，再约白天公共场所见面。',`你们认真核实了彼此身份，约在热闹的车站见面。${h.name}笑着朝你挥手。`,{verified:1,meetInPerson:1,bond:2,trust:2}),op('先不奔现，继续用时间了解彼此。',`你们约好慢慢来。她说：“不着急，喜欢不是赶进度条。”`,{longDistance:1,bond:1,trust:1}),'meet')}
+ // 第10回合总是关系结局关口，不凭空婚礼或突然被骗
+ if(f.rupture)return story('礼物真的能换来喜欢吗？',`${h.name}终于说出心里话：“我不想因为收过礼物，就必须回应你的期待。”你看着聊天框，知道关系已经走到岔路口。`,op('承认自己越界，停止索求，体面道别。','你没有挽回成功，但保留了彼此最后的尊重。',{breakup:1}),op('继续责怪她“不懂感恩”。','你们最终闹得不欢而散，留下的只是账单和遗憾。',{breakup:1,spent:1}),'lastRupture');
+ if(f.unverifiedMeet)return story('车站里的误会',`你按照片在人群里找了半天，却发现迎接你的真人与先前描述不符。原来你们一直没把身份说清楚。`,op('先确认情况，决定把关系转为普通朋友。','你们坦诚沟通后和平分别。',{catfish:1}),op('尴尬离开，决定今后先核实身份再奔现。','你终于明白照片不等于承诺。',{catfish:1}),'lastCatfish');
+ if(f.friendOnly)return story('仍是你的江湖',`你和${h.name}偶尔还会互相点赞，但故事并不一定要变成爱情。回头看，这段相遇也没有白费。`,op('继续打本、看风景，做自在玩家。','你把这段缘分留在好友列表。',{solo:1}),op('把更多时间投入擅长的玩法。','你决定认真经营自己的江湖目标。',{careerTry:1}),'lastSolo');
+ if(!f.serious)return story('缘分未满',`${h.name}发来一张游戏里的合照。两人相视一笑，但谁也没有把未来说得太满。`,op('珍惜这份陪伴，慢慢了解。','你们没有仓促许诺，仍然期待明天上线。',{bond:1,lasting:1}),op('给这段暧昧一个体面的句号。','没有争吵，你们选择各自启程。',{solo:1}),'lastOpen');
+ if(f.meetInPerson)return story('第一次见面之后',`离开车站时，${h.name}问你：“游戏里我们已经很合拍，现实里还要不要继续认识我？”`,op('牵起她的手，认真开始现实恋爱。','你们开始约会，未来的每一天都比一张游戏截图更真实。',{lasting:1,happy:1}),op('从现实朋友慢慢相处，不急着谈婚论嫁。','你们相约下一次见面，给彼此留有空间。',{lasting:1}),'lastMeet');
+ return story('隔着屏幕的晚安',`${h.name}发来语音：“我喜欢我们现在这样，但也希望将来能见面。”你终于明白，真正的关系需要持续经营。`,op('商量未来的见面计划，不许空头承诺。','你们写下见面计划，也答应在现实中照顾好自己。',{lasting:1,happy:1}),op('仍然在意她，但暂时没有余力经营异地恋。','你们决定放慢关系节奏，保留彼此的体面。',{longDistance:1}),'lastDistance')
+}
+function startGame(){setup.name=(document.getElementById('playerName')?.value||'少侠').trim().slice(0,12)||'少侠';const hero=rr(heroines);game={name:setup.name,origin:'newbie',temperament:'rational',role:'普通玩家',stats:{...defaultStats},turn:1,flags:{},visited:{},log:[],hero,npc:hero,eventsCompleted:0,bond:0,trust:0,dream:Math.random()<.4,career:null};screen='game';chooseEvent()}
+function chooseEvent(){if(!game)return;if(game.turn>10){finishGame();return}currentEvent=stageEvent();game.offeredChoices=currentEvent.choices;showTurn()}
+function showTurn(){if(!game)return;screen='game';const ev=currentEvent,h=game.hero;const showHero=game.turn>=3;el(hdr()+`<section class="panel story-panel"><div class="flex"><div class="hud"><span class="pill">第 ${game.turn} / 10 回合</span><span class="pill">${showHero?`${h.emoji} ${esc(h.name)} · ${esc(h.label)}`:'普通玩家'}</span></div><button class="navbtn quit" onclick="confirmQuit()">结束本局</button></div><div class="progress"><span style="width:${game.turn/10*100}%"></span></div><div class="scene"><div class="chapter">CHAPTER ${String(game.turn).padStart(2,'0')} · ${showHero?'心动江湖':'缘分将至'}</div><h2>${esc(ev.title)}</h2><p style="white-space:pre-line">${esc(ev.body)}</p></div><div class="scene-question">这一刻，你会……</div><div class="story-choices">${ev.choices.map((c,i)=>`<button class="choice" onclick="doChoice(${i})"><span><b>${'AB'[i]}.</b> ${esc(c.text)}</span><span class="arrow">›</span></button>`).join('')}</div><p class="tiny" style="text-align:center;margin-top:17px">你的选择会被故事记住 · 不显示属性变化</p></section>`+footer())}
+function doChoice(i){if(!game||!currentEvent||!currentEvent.choices[i])return;const c=currentEvent.choices[i],g=game;for(const [k,v] of Object.entries(c.changes||{})){if(k==='bond'||k==='trust')g[k]+=v;else g.flags[k]=v}g.log.push({turn:g.turn,event:currentEvent.id,choice:c.text,result:c.result});g.eventsCompleted++;g.turn++;
+ if(g.turn===9&&g.flags.friendOnly&&g.flags.careerTry&&Math.random()<.12){g.career=rr(['论剑玩家','竞速玩家','觉障林主播','陪玩']);g.role=g.career;}
+ chooseEvent()}
+function resolveEnding(){const f=game.flags,g=game;let id='E37';if(f.catfish){id='E13'}else if(f.breakup){id=f.spent?'E23':'E19'}else if(f.friendOnly){if(g.career==='论剑玩家')id='E25';else if(g.career==='竞速玩家')id='E26';else if(g.career==='觉障林主播')id='E27';else if(g.career==='陪玩')id='E28';else id='E37'}else if(f.meetInPerson&&f.lasting){id=f.happy?(g.hero.id==='pvp'?'E06':g.hero.id==='speed'?'E04':'E01'):'E10'}else if(f.serious&&f.lasting){id=f.happy?'E03':'E10'}else if(f.serious){id=f.gift&&g.bond<5?'E23':'E10'}else if(f.ambiguous&&f.solo){id='E19'}else if(f.lasting){id='E10'}else if(f.solo){id='E37'}else if(f.dreamMeme&&g.bond<4){id='E38'}else{id='E19'}return endings.find(e=>e.id===id)||endings[36]}
+// 结局只按已发生情节判定；未发生的照骗、婚礼、瓜房不凭空出现。
+function hdr(){return `<div class="top"><div class="brand"><span class="brandmark">缘</span>恋与燕云 <span class="tiny">SIMULATOR 1.3</span></div><div class="topright"><span class="tiny">已通关 ${save.runs} 局</span><button class="navbtn" onclick="showHome()">⌂ 首页</button></div></div>`}
+function showAbout(){screen='about';el(hdr()+`<section class="panel"><button class="back" onclick="showHome()">← 返回首页</button><h1 class="section-title">版本 V1.3 · 恋爱剧情重构</h1><p>每局10回合，第3回合必定遇见一位女主，后续剧情以关系推进为核心。不同女主有不同相遇和相处场景。</p><p>保留结局与CG图鉴、本地记录、每通关5局一次争锋工作室推广。全部主角均为虚构成年人；“女大学生徒弟”也设定为成年人。</p><button class="btn secondary small" onclick="showAd()">查看争锋工作室推广</button></section>`+footer())}
+
+</script></body></html>
