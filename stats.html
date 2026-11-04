@@ -18,12 +18,12 @@ footer{font-size:12px;color:#708492;margin:26px 0}
 @media(max-width:620px){.grid{grid-template-columns:repeat(2,1fr)}.card{padding:14px}.card strong{font-size:28px}}
 </style></head>
 <body><main>
-<div class="overline">RUN // KNIFE · ANALYTICS</div><div class="flex"><div><h1>跑刀行动 · 玩家统计</h1><p class="intro">统计自 V0.14 接入后开始。每次访问或游戏行为通过匿名计数，不读取微信号、姓名或游戏背包内容。</p></div><button class="btn" id="refresh">刷新统计</button></div>
+<div class="overline">RUN // KNIFE · ANALYTICS</div><div class="flex"><div><h1>跑刀行动 · 玩家统计</h1><p class="intro">新统计服务从本次修复后开始记录。每次访问或游戏行为通过匿名计数，不读取微信号、姓名或游戏背包内容。</p></div><button class="btn" id="refresh">刷新统计</button></div>
 <p id="state" class="status" role="status">正在读取线上统计……</p>
 <div class="grid">
 <div class="card"><small>累计页面访问</small><strong id="visits">—</strong><p>访问次数，不是玩家人数</p></div>
-<div class="card"><small>估计独立访客</small><strong id="uniques">—</strong><p>匿名去重估算，可能有误差</p></div>
-<div class="card"><small>近 24 小时访问</small><strong id="daily">—</strong><p>滚动 24 小时窗口</p></div>
+<div class="card"><small>首次访问浏览器（估算）</small><strong id="uniques">—</strong><p>同浏览器仅首次计入；不是真实独立人数</p></div>
+<div class="card"><small>今日访问（UTC）</small><strong id="daily">—</strong><p>按 UTC 自然日计数</p></div>
 <div class="card"><small>累计开局</small><strong id="starts">—</strong><p>点击「开始行动」</p></div>
 <div class="card"><small>已完成对局</small><strong id="finishes">—</strong><p>包含撤离成功与失败</p></div>
 <div class="card"><small>成功撤离</small><strong id="wins">—</strong><p>成功带出才计入</p></div>
@@ -32,45 +32,47 @@ footer{font-size:12px;color:#708492;margin:26px 0}
 <div class="card"><small>撤离成功率</small><strong id="winrate">—</strong><p>成功撤离 ÷ 完成局数</p></div>
 </div>
 <div class="panel"><div class="flex"><strong>累计对局完成情况</strong><span id="ratioLabel" class="status">—</span></div><div class="bar"><i id="ratioBar"></i></div><div class="status">未完成局数 = 开局次数 − 完成局数，刷新页面或退出可能产生未完成局数。</div></div>
-<div class="panel"><strong>使用说明</strong><ul><li>这是公开的只读统计页，知道链接的人都可以查看；请不要把页面当作私密后台。</li><li>无须 GitHub 登录即可查看。因为网站运行在 GitHub Pages，浏览器需要能访问 CounterAPI 才能更新数字。</li><li>访客与事件会受到浏览器广告拦截、网络限制、重复访问及第三方统计服务可用性的影响，不能当作精确人数。</li><li>先前版本的历史数据无法恢复；统计页自身不会重复计入游戏访问。</li></ul><p class="status">数据源：<a href="https://counterapi.com/" target="_blank" rel="noopener">CounterAPI</a> · <a href="./">返回游戏</a></p></div>
+<div class="panel"><strong>使用说明</strong><ul><li>这是公开的只读统计页，知道链接的人都可以查看；请不要把页面当作私密后台。</li><li>无须 GitHub 登录即可查看。因为网站运行在 GitHub Pages，浏览器需要能访问 Abacus 才能更新数字。</li><li>首次访问浏览器以 localStorage 为依据，同一人换设备会重复计数；访客与事件也会受到浏览器广告拦截、网络限制、重复访问及第三方统计服务可用性的影响，不能当作精确人数。</li><li>先前版本的历史数据无法恢复；统计页自身不会重复计入游戏访问。</li></ul><p class="status">数据源：<a href="https://abacus.jasoncameron.dev/" target="_blank" rel="noopener">CounterAPI</a> · <a href="./">返回游戏</a></p></div>
 <footer>沈狂狂狂狂制作 · 统计方案为免费公共计数服务，不提供账户级权限管理</footer>
 </main>
 <script>
 'use strict';
-const NS='skycity0221-delta-knife-game', KEY='game', API='https://counterapi.com/api/';
-const el=id=>document.getElementById(id); const fmt=n=>Number.isFinite(n)?Math.round(n).toLocaleString('zh-CN'):'—';
-async function readStat(action,extra=''){
- const url=API+encodeURIComponent(NS)+'/'+encodeURIComponent(action)+'/'+encodeURIComponent(KEY)+'?readOnly=true'+extra+'&_='+Date.now();
+const NS='skycity0221-delta-knife-game', API='https://abacus.jasoncameron.dev/get/';
+const el=id=>document.getElementById(id);
+const fmt=n=>Number.isFinite(n)?Math.round(n).toLocaleString('zh-CN'):'—';
+function utcDay(){return new Date().toISOString().slice(0,10).replace(/-/g,'')}
+async function readStat(key){
+ const url=API+encodeURIComponent(NS)+'/'+encodeURIComponent(key)+'?_='+Date.now();
+ const controller=new AbortController(), timeout=setTimeout(()=>controller.abort(),12000);
  try{
-  const control=new AbortController();const stop=setTimeout(()=>control.abort(),9500);
-  try{const r=await fetch(url,{cache:'no-store',signal:control.signal});if(!r.ok)throw Error('HTTP '+r.status);const v=await r.json();const n=Number(v.value);if(!Number.isFinite(n))throw Error('Invalid count');return n;}finally{clearTimeout(stop)}
- }catch(e){ // Free public API also supports JSONP, useful on restrictive mobile browsers.
-  return await new Promise((resolve,reject)=>{
-   const callback='rkStats'+Date.now()+Math.random().toString(36).slice(2),sc=document.createElement('script');
-   let done=false;const finish=(v,err)=>{if(done)return;done=true;clearTimeout(timer);sc.remove();delete window[callback];err?reject(err):resolve(v)};
-   window[callback]=v=>{const n=Number(v&&v.value);Number.isFinite(n)?finish(n):finish(null,Error('Invalid JSONP response'))};
-   sc.onerror=()=>finish(null,Error('Network blocked'));
-   sc.src=url+'&callback='+callback;document.head.appendChild(sc);
-   const timer=setTimeout(()=>finish(null,Error('Timeout')),10000);
-  });
- }
+  const response=await fetch(url,{cache:'no-store',mode:'cors',signal:controller.signal});
+  if(response.status===404)return 0;
+  if(!response.ok)throw new Error('HTTP '+response.status);
+  const result=await response.json();
+  if(!result||!Number.isFinite(Number(result.value)))throw new Error('返回数据格式错误');
+  return Number(result.value);
+ }finally{clearTimeout(timeout)}
 }
 async function load(){
- el('refresh').disabled=true;el('state').textContent='正在读取线上统计……';
+ const button=el('refresh');button.disabled=true;el('state').textContent='正在读取线上计数……';
  const metrics=[
- ['visits','visit',''],['uniques','visit','&unique=true'],['daily','visit','&timeline=24h'],
- ['starts','start',''],['finishes','finish',''],['wins','win',''],['reds','red','']
+  ['visits','visit'],['uniques','browser-first'],['daily','day-'+utcDay()],
+  ['starts','start'],['finishes','finish'],['wins','win'],['reds','red']
  ];
- const results=await Promise.all(metrics.map(async([id,action,opts])=>{try{return{id,val:await readStat(action,opts)}}catch(e){return{id,val:null,error:e.message}}}));
- const data=Object.fromEntries(results.map(x=>[x.id,x.val]));
- results.forEach(x=>el(x.id).textContent=fmt(x.val));
- const starts=data.starts,fin=data.finishes,wins=data.wins,visits=data.visits;
- el('engagement').textContent=visits>0&&starts!=null?(starts/visits).toFixed(2):'—';
- el('winrate').textContent=fin>0&&wins!=null?(100*wins/fin).toFixed(1)+'%':'—';
- const ratio=starts>0&&fin!=null?Math.max(0,Math.min(100,100*fin/starts)):0;
- el('ratioBar').style.width=ratio+'%';el('ratioLabel').textContent=starts>0&&fin!=null?fmt(fin)+' / '+fmt(starts):'—';
- const failed=results.filter(x=>x.error);el('state').textContent=failed.length?'有 '+failed.length+' 项读取失败；请检查网络或稍后刷新。':'已加载 · '+new Date().toLocaleString('zh-CN');
- el('refresh').disabled=false;
+ const results=await Promise.all(metrics.map(async([id,key])=>{
+  try{return{id,value:await readStat(key)}}catch(error){return{id,value:null,error:String(error.message||error)}}
+ }));
+ const d=Object.fromEntries(results.map(x=>[x.id,x.value]));
+ results.forEach(x=>el(x.id).textContent=fmt(x.value));
+ el('engagement').textContent=d.visits>0&&d.starts!==null?(d.starts/d.visits).toFixed(2):'—';
+ el('winrate').textContent=d.finishes>0&&d.wins!==null?(d.wins/d.finishes*100).toFixed(1)+'%':'—';
+ const completion=d.starts>0&&d.finishes!==null?Math.max(0,Math.min(100,d.finishes/d.starts*100)):0;
+ el('ratioBar').style.width=completion+'%';
+ el('ratioLabel').textContent=d.starts>0&&d.finishes!==null?fmt(d.finishes)+' / '+fmt(d.starts):'—';
+ const failed=results.filter(x=>x.error);
+ el('state').textContent=failed.length?'无法读取 '+failed.length+' 项数据；可能是服务或网络不可用。未读到的数据不会显示为零。':'统计读取完成 · '+new Date().toLocaleString('zh-CN');
+ if(failed.length)console.warn('读取失败',failed);
+ button.disabled=false;
 }
 el('refresh').onclick=load;load();
 </script></body></html>
