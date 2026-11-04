@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark"><title>跑刀行动 | 玩家统计</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;background:#080f17;color:#eaf3f5}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top right,#213b3a,#080f17 58%);padding:22px 15px}
+main{max-width:960px;margin:0 auto}.overline{color:#9cdac7;letter-spacing:.14em;font-size:12px;font-weight:700}
+h1{font-size:clamp(28px,6vw,42px);margin:8px 0 8px}.intro{color:#9cabb9;font-size:14px;line-height:1.8;margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{border:1px solid #2a4350;background:#13202dca;border-radius:16px;padding:18px;min-width:0}
+.card small{color:#a5b7c3;display:block;margin-bottom:9px}.card strong{font-size:clamp(25px,5vw,37px);font-variant-numeric:tabular-nums}
+.card p{color:#8499a7;font-size:12px;margin:10px 0 0}.bar{height:9px;background:#344653;border-radius:9px;overflow:hidden;margin:10px 0}
+.bar i{display:block;height:100%;width:0;background:#80cfa8;transition:width .35s}
+.panel{margin-top:15px;padding:20px;background:#14232f;border:1px solid #304550;border-radius:18px}
+.btn{cursor:pointer;border:1px solid #46666d;background:#213f40;color:#e4f6ec;border-radius:9px;padding:10px 16px;font-weight:700}
+a{color:#8fd5ca;text-decoration:none}.flex{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.status{font-size:12px;color:#9cb0ba}ul{line-height:2;color:#b7c6ce;padding-left:22px}
+footer{font-size:12px;color:#708492;margin:26px 0}
+@media(max-width:620px){.grid{grid-template-columns:repeat(2,1fr)}.card{padding:14px}.card strong{font-size:28px}}
+</style></head>
+<body><main>
+<div class="overline">RUN // KNIFE · ANALYTICS</div><div class="flex"><div><h1>跑刀行动 · 玩家统计</h1><p class="intro">统计自 V0.14 接入后开始。每次访问或游戏行为通过匿名计数，不读取微信号、姓名或游戏背包内容。</p></div><button class="btn" id="refresh">刷新统计</button></div>
+<p id="state" class="status" role="status">正在读取线上统计……</p>
+<div class="grid">
+<div class="card"><small>累计页面访问</small><strong id="visits">—</strong><p>访问次数，不是玩家人数</p></div>
+<div class="card"><small>估计独立访客</small><strong id="uniques">—</strong><p>匿名去重估算，可能有误差</p></div>
+<div class="card"><small>近 24 小时访问</small><strong id="daily">—</strong><p>滚动 24 小时窗口</p></div>
+<div class="card"><small>累计开局</small><strong id="starts">—</strong><p>点击「开始行动」</p></div>
+<div class="card"><small>已完成对局</small><strong id="finishes">—</strong><p>包含撤离成功与失败</p></div>
+<div class="card"><small>成功撤离</small><strong id="wins">—</strong><p>成功带出才计入</p></div>
+<div class="card"><small>红色物品发现次数</small><strong id="reds">—</strong><p>搜到红品时记录，不保证带出</p></div>
+<div class="card"><small>每次访问平均开局</small><strong id="engagement">—</strong><p>累计开局 ÷ 累计访问</p></div>
+<div class="card"><small>撤离成功率</small><strong id="winrate">—</strong><p>成功撤离 ÷ 完成局数</p></div>
+</div>
+<div class="panel"><div class="flex"><strong>累计对局完成情况</strong><span id="ratioLabel" class="status">—</span></div><div class="bar"><i id="ratioBar"></i></div><div class="status">未完成局数 = 开局次数 − 完成局数，刷新页面或退出可能产生未完成局数。</div></div>
+<div class="panel"><strong>使用说明</strong><ul><li>这是公开的只读统计页，知道链接的人都可以查看；请不要把页面当作私密后台。</li><li>无须 GitHub 登录即可查看。因为网站运行在 GitHub Pages，浏览器需要能访问 CounterAPI 才能更新数字。</li><li>访客与事件会受到浏览器广告拦截、网络限制、重复访问及第三方统计服务可用性的影响，不能当作精确人数。</li><li>先前版本的历史数据无法恢复；统计页自身不会重复计入游戏访问。</li></ul><p class="status">数据源：<a href="https://counterapi.com/" target="_blank" rel="noopener">CounterAPI</a> · <a href="./">返回游戏</a></p></div>
+<footer>沈狂狂狂狂制作 · 统计方案为免费公共计数服务，不提供账户级权限管理</footer>
+</main>
+<script>
+'use strict';
+const NS='skycity0221-delta-knife-game', KEY='game', API='https://counterapi.com/api/';
+const el=id=>document.getElementById(id); const fmt=n=>Number.isFinite(n)?Math.round(n).toLocaleString('zh-CN'):'—';
+async function readStat(action,extra=''){
+ const url=API+encodeURIComponent(NS)+'/'+encodeURIComponent(action)+'/'+encodeURIComponent(KEY)+'?readOnly=true'+extra+'&_='+Date.now();
+ try{
+  const control=new AbortController();const stop=setTimeout(()=>control.abort(),9500);
+  try{const r=await fetch(url,{cache:'no-store',signal:control.signal});if(!r.ok)throw Error('HTTP '+r.status);const v=await r.json();const n=Number(v.value);if(!Number.isFinite(n))throw Error('Invalid count');return n;}finally{clearTimeout(stop)}
+ }catch(e){ // Free public API also supports JSONP, useful on restrictive mobile browsers.
+  return await new Promise((resolve,reject)=>{
+   const callback='rkStats'+Date.now()+Math.random().toString(36).slice(2),sc=document.createElement('script');
+   let done=false;const finish=(v,err)=>{if(done)return;done=true;clearTimeout(timer);sc.remove();delete window[callback];err?reject(err):resolve(v)};
+   window[callback]=v=>{const n=Number(v&&v.value);Number.isFinite(n)?finish(n):finish(null,Error('Invalid JSONP response'))};
+   sc.onerror=()=>finish(null,Error('Network blocked'));
+   sc.src=url+'&callback='+callback;document.head.appendChild(sc);
+   const timer=setTimeout(()=>finish(null,Error('Timeout')),10000);
+  });
+ }
+}
+async function load(){
+ el('refresh').disabled=true;el('state').textContent='正在读取线上统计……';
+ const metrics=[
+ ['visits','visit',''],['uniques','visit','&unique=true'],['daily','visit','&timeline=24h'],
+ ['starts','start',''],['finishes','finish',''],['wins','win',''],['reds','red','']
+ ];
+ const results=await Promise.all(metrics.map(async([id,action,opts])=>{try{return{id,val:await readStat(action,opts)}}catch(e){return{id,val:null,error:e.message}}}));
+ const data=Object.fromEntries(results.map(x=>[x.id,x.val]));
+ results.forEach(x=>el(x.id).textContent=fmt(x.val));
+ const starts=data.starts,fin=data.finishes,wins=data.wins,visits=data.visits;
+ el('engagement').textContent=visits>0&&starts!=null?(starts/visits).toFixed(2):'—';
+ el('winrate').textContent=fin>0&&wins!=null?(100*wins/fin).toFixed(1)+'%':'—';
+ const ratio=starts>0&&fin!=null?Math.max(0,Math.min(100,100*fin/starts)):0;
+ el('ratioBar').style.width=ratio+'%';el('ratioLabel').textContent=starts>0&&fin!=null?fmt(fin)+' / '+fmt(starts):'—';
+ const failed=results.filter(x=>x.error);el('state').textContent=failed.length?'有 '+failed.length+' 项读取失败；请检查网络或稍后刷新。':'已加载 · '+new Date().toLocaleString('zh-CN');
+ el('refresh').disabled=false;
+}
+el('refresh').onclick=load;load();
+</script></body></html>
